@@ -1,26 +1,6 @@
 /*
-
-Developer notes:
-
-Using NWS point forecasts, this calculates if paragliding wind conditions are good
-
-NWS API https://www.weather.gov/documentation/services-web-api
-
-Start with Lat, Lon to get the Station and Grid X, Y
-https://api.weather.gov/points/37.674,-122.495
-
-"forecastHourly" is in the response (used for Wind info)
-https://api.weather.gov/gridpoints/MTR/84,122/forecast/hourly
-
-"forecastGridData" is in the response (used for Lift info) - not used currently
-https://api.weather.gov/gridpoints/MTR/104,152 (
-
-*/
-
-
-/*
 *
-*  The function updateMysql updates the MySQL table with new JSON wind forecast
+*  function updateMysql updates the MySQL table with new JSON wind forecast
 *
 */
 function updateMysql(wind_forecast, gridX, gridY, station, site) {
@@ -342,6 +322,8 @@ $(document).ready(function() {
     var speedmax_edge = 0;
     var dir_ideal = [];
     var dir_edge = [];
+
+    // below are all the wind condition parameters for each site
 
     site = "bidwell";
     lat = 39.7802;
