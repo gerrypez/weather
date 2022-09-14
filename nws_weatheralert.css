@@ -1,0 +1,93 @@
+a {text-decoration: none; color:skyblue; }
+a:link {text-decoration: none; color:skyblue;}
+a:hover {text-decoration: none; color:#ccffcc; }
+a:active {text-decoration: none; color:skyblue; }
+a:visited {text-decoration: none; color:skyblue; }
+
+.awall {color: #dbe7f9;}
+.high {background-color:#1b1610; padding: 0 3px 0 3px;}
+.baptitle {font-size:1.2em;}
+#bottom {clear:left; float:left; width:400px; margin: 50px 0px 0px 0px; background-color:#202020;}
+.developer_area {margin: 20px 0 0 20px; color:gray;}
+.developer_date {margin: 20px 0 0 20px;}
+.developer_weather {margin: 0 0 0 20px;}
+.error_bottom {clear:left; float:left; width:400px; margin: 50px 0px 0px 0px; background-color:#202020; padding:10px; color:pink;}
+.error_message {font-size: 0.8em; margin: 0 0 0 10px;}
+.errorcheck {color:#525A78; margin: 10px 0 5px 20px; clear:left; float:left;}
+.errorsite {color:#525A78; margin: 10px 0 5px 20px; float:left;}
+ .forceupdate {margin: 10px 0 10px 20px; background-color: #525A78; border: none; color: white; padding: 5px 10px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;}
+.go-green {float:left; width:30px; background-color: #1EFC0F; height:30px; margin-left:2px; padding:5px;}
+.go-greenyellow {float:left; width:30px; background-color:#DCF285; height:30px; margin-left:2px; padding:5px;}
+.go-yellow {float:left; width:30px; background-color:#FCEC0F; height:30px; margin-left:2px; padding:5px;}
+.go-red {float:left; width:30px; height:30px; background-color:#9C9C9C; margin-left:2px; padding:5px; color:#E1E1E1;}
+.go-blue {float:left; width:30px; background-color:#1994f1; height:30px; margin-left:2px; padding:5px; color:#FFF;}
+.infobutton {float: right; border-radius: 10px; background-color:#03a9f4; border: none; padding:3px 6px 3px 6px; margin-right: 30px; }
+.infopanel { display: none; margin: 10px 0 10px 0; width: 430px; float:left; clear:left; color:white; }
+li {margin: 0 0 6px 0;}
+
+.morestuff {display:none;clear:left;float:left; padding:5px; margin-left:5px; margin-bottom:5px;max-width:100%;}
+.morestuff span {margin-right: 5px;}
+.moretitle {color:#FFF; font-size: 1.1em;}
+
+.nws_image_box { float:left;clear:left; display:none; /*display: grid;*/ height: 100%;}
+.nws_image {max-width:100%; margin:auto; }
+
+.plusexpand {width:30px; background-color:#000; color: #FFF;float:left;font-size: large;padding-left: 10px;padding-top: 5px;height:30px;}
+.sitebox {cursor: pointer; clear:left;float:left;width:430px;margin-top: 2px;}
+.siteinfo{display: none;clear:left;float:left;width: 410px;padding: 5px;margin-left:30px;background-color: #FFF;}
+.score {float:left;width:230px;height: 30px;background-color: #3d3c44;}
+.score img {margin-top: 5px;margin-left: 20px;}
+.status {color:pink; margin-left: 30px; }
+.subtitle{ clear: left; float:left; color:rgb(100, 197, 230); font-size: 1.1em; margin: 20px 0 10px 10px;}
+.thetitle { color:white; margin: 13px 0 13px 10px; width: 410px;}
+.thex {color:white; padding-top: 5px; padding-left: 10px; }
+.t_day {width:30px;background-color: blue;color: #FFF;float:left;font-size: x-large;padding-left: 10px;}
+.title_site {float:left;  color:white; background-color:slategray; width:165px; padding-left:10px; padding-right:20px; padding-top:4px; height:30px; font-size:1em;}
+.title_blue {float:left; color:white; background-color:#454d72; width:165px; padding-left:10px; padding-right:20px; padding-top:4px; height:30px;font-size:1.2em;}
+.title_exp {float:left; color:white;background-color: darkgray;width: 165px;padding-left: 10px;padding-right:20px;padding-top: 4px;height:30px;font-size:1.2em;}
+.time {color: #909090;margin-left: 10px;}
+.time a:link {color:#4B4B4B;}
+.time a:visited {color:#909090;}
+.time a:hover {color:#FFFFFF;text-decoration: none;}
+.time a:active {color:#909090;}
+/* .windy {clear:left;overflow: visible;width: 650px;height: 600px;} */
+.updatebutton {clear:left; margin: 50px 0 10px 20px;}
+
+
+
+
+/* for pull down menus, sites hidden at first
+
+#shasta {display: none;}
+#woodrat {display: none;}
+#pine {display: none;}
+#hagelstein {display: none;}
+
+#owens_lee {display: none;}
+#owens_walts {display: none;}
+
+#lakeview_blackcap {display: none;}
+#lakeview_dohertyslide {display: none;}
+#lakeview_sugarhill {display: none;}
+#lakeview_hadleybutte {display: none;}
+#whaleback {display: none;}
+
+#day_dreams {display: none;}
+#duck_hill {display: none;}
+#kingsbury {display: none;}
+#peavine {display: none;}
+#rainbow_east {display: none;}
+#rainbow_west {display: none;}
+
+#marshall {display: none;}
+
+#parma{display:none;}
+#more_mesa{display:none;}
+#bates{display:none;}
+
+#cuesta{display:none;}
+#mdo{display:none;}
+#laguna{display:none;}
+#cayucos{display:none;}
+
+*/
