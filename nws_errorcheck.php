@@ -2,7 +2,7 @@
 
 /*
 *
-*  This is Error Check script looking for errors in the MySQL table (ex. out of date fields)
+*  This is general Error Check script looking for errors in the MySQL table (ex. out of date fields)
 *
 */
 
@@ -14,8 +14,6 @@ error_reporting(E_ALL);
 
 // connect to database
 include 'db_mysqli.php';
-
-// echo ("error_check:<br> ");
 
 // get current local time
 date_default_timezone_set('America/Los_Angeles');
@@ -140,8 +138,6 @@ function checkjsonWind () {
 }
 
 checkjsonWind();
-
-
 
 
 /*

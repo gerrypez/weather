@@ -2,7 +2,7 @@
 
 /*
 *
-*  This checks out old the most recent date is in the Wind table
+*  Check how old the write_date is in the mysql wind table
 *
 */
 
@@ -27,8 +27,6 @@ while($row = $result->fetch_assoc()) {
     $datetime1 = new DateTime($row['write_date']);//start time
     $datetime2 = new DateTime($datetime_now);//end time
     $interval = $datetime1->diff($datetime2);
-
-    // echo $interval->format('%Y years %m months %d days %H hours %i minutes %s seconds');//00 years 0 months 0 days 08 hours 0 minutes 0 seconds
 
     // number of hours from latest update
     echo $interval->format('%h');
