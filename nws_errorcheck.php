@@ -13,12 +13,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // connect to database
-global $mysqli;
-$mysqli = new mysqli("www.gerrypez.com","gerrypez","Whatever123!","golfsync");
-if ($mysqli -> connect_errno) {
-    echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-    exit();
-}
+include 'db_mysqli.php';
 
 // echo ("error_check:<br> ");
 
