@@ -19,10 +19,6 @@ $gridX = $_POST['gridX'];
 $gridY = $_POST['gridY'];
 $station = $_POST['station'];
 
-// $gridX = 84;
-// $gridY = 122;
-// $station = "MTR";
-
 // Perform query
 if ($result = $mysqli -> query("SELECT json_wind FROM weather_forecast WHERE gridX = '$gridX' AND gridY = '$gridY' LIMIT 1")) {
     while($row = mysqli_fetch_assoc($result)) {

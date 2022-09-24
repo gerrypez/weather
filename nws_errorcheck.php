@@ -3,6 +3,7 @@
 /*
 *
 *  This is general Error Check script looking for errors in the MySQL table (ex. out of date fields)
+*  If any errors are found, they are listed at the bottom of the main HTML page
 *
 */
 
@@ -18,7 +19,6 @@ include 'db_mysqli.php';
 // get current local time
 date_default_timezone_set('America/Los_Angeles');
 $datetime_now = date('Y-m-d H:i:s');
-
 
 /*
 *
@@ -48,7 +48,6 @@ function variableMatch ($site, $station, $gridX, $gridY) {
         if ($gridY != $row["gridY"]) {
             echo ("variableMatch error ".$site." gridY ".$gridY."<br>");
         }
-
     }
 }
 
@@ -123,12 +122,12 @@ function checkjsonWind () {
         $diff_hours = $date2->diff($date1)->format("%h");
         $diff_days = $date2->diff($date1)->format("%a");
 
+        // Error if weather data is over a few days old
         if ($diff_days > 2) {
-            // echo ($site_is." ".$diff_days."D<br>");
             echo ("E. [checkjsonWind] mysql_date ".$site." ".$diff_days." days old<br>");
         }
 
-        /*
+        /*  Could also list hours old
         if ($diff_hours > 8) {
             echo ($site_is." ".$diff_hours."h,<br> ");
         }
@@ -174,6 +173,8 @@ function checkLatlng ($site, $station, $gridX, $gridY, $lat, $lng) {
 }
 
 
+// this seems redundant, as the data below is also in the main .js page
+// this needs to be consolidated into a Class
 
 $site = "big_sur";
 $lat = 35.971;

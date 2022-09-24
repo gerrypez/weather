@@ -1,6 +1,7 @@
 /*
 *
 *  function updateMysql updates the MySQL table with new JSON wind forecast
+*  It calls the NWS API and puts the JSON weather data in MySQL 
 *
 */
 function updateMysql(wind_forecast, gridX, gridY, station, site) {
@@ -84,8 +85,6 @@ function getAPIdata (site, gridX, gridY, station, mysql_date) {
     }); // end ajax json
 } // end get Wind function
 
-
-
 /*
 *
 *  The function getMysql gets wind data stored in MySQL, checks wind conditions, colors boxes.
@@ -162,9 +161,6 @@ function getMysql(site, station, gridX, gridY, hourstart, hourend, speedmin_idea
                 intoffset = parseInt(isutc); // 07 becomes the integer 7
                 inthour = parseInt(thehour);
 
-                if (site=="dunlap") {console.log(site+" thehour "+inthour);}
-                if (site=="st_helena") {console.log(site+" thehour "+inthour);}
-
                 // convert UTC to PT ... currently no sites show time in UTC so not needed
                 if (isutc === "00") {
                     // time is in UTC, so subtract offset for PT
@@ -200,10 +196,9 @@ function getMysql(site, station, gridX, gridY, hourstart, hourend, speedmin_idea
                     if (greeno >= 4) {
                         therow = therow.concat('<div class="go-green" id="'+site+tagdate+'">'+weekday[todaynum]+'</div>');
 
-                        // special marker for rare sites
+                        // special marker for rarely flyable sites
                         if (site == 'drakes') { $('#drakes_name').css('background-color', 'green'); }
                         if (site == 'grade') { $('#grade_name').css('background-color', 'green'); }
-
 
                     } else if (greeno==1 || greeno == 2 || greeno == 3) {
                         therow = therow.concat('<div class="go-greenyellow" id="'+site+tagdate+'">'+weekday[todaynum]+'</div>');
@@ -221,6 +216,7 @@ function getMysql(site, station, gridX, gridY, hourstart, hourend, speedmin_idea
                     yellowo = 0;
 
                 // incrementing colors depending on the days conditions
+                // add colors for each out and then determine final color of day
                 } else if (inthour >= hourstart && inthour <= hourend) {
                     if ((speedmin_act >= speedmin_ideal && speedmax_act <= speedmax_ideal) && (jQuery.inArray(thedirection, dir_ideal) !== -1)) {
                         console.log(site+" [getMysql] green: T="+inthour+"("+timestr+"), windspeed "+thespeed+", direction "+thedirection+", day "+weekday[todaynum]);
