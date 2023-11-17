@@ -1,3 +1,13 @@
-db_mysqli.php
+
 .DS_STORE
-node_modules
+
+/node_modules
+/.pnp
+.pnp.js
+package-lock.json
+
+/coverage
+
+/build
+
+npm-debug.log*
