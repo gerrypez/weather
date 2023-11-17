@@ -1,5 +1,6 @@
 
 [ ]  Finish Kiting sites
+[ ]  make for only size days
 [ ]  Fix UseEffect error javascript console
 [ ] check midnight, 2AM, different times
 [ ] make sure all Station and Grid X Y are correct
@@ -10,9 +11,12 @@
 [ ]  try deploy to 101domain
 [ ]  try deploy to Google Firestore
 [ ]  open a row, should close with negative sign
-[ ]  submit code to GitHub (no secrets / passwords right? )
-[ ]  case where API doesn't respond ?
+[ ]  make sure code has no Firebase/etc config passwords
+[ ]  case where API doesn't respond ?  how to refresh later
 [ ]  error test code
+[ ]  make plus a light gray color to fade a bit
+[ ]  compare old and new site colors, look for bugs
+[ ]  remove my dev notes from GitHub
 
 // DEPLOY
 > firebase deploy --only hosting:liftweather
@@ -34,27 +38,6 @@ React
 > Ctrl-C (quit a react session)
 http://localhost:3000/ (project location)
 
-
-Flow
-1. Build skeleton with Arraydata.jsx
-2. Calculate today date, go out 6 days
-    if after 6pm, start next day
-    populate days
-2. Loop through NWS API, site by site ... changing Arraydata.jsx
-
-<App/>
-    <Headerbar/> (html)
-    <Allrows/>
-        <Arraydata/> (json)
-        <Arow/>
-            <Sitename/>
-            <Sitedays/>
-                <FetchJson/>
-                    <Colorcalc/>
-            <Linkmap/>
-            <link_forecasts/>
-            <link_current/>
-            <link_data/>
 
 
 

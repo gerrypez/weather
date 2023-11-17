@@ -16,3 +16,7 @@ With the grid information, getting the weather forecast (example)<br>
 https://api.weather.gov/gridpoints/MTR/79,113/forecast/hourly
 
 Once the weather forecasts is aquired, the app uses the Arraydata.jsx file to compare the wind speed and direction desired to the forecast, and day box colors are calculated.
+
+### 'app flow diagram'
+
+![alt text](https://github.com/gerrypez/weather/src/images/app_flowchart.png)

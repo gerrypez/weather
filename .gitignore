@@ -1,8 +1,4 @@
 
-
-
-package-lock.json
-
 # Build production
 build/
 
@@ -47,5 +43,5 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 .yarn-integrity
-backup.sql
 VERSION
+_dev_notes.text

@@ -19,7 +19,6 @@ export const Colorcalc = (nwsdata, name, hourstart, hourend, speedmin_ideal, spe
         ["d4", "gray"],
         ["d5", "gray"],
         ["d6", "gray"],
-        ["d7", "gray"],
     ];
 
     // declare variables
