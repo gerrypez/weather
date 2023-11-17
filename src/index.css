@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+
+/* base styles */
+* {
+    margin: 0;
+    font-family: "Roboto";
+    color: white;
+    background-color: #000;
+}
+a {
+    text-decoration: none;
+    color: skyblue;
+    font-size: 0.8em;
+}
+a:link {
+    text-decoration: none;
+    color: skyblue;
+}
+a:hover {
+    text-decoration: none;
+    color: #ccffcc;
+}
+a:active {
+    text-decoration: none;
+    color: skyblue;
+}
+a:visited {
+    text-decoration: none;
+    color: skyblue;
+}
+li {
+    margin: 0 0 6px 0;
+}
+
+.baptitle {
+    font-size: 1.1em;
+}
+
+.daycolors {
+    float: left;
+    width: 250px;
+    height: 30px;
+    font-size: 0.9em;
+}
+
+.go-blue {
+    float: left;
+    width: 30px;
+    background-color: #1994f1;
+    height: 100%;
+    color: #303030;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    margin-left: 1px;
+}
+.go-green {
+    float: left;
+    width: 30px;
+    background-color: #1efc0f;
+    height: 100%;
+    color: #303030;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    margin-left: 1px;
+}
+.go-lightgreen {
+    float: left;
+    width: 30px;
+    background-color: #abf7b1;
+    height: 100%;
+    color: #303030;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    margin-left: 1px;
+}
+.go-yellow {
+    float: left;
+    width: 30px;
+    background-color: #fcec0f;
+    height: 100%;
+    color: #303030;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    margin-left: 1px;
+}
+
+.go-yellow-blue {
+    float: left;
+    width: 30px;
+    background: -webkit-linear-gradient(bottom right, #1994f1, #1994f1 30%, #fcec0f 30%, #fcec0f);
+    height: 100%;
+    color: #303030;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    margin-left: 1px;
+}
+
+.go-lightgreen-blue {
+    float: left;
+    width: 30px;
+    background: -webkit-linear-gradient(bottom right, #1994f1, #1994f1 30%, #abf7b1 30%, #abf7b1);
+    height: 100%;
+    color: #303030;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    margin-left: 1px;
+}
+
+
+.go-gray {
+    float: left;
+    width: 30px;
+    background-color: #9c9c9c;
+    height: 100%;
+    color: #303030;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    margin-left: 1px;
+}
+
+.go-gray-blue {
+    float: left;
+    width: 30px;
+    background: -webkit-linear-gradient(bottom right, #1994f1, #1994f1 30%, #9c9c9c 30%, #9c9c9c);
+    height: 100%;
+    color: #303030;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    margin-left: 1px;
+}
+
+
+.infopanel {
+    font-size: 0.8em;
+    margin: 10px 0 10px 0;
+    width: 430px;
+    float: left;
+    clear: left;
+    color: white;
+}
+.infobutton {
+    float: right;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #03a9f4;
+    border: none;
+    padding: 3px 6px 3px 6px;
+    margin-right: 30px;
+}
+.infoblocks {
+    margin-bottom: 15px;
+}
+
+.infogreen {
+    background-color: #1efc0f;
+    color: #000;
+    padding: 4px;
+    margin-right: 5px;
+}
+.infogreenlight {
+    background-color: #dcf285;
+    color: #000;
+    padding: 4px;
+    margin-right: 5px;
+}
+.infoyellow {
+    background-color: #ffff00;
+    color: #000;
+    padding: 4px;
+    margin-right: 5px;
+}
+.infogray {
+    background-color: gray;
+    color: #FFF;
+    padding: 4px;
+    margin-right: 5px;
+}
+
+.infoblue {
+    background-color: #1b7ac7;
+    color: #000;
+    color: #fff;
+    padding: 4px;
+}
+
+.morestuff {
+    clear: left;
+    float: left;
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    max-width: 100%;
+}
+.morestuff span {
+    margin-right: 5px;
+}
+.moretitle {
+    color: #fff;
+    clear: left;
+    float: left;
+    font-size: 1em;
+}
+.morelinks {
+    float: left;
+    clear: left;
+    margin: 2px 0 8px 0;
+    width: 450px;
+}
+.morelinky {
+  margin-right:5px;
+}
+.nws_image_box {
+    float: left;
+    clear: left;
+    height: 100%;
+}
+.nws_image {
+    max-width: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+.rowbutton {
+    color: white;
+    background-color: #4d5471;
+    border: none;
+    float:left;
+    clear:left;
+    height:30px;
+    width:30px;
+}
+.siterow {
+    cursor: pointer;
+    clear: left;
+    float: left;
+    width: 450px;
+    margin-bottom: 1px;
+}
+
+.toprow {
+  clear:left;
+  float:left;
+  width: 450px;
+}
+.linkmap {
+    width: 450px;
+}
+
+
+.sitename {
+  float: left;
+  font-size: 0.9em;
+  color: white;
+  background-color: #454d72;
+  width: 125px;
+  padding-left: 10px;
+  padding-right: 5px;
+  height: 30px;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+.status {
+    color: pink;
+    margin-left: 30px;
+}
+.subtitle {
+    clear: left;
+    float: left;
+    color: rgb(100, 197, 230);
+    font-size: 1.1em;
+    margin: 20px 0 10px 10px;
+}
+
+.thetitle {
+    margin: 13px 0 13px 10px;
+    width: 415px;
+}
+.t_day {
+    width: 30px;
+    background-color: blue;
+    color: #fff;
+    float: left;
+    font-size: x-large;
+    padding-left: 10px;
+}
+

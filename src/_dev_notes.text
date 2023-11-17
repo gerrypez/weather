@@ -1,0 +1,71 @@
+
+[ ]  Finish Kiting sites
+[ ]  Fix UseEffect error javascript console
+[ ] check midnight, 2AM, different times
+[ ] make sure all Station and Grid X Y are correct
+[ ]  fix open and close of links
+[ ] test bottom links
+[ ]  check gps lat/lon is correct all
+[ ]  get mouse over hand (pointer?) to show, and change site name color background
+[ ]  try deploy to 101domain
+[ ]  try deploy to Google Firestore
+[ ]  open a row, should close with negative sign
+[ ]  submit code to GitHub (no secrets / passwords right? )
+[ ]  case where API doesn't respond ?
+[ ]  error test code
+
+// DEPLOY
+> firebase deploy --only hosting:liftweather
+
+// RUN LOCAL
+// runs on http://localhost:3000
+// get to /code/liftweather folder
+> npm run start
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCQMkDyGucHvuMgP7zfIGpDQkgyav6X6XA",
+  authDomain: "liftweather-c9ac8.firebaseapp.com",
+  projectId: "liftweather-c9ac8",
+  storageBucket: "liftweather-c9ac8.appspot.com",
+  messagingSenderId: "758502113228",
+  appId: "1:758502113228:web:18f08463a518efbbcaa769"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+React
+> npm run start (run project)
+> Ctrl-C (quit a react session)
+http://localhost:3000/ (project location)
+
+
+Flow
+1. Build skeleton with Arraydata.jsx
+2. Calculate today date, go out 6 days
+    if after 6pm, start next day
+    populate days
+2. Loop through NWS API, site by site ... changing Arraydata.jsx
+
+<App/>
+    <Headerbar/> (html)
+    <Allrows/>
+        <Arraydata/> (json)
+        <Arow/>
+            <Sitename/>
+            <Sitedays/>
+                <FetchJson/>
+                    <Colorcalc/>
+            <Linkmap/>
+            <link_forecasts/>
+            <link_current/>
+            <link_data/>
+
+
+
+
