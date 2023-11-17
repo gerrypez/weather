@@ -19,4 +19,6 @@ Once the weather forecasts is aquired, the app uses the Arraydata.jsx file to co
 
 ### 'app flow diagram'
 
-![alt text](https://github.com/gerrypez/weather/src/images/app_flowchart.png)
+![alt text](https://github.com/gerrypez/weather/blob/main/src/images/app_flowchart.png?raw=true)
+
+
