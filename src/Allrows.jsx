@@ -10,7 +10,7 @@ const Allrows = () => {
         <Arow arraydata={arraydata.filter((data) => data.category === "local")} />
         <div className="subtitle">Remote Sites</div>
         <Arow arraydata={arraydata.filter((data) => data.category === "remote")} />
-        <div className="subtitle">Kiting</div>
+        <div className="subtitle">Kiting Fields</div>
         <Arow arraydata={arraydata.filter((data) => data.category === "kiting")} />
     </div>
     );

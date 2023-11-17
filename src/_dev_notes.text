@@ -1,22 +1,17 @@
 
-[ ]  Finish Kiting sites
-[ ]  make for only size days
+
 [ ]  Fix UseEffect error javascript console
 [ ] check midnight, 2AM, different times
-[ ] make sure all Station and Grid X Y are correct
-[ ]  fix open and close of links
-[ ] test bottom links
-[ ]  check gps lat/lon is correct all
-[ ]  get mouse over hand (pointer?) to show, and change site name color background
+[ ]  fix open and close of links area
+[ ]  get mouse over hand to change site background
 [ ]  try deploy to 101domain
 [ ]  try deploy to Google Firestore
-[ ]  open a row, should close with negative sign
 [ ]  make sure code has no Firebase/etc config passwords
 [ ]  case where API doesn't respond ?  how to refresh later
-[ ]  error test code
-[ ]  make plus a light gray color to fade a bit
-[ ]  compare old and new site colors, look for bugs
 [ ]  remove my dev notes from GitHub
+[ ]  change kiting to start at 8 mph ?
+[ ]  add WU stations to all current wind
+[ ]  make error check to verify station and grid is correct
 
 // DEPLOY
 > firebase deploy --only hosting:liftweather

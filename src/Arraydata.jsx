@@ -6,8 +6,8 @@ export const arraydata = [
         lat: 38.1384,
         lng: -122.1959,
         station: "STO",
-        grid_x: 12,
-        grid_y: 53,
+        grid_x: 13,
+        grid_y: 54,
         hourstart: 10,
         hourend: 19,
         speedmin_ideal: 8,
@@ -34,7 +34,7 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.1384,-122.1959" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/12,53/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/13,54/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.1384,-122.1959" },
         ]
     },
@@ -45,8 +45,8 @@ export const arraydata = [
         lat: 38.098,
         lng: -122.18,
         station: "STO",
-        grid_x: 12,
-        grid_y: 51,
+        grid_x: 13,
+        grid_y: 52,
         hourstart: 10,
         hourend: 18,
         speedmin_ideal: 8,
@@ -59,7 +59,7 @@ export const arraydata = [
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.098&lon=-122.180&wfo=STO&zcode=CAZ017&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-122.1959&lat=38.1384#.WtYca9PwbUI" },
-            { id: 2, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.1384&lon=-122.1959&unit=0&lg=english&FcstType=graphical" },
+            { id: 2, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.1384&lon=-122.180&unit=0&lg=english&FcstType=graphical" },
             { id: 3, description: "NWS Discussion", url: "https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" },
             { id: 4, description: "Windy All Models", url: "https://www.windy.com/38.1384/-122.1959/wind?38.1384,-122.1959,7,m:eHCacL2" },
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
@@ -74,7 +74,7 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.098,-122.180" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/12,51/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/13,52/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.098,-122.180" },
         ]
     },
@@ -114,7 +114,7 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.098,-122.180" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/12,51/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/13,52/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.098,-122.180" },
         ]
     },
@@ -201,7 +201,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 7,
+        id: 6,
         name: "ed levin",
         category: "local",
         lat : 37.4847,
@@ -242,7 +242,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 8,
+        id: 7,
         name: "mission",
         category: "local",
         lat : 37.518,
@@ -283,7 +283,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 9,
+        id: 8,
         name: "marina, sand city",
         category: "local",
         lat : 36.626,
@@ -325,7 +325,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 10,
+        id: 9,
         name: "mussel rock",
         category: "local",
         lat : 37.674,
@@ -369,7 +369,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 11,
+        id: 10,
         name: "tam",
         category: "local",
         lat : 37.911,
@@ -411,7 +411,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 12,
+        id: 11,
         name: "vaca ridge",
         category: "local",
         lat : 38.400,
@@ -448,14 +448,14 @@ export const arraydata = [
         ]
     },
     {
-        id:13,
+        id:12,
         name: "bidwell chico",
         category: "remote",
         lat: 39.7802,
         lng: -121.761,
         station: "STO",
-        grid_x: 41,
-        grid_y: 122,
+        grid_x: 42,
+        grid_y: 123,
         hourstart: 10,
         hourend: 18,
         speedmin_ideal: 2,
@@ -479,12 +479,12 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.7802,-121.761" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/41,122/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/42,123/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.7802,-121.761" },
         ]
     },
     {
-        id:14,
+        id:13,
         name: "big sur",
         category: "remote",
         lat: 35.971,
@@ -498,7 +498,7 @@ export const arraydata = [
         speedmax_ideal: 8,
         speedmin_edge: 0,
         speedmax_edge: 12,
-        lightwind_ok: "no",
+        lightwind_ok: "yes",
         dir_ideal: ["SW", "WSW", "W"],
         dir_edge: ["SSW", "SW", "WSW", "W", "WNW"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=35.971&lon=-121.453&wfo=MTR&zcode=CAZ517&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
@@ -520,7 +520,7 @@ export const arraydata = [
         ]
     },
     {
-        id:15,
+        id:14,
         name: "drakes pt reyes",
         category: "remote",
         lat: 38.0265,
@@ -557,7 +557,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 16,
+        id: 15,
         name: "dunlap",
         category: "remote",
         lat: 36.765,
@@ -571,7 +571,7 @@ export const arraydata = [
         speedmax_ideal: 7,
         speedmin_edge: 0,
         speedmax_edge: 12,
-        lightwind_ok: "no",
+        lightwind_ok: "yes",
         dir_ideal: ["WSW", "W", "WNW"],
         dir_edge: ["SW", "WSW", "W", "WNW", "NW"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=36.765&lon=-119.098&wfo=HNX&zcode=CAZ096&gset=15&gdiff=5&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
@@ -593,15 +593,14 @@ export const arraydata = [
         ]
     },
     {
-        id: 17,
+        id: 16,
         name: "duck, mcclellan",
         category: "remote",
-
         lat: 39.2295,
-        lng: -122.9634,
-        station: "MTR",
-        grid_x: 68,
-        grid_y: 120,
+        lng: -119.7651,
+        station: "REV",
+        grid_x: 44,
+        grid_y: 93,
         hourstart: 10,
         hourend: 18,
         speedmin_ideal: 6,
@@ -624,13 +623,13 @@ export const arraydata = [
 
         ],
         link_data: [
-            { id: 1, description: "API", url: "https://api.weather.gov/points/39.2295,-122.9634" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/68,120/forecast/hourly" },
-            { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.2295,-122.9634" },
+            { id: 1, description: "API", url: "https://api.weather.gov/points/39.2295,-119.7651" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/REV/44,93/forecast/hourly" },
+            { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.2295,-119.7651" },
         ]
     },
     {
-        id: 18,
+        id: 17,
         name: "elk",
         category: "remote",
         lat: 39.277,
@@ -660,12 +659,12 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.277,-122.941" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/EKA/88,30/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/EKA/89,31/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.277,-122.941" },
         ]
     },
     {
-        id: 19,
+        id: 18,
         name: "hat creek",
         category: "remote",
         lat: 40.842,
@@ -682,7 +681,7 @@ export const arraydata = [
         lightwind_ok: "no",
         dir_ideal: ["WSW", "W", "WNW"],
         dir_edge: ["SW", "WSW", "W", "WNW"],
-        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=40.842&lon=-121.428&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6",
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=40.842&lon=-121.428&wfo=STO&zcode=CAZ014&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=00001110100000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-121.428&lat=40.842#.WtYca9PwbUI" },
             { id: 2, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=40.842&lon=-121.428&unit=0&lg=english&FcstType=graphical" },
@@ -701,7 +700,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 20,
+        id: 19,
         name: "hull",
         category: "remote",
         lat: 39.509,
@@ -731,12 +730,12 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.509,-122.937" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/EKA/91,40/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/EKA/92,41/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.509,-122.937" },
         ]
     },
     {
-        id: 21,
+        id: 20,
         name: "indian valley",
         category: "remote",
         lat: 40.194,
@@ -766,16 +765,16 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/40.194,-120.923" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/REV/12,142/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/REV/13,143/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/40.194,-120.923" },
         ]
     },
     {
-        id: 22,
+        id: 21,
         name: "jenner goat rock",
         category: "remote",
-        lat: 38.443,
-        lng: -123.122,
+        lat: 38.4421,
+        lng: -123.1245,
         station: "MTR",
         grid_x: 66,
         grid_y: 140,
@@ -788,27 +787,27 @@ export const arraydata = [
         lightwind_ok: "no",
         dir_ideal: ["WSW", "W", "WNW", "NW"],
         dir_edge: ["SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
-        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.443&lon=-123.122&wfo=MTR&zcode=CAZ505&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.4421&lon=-123.1245&wfo=MTR&zcode=CAZ505&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
         link_forecasts: [
-            { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-123.122&lat=38.443#.WtYca9PwbUI" },
-            { id: 2, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.443&lon=-123.122&unit=0&lg=english&FcstType=graphical" },
+            { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-123.1245&lat=38.4421#.WtYca9PwbUI" },
+            { id: 2, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.4421&lon=-123.1245&unit=0&lg=english&FcstType=graphical" },
             { id: 3, description: "NWS Discussion", url: "https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" },
-            { id: 4, description: "Windy All Models", url: "https://www.windy.com/38.443/-123.122/wind?38.443,-123.122,7,m:eHCacL2" },
+            { id: 4, description: "Windy All Models", url: "https://www.windy.com/38.4421/-123.1245/wind?38.4421,-123.1245,7,m:eHCacL2" },
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
         ],
         link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.443&lon=-123.122&zoom=13" },
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.4421&lon=-123.1245&zoom=13" },
             { id: 2, description: "Bodega Wind", url: "https://boon.ucdavis.edu/obs/shoreline/wind" },
             { id: 3, description: "Fog Satellite", url: "http://fog.today" },
         ],
         link_data: [
-            { id: 1, description: "API", url: "https://api.weather.gov/points/38.443,-123.122" },
+            { id: 1, description: "API", url: "https://api.weather.gov/points/38.4421,-123.1245" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/66,140/forecast/hourly" },
-            { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.443,-123.122" },
+            { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.4421,-123.1245" },
         ]
     },
     {
-        id: 23,
+        id: 22,
         name: "jenner grade",
         category: "remote",
         lat: 38.478,
@@ -845,7 +844,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 24,
+        id: 23,
         name: "lagoon valley",
         category: "remote",
         lat: 38.333,
@@ -862,7 +861,7 @@ export const arraydata = [
         lightwind_ok: "no",
         dir_ideal: ["SW", "WSW", "W", "WNW"],
         dir_edge: ["SSW", "SW", "WSW", "W", "WNW", "NW"],
-        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.333&amp;lon=-122.002&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6",
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.333&lon=-122.002&wfo=STO&zcode=CAZ017&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001111000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-122.002&lat=38.333#.WtYca9PwbUI" },
             { id: 2, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.333&lon=-122.002&unit=0&lg=english&FcstType=graphical" },
@@ -876,12 +875,12 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.333,-122.002" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/20,60/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/21,61/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.333,-122.002" },
         ]
     },
     {
-        id: 25,
+        id: 24,
         name: "oroville",
         category: "remote",
         lat: 39.537,
@@ -898,7 +897,7 @@ export const arraydata = [
         lightwind_ok: "no",
         dir_ideal: ["N", "NNW"],
         dir_edge: ["N", "NNE", "NNW"],
-        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.333&amp;lon=-122.002&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6",
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=39.537&lon=-121.628&wfo=STO&zcode=CAZ016&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-121.628&lat=39.537#.WtYca9PwbUI" },
             { id: 2, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=39.537&lon=-121.628&unit=0&lg=english&FcstType=graphical" },
@@ -917,7 +916,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 26,
+        id: 25,
         name: "poplar",
         category: "remote",
         lat: 37.4554,
@@ -953,14 +952,14 @@ export const arraydata = [
         ]
     },
     {
-        id: 27,
+        id: 26,
         name: "potato hill",
         category: "remote",
         lat: 39.3317,
         lng: -122.685,
         station: "STO",
         grid_x: 7,
-        grid_y: 110,
+        grid_y: 109,
         hourstart: 10,
         hourend: 18,
         speedmin_ideal: 0,
@@ -970,7 +969,7 @@ export const arraydata = [
         lightwind_ok: "yes",
         dir_ideal: ["ENE", "E", "ESE", "SE"],
         dir_edge: ["NE", "ENE", "E", "ESE", "SE", "S"],
-        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=37.4554&lon=-122.4447&wfo=MTR&zcode=CAZ507&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=39.317&lon=-122.685&wfo=STO&zcode=CAZ063&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lat=39.317&lon=-122.685&unit=0&lg=english&FcstType=graphical" },
             { id: 2, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=39.317&lon=-122.685&unit=0&lg=english&FcstType=graphical" },
@@ -984,12 +983,12 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.317,-122.685" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/6,108/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/7,109/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.317,-122.685" },
         ]
     },
     {
-        id: 28,
+        id: 27,
         name: "sagebrush, cronin",
         category: "remote",
         lat: 38.822,
@@ -1006,7 +1005,7 @@ export const arraydata = [
         lightwind_ok: "yes",
         dir_ideal: ["WSW", "W", "WNW"],
         dir_edge: ["S", "SW", "WSW", "W", "WNW", "NW"],
-        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.822&lon=-120.889&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6",
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.822&lon=-120.889&wfo=STO&zcode=CAZ067&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-120.889&lat=38.822#.WtYca9PwbUI" },
             { id: 2, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.822&lon=-120.889&unit=0&lg=english&FcstType=graphical" },
@@ -1020,12 +1019,12 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.822,-120.889" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/63,74/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/11,51/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.822,-120.889" },
         ]
     },
     {
-        id: 29,
+        id: 28,
         name: "sb vallejo",
         category: "remote",
         lat: 38.0772,
@@ -1042,7 +1041,7 @@ export const arraydata = [
         lightwind_ok: "no",
         dir_ideal: ["WSW", "W"],
         dir_edge: ["SW", "WSW", "W", "WNW"],
-        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.0772&lon=-122.2398&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6",
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.0772&lon=-122.2398&wfo=STO&zcode=CAZ018&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=48&pcmd=00001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-122.2398&lat=38.0772#.WtYca9PwbUI" },
             { id: 2, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.0772&lon=-122.2398&unit=0&lg=english&FcstType=graphical" },
@@ -1056,19 +1055,19 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.0772,-122.2398" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/10,50/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/11,51/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.0772,-122.2398" },
         ]
     },
     {
-        id: 30,
+        id: 29,
         name: "slide mountain",
         category: "remote",
         lat: 39.319,
         lng: -119.867,
         station: "REV",
-        grid_x: 40,
-        grid_y: 96,
+        grid_x: 41,
+        grid_y: 97,
         hourstart: 10,
         hourend: 18,
         speedmin_ideal: 2,
@@ -1096,12 +1095,12 @@ export const arraydata = [
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.319,-119.867" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/REV/40,96/forecast/hourly" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/REV/41,97/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.319,-119.867" },
         ]
     },
     {
-        id: 31,
+        id: 30,
         name: "st helena",
         category: "remote",
         lat: 38.667,
@@ -1137,7 +1136,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 32,
+        id: 31,
         name: "stoneman park",
         category: "remote",
         lat: 38.0047,
@@ -1175,20 +1174,20 @@ export const arraydata = [
         ]
     },
     {
-        id: 33,
+        id: 32,
         name: "tollhouse",
         category: "remote",
         lat: 37.015,
         lng: -119.373,
         station: "HNX",
         grid_x: 69,
-        grid_y: 106,
+        grid_y: 109,
         hourstart: 10,
         hourend: 18,
         speedmin_ideal: 3,
-        speedmax_ideal: 7,
+        speedmax_ideal: 8,
         speedmin_edge: 0,
-        speedmax_edge: 10,
+        speedmax_edge: 14,
         lightwind_ok: "yes",
         dir_ideal: ["SW", "WSW", "W"],
         dir_edge: ["SSW", "SW", "WSW", "W", "WNW"],
@@ -1211,7 +1210,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 34,
+        id: 33,
         name: "waddel",
         category: "remote",
         lat: 37.089,
@@ -1247,7 +1246,7 @@ export const arraydata = [
         ]
     },
     {
-        id: 35,
+        id: 34,
         name: "windy hill",
         category: "remote",
         lat: 37.364,
@@ -1283,16 +1282,16 @@ export const arraydata = [
         ]
     },
     {
-        id: 36,
-        name: "benecia, vallejo",
+        id: 35,
+        name: "berkeley cesear chavez",
         category: "kiting",
-        lat: 38.1451,
-        lng: -122.2649,
-        station: "STO",
-        grid_x: 10,
-        grid_y: 54,
-        hourstart: 10,
-        hourend: 18,
+        lat: 37.871,
+        lng: -122.319,
+        station: "MTR",
+        grid_x: 89,
+        grid_y: 109,
+        hourstart: 7,
+        hourend: 10,
         speedmin_ideal: 8,
         speedmax_ideal: 13,
         speedmin_edge: 7,
@@ -1302,16 +1301,220 @@ export const arraydata = [
         dir_edge: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.1144&lon=-122.2705&wfo=STO&zcode=CAZ017&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
         link_forecasts: [
-            { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.1144&lon=-122.2705&unit=0&lg=english&FcstType=graphical" },
-            { id: 2, description: "Windy All Models", url: "https://www.windy.com/38.1144/-122.2705/wind?38.1144,-122.2705,7,m:eHCacL2" },
+            { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=37.871&lon=-122.319&unit=0&lg=english&FcstType=graphical" },
+            { id: 2, description: "Windy All Models", url: "https://www.windy.com/37.871/-122.319/wind?37.871,-122.319,7,m:eHCacL2" },
         ],
         link_current: [
 
         ],
         link_data: [
-            { id: 1, description: "API", url: "https://api.weather.gov/points/38.1451,-122.2649" },
-            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/9,53/forecast/hourly" },
-            { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.1144,-122.2705" },
+            { id: 1, description: "API", url: "https://api.weather.gov/points/37.871,-122.319" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/89,109/forecast/hourly" },
+            { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.871,-122.319" },
+        ]
+    },
+    {
+        id: 36,
+        name: "davis farm",
+        category: "kiting",
+        lat: 38.57,
+        lng: -121.82,
+        station: "STO",
+        grid_x: 30,
+        grid_y: 70,
+        hourstart: 7,
+        hourend: 10,
+        speedmin_ideal: 8,
+        speedmax_ideal: 13,
+        speedmin_edge: 7,
+        speedmax_edge: 18,
+        lightwind_ok: "no",
+        dir_ideal: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        dir_edge: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.1144&lon=-122.2705&wfo=STO&zcode=CAZ017&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
+        link_forecasts: [
+            { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.570&lon=-121.820&unit=0&lg=english&FcstType=graphical" },
+            { id: 2, description: "Windy All Models", url: "https://www.windy.com/38.570/-121.820/wind?38.570,-121.820,7,m:eHCacL2" },
+        ],
+        link_current: [
+
+        ],
+        link_data: [
+            { id: 1, description: "API", url: "https://api.weather.gov/points/38.570,-121.820" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/89,109/forecast/hourly" },
+            { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.570,-121.820" },
+        ]
+    },
+    {
+        id: 37,
+        name: "mtn view shoreline",
+        category: "kiting",
+        lat: 37.43,
+        lng: -122.076,
+        station: "MTR",
+        grid_x: 94,
+        grid_y: 88,
+        hourstart: 9,
+        hourend: 19,
+        speedmin_ideal: 8,
+        speedmax_ideal: 13,
+        speedmin_edge: 7,
+        speedmax_edge: 18,
+        lightwind_ok: "no",
+        dir_ideal: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        dir_edge: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.1144&lon=-122.2705&wfo=STO&zcode=CAZ017&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
+        link_forecasts: [
+            { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=37.430&lon=-122.076&unit=0&lg=english&FcstType=graphical" },
+            { id: 2, description: "Windy All Models", url: "https://www.windy.com/37.430/-122.076/wind?37.430,-122.076,7,m:eHCacL2" },
+        ],
+        link_current: [
+
+        ],
+        link_data: [
+            { id: 1, description: "API", url: "https://api.weather.gov/points/37.430,-122.076" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/94,88/forecast/hourly" },
+            { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.430,-122.076" },
+        ]
+    },
+    {
+        id: 38,
+        name: "pacifica mussel rock",
+        category: "kiting",
+        lat: 37.43,
+        lng: -122.076,
+        station: "MTR",
+        grid_x: 81,
+        grid_y: 101,
+        hourstart: 9,
+        hourend: 19,
+        speedmin_ideal: 8,
+        speedmax_ideal: 13,
+        speedmin_edge: 7,
+        speedmax_edge: 18,
+        lightwind_ok: "no",
+        dir_ideal: ["SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        dir_edge: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=37.674&lon=-122.495&wfo=MTR&zcode=CAZ509&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
+        link_forecasts: [
+            { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-122.495&lat=37.674#.WtYca9PwbUI" },
+            { id: 2, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=37.674&lon=-122.495&unit=0&lg=english&FcstType=graphical" },
+            { id: 3, description: "NWS Discussion", url: "https://forecast.weather.gov/product.php?site=MTR&issuedby=MTR&product=AFD&format=CI&version=1&glossary=1" },
+            { id: 4, description: "Windy All Models", url: "https://www.windy.com/37.674/-122.495/wind?37.674,-122.495,7,m:eHCacL2" },
+            { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
+            { id: 6, description: "Aviation Weather", url: "http://usairnet.com/cgi-bin/launch/code.cgi?sta=KSFO&model=avn&state=CA&Submit=Change+Location" },
+            { id: 7, description: "Tides", url: "https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9414290" },
+        ],
+        link_current: [
+            { id: 1, description: "Parker Wind", url: "https://mr.robertmparker.com/" },
+            { id: 2, description: "SailFlow", url: "https://www.sailflow.com/map#37.67,-122.448,12,1" },
+            { id: 3, description: "EasyUp", url: "http://easyup.guru/" },
+            { id: 4, description: "Webcam Walker", url: "https://youtu.be/vZEINdmawdc" },
+            { id: 5, description: "Webcam Cheetah", url: "https://youtu.be/L6e1EEA-dQI" },
+            { id: 6, description: "Webcam Funston", url: "https://www.fellowfeathers.com/dashboard/" },
+            { id: 7, description: "Fog Satellite", url: "https://www.fog.today" },
+
+        ],
+        link_data: [
+            { id: 1, description: "API", url: "https://api.weather.gov/points/37.674,-122.495" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/81,101/forecast/hourly" },
+            { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.674,-122.495" },
+        ]
+    },
+    {
+        id: 39,
+        name: "sf crissy field",
+        category: "kiting",
+        lat: 37.8039,
+        lng: -122.4627,
+        station: "MTR",
+        grid_x: 83,
+        grid_y: 107,
+        hourstart: 9,
+        hourend: 19,
+        speedmin_ideal: 8,
+        speedmax_ideal: 13,
+        speedmin_edge: 7,
+        speedmax_edge: 18,
+        lightwind_ok: "no",
+        dir_ideal: ["N", "NNE", "NE", "WSW", "W", "WNW", "NW", "NNW"],
+        dir_edge: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=37.8039&lon=-122.4627&wfo=MTR&zcode=CAZ509&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
+        link_forecasts: [
+            { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=37.8039&lon=-122.4627&unit=0&lg=english&FcstType=graphical" },
+            { id: 2, description: "Windy All Models", url: "https://www.windy.com/37.8039/-122.4627/wind?37.8039,-122.4627,7,m:eHCacL2" },
+        ],
+        link_current: [
+
+        ],
+        link_data: [
+            { id: 1, description: "API", url: "https://api.weather.gov/points/37.8039,-122.4627" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/83,107/forecast/hourly" },
+            { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.8039,-122.4627" },
+        ]
+    },
+    {
+        id: 40,
+        name: "vacaville lagoon",
+        category: "kiting",
+        lat: 38.333,
+        lng: -122.002,
+        station: "STO",
+        grid_x: 21,
+        grid_y: 61,
+        hourstart: 9,
+        hourend: 19,
+        speedmin_ideal: 8,
+        speedmax_ideal: 13,
+        speedmin_edge: 7,
+        speedmax_edge: 18,
+        lightwind_ok: "no",
+        dir_ideal: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        dir_edge: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.333&lon=-122.002&wfo=STO&zcode=CAZ017&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
+        link_forecasts: [
+            { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.333&lon=-122.002&unit=0&lg=english&FcstType=graphical" },
+            { id: 2, description: "Windy All Models", url: "https://www.windy.com/38.333/-122.002/wind?38.333,-122.002,7,m:eHCacL2" },
+        ],
+        link_current: [
+
+        ],
+        link_data: [
+            { id: 1, description: "API", url: "https://api.weather.gov/points/38.333,-122.002" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/20,60/forecast/hourly" },
+            { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.333,-122.002" },
+        ]
+    },
+    {
+        id: 41,
+        name: "vallejo parks",
+        category: "kiting",
+        lat: 38.1141,
+        lng: -122.2708,
+        station: "STO",
+        grid_x: 10,
+        grid_y: 53,
+        hourstart: 10,
+        hourend: 18,
+        speedmin_ideal: 8,
+        speedmax_ideal: 13,
+        speedmin_edge: 7,
+        speedmax_edge: 18,
+        lightwind_ok: "no",
+        dir_ideal: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        dir_edge: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.1141&lon=-122.2708&wfo=STO&zcode=CAZ017&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
+        link_forecasts: [
+            { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.1141&lon=-122.2708&unit=0&lg=english&FcstType=graphical" },
+            { id: 2, description: "Windy All Models", url: "https://www.windy.com/38.1144/-122.2705/wind?38.1141,-122.2708,7,m:eHCacL2" },
+        ],
+        link_current: [
+
+        ],
+        link_data: [
+            { id: 1, description: "API", url: "https://api.weather.gov/points/38.1141,-122.2708" },
+            { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/10,53/forecast/hourly" },
+            { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.1141,-122.2708" },
         ]
     },
 ];
