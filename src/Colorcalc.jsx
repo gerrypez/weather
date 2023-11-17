@@ -164,20 +164,20 @@ export const Colorcalc = (nwsdata, name, hourstart, hourend, speedmin_ideal, spe
             // add colors for each out and then determine final color of day
         } else if (inthour >= hourstart && inthour <= hourend) {
             if (speedmin_act >= speedmin_ideal && speedmax_act <= speedmax_ideal && dir_ideal.indexOf(thedirection) > -1) {
-                console.log(name + " GREEN: T=" + inthour + "(" + timestr + "), thespeed: " + thespeed + ", ideal:" + speedmin_ideal + "-" + speedmax_ideal +" edge: " + speedmin_edge + "-" + speedmax_edge + ', ' + thedirection + ", day " + weekday[todaynum]);
+                // console.log(name + " GREEN: T=" + inthour + "(" + timestr + "), thespeed: " + thespeed + ", ideal:" + speedmin_ideal + "-" + speedmax_ideal +" edge: " + speedmin_edge + "-" + speedmax_edge + ', ' + thedirection + ", day " + weekday[todaynum]);
                 greeno = greeno + 1;
                 yellowo = yellowo + 1;
                 // console.log ("1");
             } else if (speedmin_act >= speedmin_edge && speedmax_act <= speedmax_edge && dir_edge.indexOf(thedirection) > -1) {
-                console.log(name + " YELLOW: T=" + inthour + "(" + timestr + "), thespeed:" + thespeed + ", ideal:" + speedmin_ideal + "-" + speedmax_ideal +" edge: " + speedmin_edge + "-" + speedmax_edge + ', ' +thedirection + ", day " + weekday[todaynum]);
+                // console.log(name + " YELLOW: T=" + inthour + "(" + timestr + "), thespeed:" + thespeed + ", ideal:" + speedmin_ideal + "-" + speedmax_ideal +" edge: " + speedmin_edge + "-" + speedmax_edge + ', ' +thedirection + ", day " + weekday[todaynum]);
                 yellowo = yellowo + 1;
                 // console.log ("2");
             } else if (speedmax_act <= 5 && lightwind_ok === "yes") {
-                console.log(name + " LIGHTWIND OK: T=" + inthour + "(" + timestr + "), thespeed:" + thespeed + ", ideal:" + speedmin_ideal + "-" + speedmax_ideal +" edge: " + speedmin_edge + "-" + speedmax_edge + ', ' +thedirection + ", day " + weekday[todaynum]);
+                // console.log(name + " LIGHTWIND OK: T=" + inthour + "(" + timestr + "), thespeed:" + thespeed + ", ideal:" + speedmin_ideal + "-" + speedmax_ideal +" edge: " + speedmin_edge + "-" + speedmax_edge + ', ' +thedirection + ", day " + weekday[todaynum]);
                 yellowo = yellowo + 1;
                 // console.log ("3");
             } else {
-                console.log(name + " GRAY: T=" + inthour + "(" + timestr + "), thespeed:" + thespeed + ", ideal:" + speedmin_ideal + "-" + speedmax_ideal +" edge: " + speedmin_edge + "-" + speedmax_edge + ', ' +thedirection + ", day " + weekday[todaynum]);
+                // console.log(name + " GRAY: T=" + inthour + "(" + timestr + "), thespeed:" + thespeed + ", ideal:" + speedmin_ideal + "-" + speedmax_ideal +" edge: " + speedmin_edge + "-" + speedmax_edge + ', ' +thedirection + ", day " + weekday[todaynum]);
             }
 
             // NWS describes Rain and Snow in many ways

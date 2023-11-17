@@ -27,7 +27,7 @@ const Headerbar = () => {
                             <span className="infogray">unlikely</span>
                             <span className="infoblue">rain</span>
                         </li>
-                        <li>click on row for site weather links</li>
+                        <li>click on row for weather links</li>
                         <li>sites are within 150 miles of SF</li>
                         <li>developer: gerrypez@gmail.com</li>
                     </ul>

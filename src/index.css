@@ -207,13 +207,13 @@ li {
     color: #fff;
     clear: left;
     float: left;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 .morelinks {
     float: left;
     clear: left;
-    margin: 2px 0 8px 0;
-    width: 450px;
+    margin: 2px 0 8px 5px;
+    width: 500px;
 }
 .morelinky {
   margin-right:5px;
@@ -242,27 +242,29 @@ li {
     cursor: pointer;
     clear: left;
     float: left;
-    width: 450px;
+    width: 500px;
     margin-bottom: 1px;
+    margin-left:20px;
 }
 
 .toprow {
   clear:left;
   float:left;
-  width: 450px;
+  width: 500px;
 }
+
 .linkmap {
     width: 450px;
+    font-size: 0.9em;
 }
 
 
 .sitename {
   float: left;
-  font-size: 0.9em;
   color: white;
   background-color: #454d72;
-  width: 125px;
-  padding-left: 10px;
+  width: 150px;
+  padding-left: 15px;
   padding-right: 5px;
   height: 30px;
   vertical-align: middle;

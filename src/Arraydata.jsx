@@ -25,12 +25,11 @@ export const arraydata = [
             { id: 4, description: "Windy All Models", url: "https://www.windy.com/38.1384/-122.1959/wind?38.1384,-122.1959,7,m:eHCacL2" },
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KVCB&state=CA" },
-            { id: 7, description: "KCAVALLE53*", url: "https://www.wunderground.com/personal-weather-station/dashboard?ID=KCAVALLE53" },
-            { id: 8, description: "KCAVALLE34", url: "https://www.wunderground.com/dashboard/pws/KCAVALLE34" },
         ],
         link_current: [
             { id: 1, description: "KCAVALLE53*", url: "https://www.wunderground.com/personal-weather-station/dashboard?ID=KCAVALLE53" },
-            { id: 2, description: "KCAVALLE34", url: "https://www.wunderground.com/dashboard/pws/KCAVALLE34" },
+            { id: 2, description: "Bridge Wind", url: "https://tidesandcurrents.noaa.gov/met.html?id=9415118" },
+            { id: 3, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.1384&lon=-122.1959&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.1384,-122.1959" },
@@ -64,13 +63,12 @@ export const arraydata = [
             { id: 4, description: "Windy All Models", url: "https://www.windy.com/38.1384/-122.1959/wind?38.1384,-122.1959,7,m:eHCacL2" },
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KVCB&state=CA" },
-            { id: 7, description: "KCAVALLE53*", url: "https://www.wunderground.com/personal-weather-station/dashboard?ID=KCAVALLE53" },
-            { id: 8, description: "KCAVALLE34", url: "https://www.wunderground.com/dashboard/pws/KCAVALLE34" },
         ],
         link_current: [
-            { id: 1, description: "Bridge Wind", url: "https://tidesandcurrents.noaa.gov/met.html?id=9415118" },
-            { id: 2, description: "Local Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.098&lon=-122.180&zoom=13" },
-            { id: 3, description: "Live webcam backside", url: "https://www.youtube.com/watch?v=JFkxBYPwkfY" },
+            { id: 1, description: "KCABENIC65", url: "https://www.wunderground.com/dashboard/pws/KCABENIC65" },
+            { id: 2, description: "Bridge Wind", url: "https://tidesandcurrents.noaa.gov/met.html?id=9415118" },
+            { id: 3, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.098&lon=-122.180&zoom=13" },
+            { id: 4, description: "Live webcam backside", url: "https://www.youtube.com/watch?v=JFkxBYPwkfY" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.098,-122.180" },
@@ -104,13 +102,12 @@ export const arraydata = [
             { id: 4, description: "Windy All Models", url: "https://www.windy.com/38.1384/-122.1959/wind?38.1384,-122.1959,7,m:eHCacL2" },
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KVCB&state=CA" },
-            { id: 7, description: "KCAVALLE53*", url: "https://www.wunderground.com/personal-weather-station/dashboard?ID=KCAVALLE53" },
-            { id: 8, description: "KCAVALLE34", url: "https://www.wunderground.com/dashboard/pws/KCAVALLE34" },
         ],
         link_current: [
-            { id: 1, description: "Bridge Wind", url: "https://tidesandcurrents.noaa.gov/met.html?id=9415118" },
-            { id: 2, description: "Local Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.098&lon=-122.180&zoom=13" },
-            { id: 3, description: "Live webcam backside", url: "https://www.youtube.com/watch?v=JFkxBYPwkfY" },
+            { id: 1, description: "KCABENIC65*", url: "https://www.wunderground.com/dashboard/pws/KCABENIC65" },
+            { id: 2, description: "Bridge Wind", url: "https://tidesandcurrents.noaa.gov/met.html?id=9415118" },
+            { id: 3, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.098&lon=-122.180&zoom=13" },
+            { id: 4, description: "Live webcam backside", url: "https://www.youtube.com/watch?v=JFkxBYPwkfY" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.098,-122.180" },
@@ -151,6 +148,7 @@ export const arraydata = [
             { id: 1, description: "6hr Current Wind", url: "http://bit.ly/2K2lyL3" },
             { id: 2, description: "Webcam Top", url: "http://www.alertwildfire.org/southeastbay/index.html?camera=Axis-Diablo" },
             { id: 3, description: "Telegram Chat", url: "https://wingsofrogallo.org/chat/" },
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.881&lon=-121.914&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.881,-121.914" },
@@ -192,6 +190,7 @@ export const arraydata = [
             { id: 1, description: "6hr Current Wind", url: "http://bit.ly/2K2lyL3" },
             { id: 2, description: "Webcam Top", url: "http://www.alertwildfire.org/southeastbay/index.html?camera=Axis-Diablo" },
             { id: 3, description: "Telegram Chat", url: "https://wingsofrogallo.org/chat/" },
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.881&lon=-121.914&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.881,-121.914" },
@@ -233,6 +232,7 @@ export const arraydata = [
             { id: 2, description: "Mt Alison", url: "https://mesowest.utah.edu/cgi-bin/droman/meso_graph_mesowest.cgi?stn1=PG674&stn2=PG674&unit=0&timeout=0000&time=LOCAL&hour1=00&day1=00&month1=&year1=&hours=12&past=0&graph1=TTD&graph2=WND&g1min=&g1max=&g2min=&g2max=&gsize=1&g1auto=1&g2auto=1&linetype=colorline" },
             { id: 3, description: "Skew-T", url: "http://topaflyers.com/weather/soundings/oak.png" },
             { id: 4, description: "Telegram Chat", url: "https://wingsofrogallo.org/chat/" },
+            { id: 5, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.4847&lon=-121.8654&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.4847,-121.8654" },
@@ -274,6 +274,7 @@ export const arraydata = [
             { id: 2, description: "Mt Alison", url: "https://mesowest.utah.edu/cgi-bin/droman/meso_graph_mesowest.cgi?stn1=PG674&stn2=PG674&unit=0&timeout=0000&time=LOCAL&hour1=00&day1=00&month1=&year1=&hours=12&past=0&graph1=TTD&graph2=WND&g1min=&g1max=&g2min=&g2max=&gsize=1&g1auto=1&g2auto=1&linetype=colorline" },
             { id: 3, description: "Skew-T", url: "http://topaflyers.com/weather/soundings/oak.png" },
             { id: 4, description: "Telegram Chat", url: "https://wingsofrogallo.org/chat/" },
+            { id: 5, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.518&lon=-121.892&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.518,-121.892" },
@@ -315,6 +316,7 @@ export const arraydata = [
             { id: 2, description: "Local WU Stations", url: "https://www.wunderground.com/wundermap?lat=36.636&lon=-121.844&zoom=12" },
             { id: 3, description: "Webcam", url: "https://www.thesanctuarybeachresort.com/resort/beach-camera" },
             { id: 4, description: "Fog Satellite", url: "https://www.fog.today" },
+            { id: 5, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=36.626&lon=-121.844&zoom=13" },
 
         ],
         link_data: [
@@ -403,6 +405,7 @@ export const arraydata = [
             { id: 3, description: "Webcam Tam", url: "http://www.rntl.net/mttamcam.htm" },
             { id: 4, description: "Webcam Berkeley", url: "http://www.lawrencehallofscience.org/static/scienceview/scienceview.berkeley.edu/html/view/index.php" },
             { id: 5, description: "Fog Satellite", url: "https://www.fog.today" },
+            { id: 6, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.911&lon=-122.625&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.911,-122.625" },
@@ -440,6 +443,7 @@ export const arraydata = [
         link_current: [
             { id: 1, description: "Wind Guru", url: "https://www.windguru.cz/station/2330" },
             { id: 2, description: "Weather Underground", url: "https://www.wunderground.com/dashboard/pws/KCANAPA198" },
+            { id: 3, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.400&lon=-122.106&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.400,-122.106" },
@@ -475,7 +479,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KCIC&state=CA" },
         ],
         link_current: [
-            { id: 2, description: "Local Weather Stations", url: "https://www.wunderground.com/wundermap?lat=36.765&lon=-119.098&zoom=13" },
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.7802&lon=-121.761&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.7802,-121.761" },
@@ -511,7 +515,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KFAT&state=CA" },
         ],
         link_current: [
-            { id: 2, description: "Local Weather Stations", url: "https://www.wunderground.com/wundermap?lat=36.765&lon=-119.098&zoom=13" },
+            { id: 2, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=35.971&lon=-121.453&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/35.971,-121.453" },
@@ -548,7 +552,8 @@ export const arraydata = [
             { id: 6, description: "Fog Satellite", url: "http://fog.today" },
         ],
         link_current: [
-            { id: 2, description: "Park Closure Status", url: "https://www.nps.gov/pore/planyourvisit/conditions.htm" },
+            { id: 1, description: "Park Closure Status", url: "https://www.nps.gov/pore/planyourvisit/conditions.htm" },
+            { id: 2, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.0265&lon=-122.9634&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.0265,-122.9634" },
@@ -584,7 +589,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KFAT&state=CA" },
         ],
         link_current: [
-            { id: 2, description: "Local Weather Stations", url: "https://www.wunderground.com/wundermap?lat=36.765&lon=-119.098&zoom=13" },
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=36.765&lon=-119.098&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/36.765,-119.098" },
@@ -620,6 +625,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" },
         ],
         link_current: [
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.2295&lon=-119.7651&zoom=13" },
 
         ],
         link_data: [
@@ -655,6 +661,7 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
         ],
         link_current: [
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.277&lon=-122.941&zoom=13" },
 
         ],
         link_data: [
@@ -691,7 +698,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRBL&state=CA" },
         ],
         link_current: [
-
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=40.842&lon=-121.428&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/40.842,-121.428" },
@@ -726,7 +733,7 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
         ],
         link_current: [
-
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.509&lon=-122.937&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.509,-122.937" },
@@ -761,7 +768,7 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
         ],
         link_current: [
-
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=40.194&lon=-120.923&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/40.194,-120.923" },
@@ -944,6 +951,7 @@ export const arraydata = [
         ],
         link_current: [
             { id: 1, description: "Webcam", url: "http://samcam.samschowderhouse.com:8334/view/viewer_index.shtml?id=921" },
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.4554&lon=-122.4447&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.4554,-122.4447" },
@@ -979,7 +987,7 @@ export const arraydata = [
             { id: 5, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRBL&state=CA" },
         ],
         link_current: [
-
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.3317&lon=-122.685&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.317,-122.685" },
@@ -1015,7 +1023,7 @@ export const arraydata = [
             { id: 5, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSAC&state=CA" },
         ],
         link_current: [
-
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.822&lon=-120.889&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.822,-120.889" },
@@ -1092,6 +1100,7 @@ export const arraydata = [
             { id: 1, description: "Wind Slide Peak", url: "https://wrcc.dri.edu/weather/slide.html" },
             { id: 2, description: "Wind Peavine", url: "https://www.wrh.noaa.gov/rev/remotedata/newpvpn2.php" },
             { id: 3, description: "Webcams", url: "https://skirose.com/the-mountain-web-cams/" },
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.319&lon=-119.867&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.319,-119.867" },
@@ -1127,7 +1136,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KAPC&state=CA" },
         ],
         link_current: [
-
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.667&lon=-122.628&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.667,-122.628" },
@@ -1163,9 +1172,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KAPC&state=CA" },
         ],
         link_current: [
-            { id: 1, description: "KCAPITTS102", url: "https://www.wunderground.com/dashboard/pws/KCAPITTS102" },
-            { id: 2, description: "KCAPITTS62", url: "https://www.wunderground.com/dashboard/pws/KCAPITTS62" },
-            { id: 3, description: "KCAPITTS86", url: "https://www.wunderground.com/dashboard/pws/KCAPITTS86" },
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.0047&lon=-121.9201&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.0047,-121.9201" },
@@ -1201,7 +1208,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KFAT&state=CA" },
         ],
         link_current: [
-
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.015&lon=-119.373&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.015,-119.373" },
@@ -1237,7 +1244,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KTRK&state=CA" },
         ],
         link_current: [
-
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.089&lon=-122.274&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.089,-122.274" },
@@ -1273,7 +1280,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KPAO&state=CA" },
         ],
         link_current: [
-
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.364&lon=-122.245&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.364,-122.245" },
@@ -1305,7 +1312,7 @@ export const arraydata = [
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/37.871/-122.319/wind?37.871,-122.319,7,m:eHCacL2" },
         ],
         link_current: [
-
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.871&lon=-122.319&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.871,-122.319" },
@@ -1337,7 +1344,7 @@ export const arraydata = [
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/38.570/-121.820/wind?38.570,-121.820,7,m:eHCacL2" },
         ],
         link_current: [
-
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.57&lon=-121.82&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.570,-121.820" },
@@ -1369,7 +1376,7 @@ export const arraydata = [
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/37.430/-122.076/wind?37.430,-122.076,7,m:eHCacL2" },
         ],
         link_current: [
-
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.43&lon=-122.076&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.430,-122.076" },
@@ -1445,7 +1452,7 @@ export const arraydata = [
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/37.8039/-122.4627/wind?37.8039,-122.4627,7,m:eHCacL2" },
         ],
         link_current: [
-
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.8039&lon=-122.4627&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.8039,-122.4627" },
@@ -1477,7 +1484,7 @@ export const arraydata = [
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/38.333/-122.002/wind?38.333,-122.002,7,m:eHCacL2" },
         ],
         link_current: [
-
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.333&lon=-122.002&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.333,-122.002" },
@@ -1509,7 +1516,7 @@ export const arraydata = [
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/38.1144/-122.2705/wind?38.1141,-122.2708,7,m:eHCacL2" },
         ],
         link_current: [
-
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.1141&lon=-122.2708&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.1141,-122.2708" },

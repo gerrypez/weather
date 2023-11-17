@@ -10,15 +10,13 @@ const Sitedays = ({ name, station, grid_x, grid_y, hourstart, hourend, speedmin_
     // console.log('daycolors return:'+daycolors);
 
     return (
-
         <div>
-            {daycolors.map((daycolor) => (
-                    <div className={daycolor[1]} key={daycolor.id}>
+            {daycolors.map((daycolor, i) => (
+                    <div className={daycolor[1]} key={i}>
                         {daycolor[0]}
                     </div>
-                ))}
+            ))}
         </div>
-
     );
 };
 
