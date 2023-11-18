@@ -1,5 +1,5 @@
 /*
-*   Displays one row (site), using the built React components
+*   Displays one site row
 */
 
 import Sitename from "./Sitename";
@@ -13,15 +13,22 @@ import { useState } from "react";
 const Arow = ({ arraydata }) => {
 
     // when info button is clicked, show info panel
-    const [show, setShow] = useState(false);
+    const [isOpen, setIsOpen] = useState(0);
 
-    // onClick={() => setRowShow(data.id)}
+    // toggle the open and close of bottom links
+    function toggle(dataid) {
+        if(dataid === isOpen) {
+            setIsOpen(0);
+        } else {
+          setIsOpen(dataid);
+        }
+    }
 
     return (
         <div>
             {arraydata.map((data) => (
                 <div className="siterow" key={data.id}>
-                    <div className="toprow" onClick={() => setShow(data.id)}>
+                    <div className="toprow" onClick={e => toggle(data.id)}>
                         <div className="title_blue" id={data.id}>
                             <Sitename id={data.id} sitename={data.sitename} />
                         </div>
@@ -31,9 +38,9 @@ const Arow = ({ arraydata }) => {
                             speedmin_edge={data.speedmin_edge} speedmax_edge={data.speedmax_edge} lightwind_ok={data.lightwind_ok} dir_ideal={data.dir_ideal} dir_edge={data.dir_edge} />
                         </div>
                     </div>
-                    {show === data.id && (
+                    {data.id === isOpen && (
                         <div>
-                            <div className="linkmap" onClick={() => setShow(0)}>
+                            <div className="linkmap" onClick={e => toggle(data.id)}>
                                 <Nwsimage id={data.id} nws_image={data.nws_image} />
                             </div>
                             <div className="morestuff">

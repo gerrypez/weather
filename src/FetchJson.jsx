@@ -24,10 +24,35 @@ export const FetchJson = (sitename, station, grid_x, grid_y, hourstart, hourend,
         // asynch getWeatherJson function
         const getWeatherJson = async () => {
 
-            // fetch the NWS API for site data
-            const response = await fetch(siteURL);
-            
-            const nwsdata = await response.json();
+            // old code ... used this, worked, but sometimes got 500 error
+            // so I replaced it with fetch retries 
+            // const response = await fetch(siteURL);
+            // const nwsdata = await response.json();
+
+            async function fetchWithRetries(url, retries = 5) {
+                for (let i = 0; i < retries; i++) {
+                  try {
+                    const response = await fetch(url);
+                    if (response.ok) {
+                      return await response.json();
+                    } else if (response.status === 500) {
+                      console.error("FetchJson.jsx" + sitename + "500 error, Retrying...");
+                      await new Promise((resolve) => setTimeout(resolve, 1000));
+                    } else {
+                      throw new Error("FetchJson.jsx" + sitename + "Unexpected response status");
+                    }
+                  } catch (error) {
+                    console.error("FetchJson.jsx error fetching data");
+                    if (i === retries - 1) {
+                      throw error;
+                    }
+                  }
+                }
+                throw new Error("FetchJson.jsx maximum number of retries reached");
+              }
+
+              const nwsdata = await fetchWithRetries(siteURL, 5);
+
 
             // send NWS json to function Colorcalc
             const colorresult = Colorcalc(nwsdata, sitename, hourstart, hourend, speedmin_ideal, speedmax_ideal, speedmin_edge, speedmax_edge, lightwind_ok, dir_ideal, dir_edge);
