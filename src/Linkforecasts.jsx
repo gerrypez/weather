@@ -1,3 +1,7 @@
+/*
+*  Forecast links below each row
+*/
+
 const link_forecasts = ({ link_forecasts }) => {
     return (
         <div>
@@ -8,7 +12,6 @@ const link_forecasts = ({ link_forecasts }) => {
                         <a className="morelinky" href={link.url} target="_blank" rel="noreferrer">
                             {link.description}
                         </a>
-
                     </span>
                 ))}
             </div>

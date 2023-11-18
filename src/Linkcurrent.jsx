@@ -1,5 +1,7 @@
+/*
+*  Links for current weather below each site row
+*/
 const link_current = ({ link_current }) => {
-    // console.log("link_current here");
     return (
         <div>
             <div className="moretitle">Current</div>
@@ -9,7 +11,6 @@ const link_current = ({ link_current }) => {
                         <a className="morelinky" href={link.url} target="_blank" rel="noreferrer">
                             {link.description}
                         </a>
-
                     </span>
                 ))}
             </div>

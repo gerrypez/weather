@@ -1,3 +1,6 @@
+/*
+*  Links for data below each site row
+*/
 const link_data = ({ link_data }) => {
     return (
         <div>
@@ -8,7 +11,6 @@ const link_data = ({ link_data }) => {
                         <a className="morelinky" href={link.url} target="_blank" rel="noreferrer">
                             {link.description}
                         </a>
-
                     </span>
                 ))}
             </div>

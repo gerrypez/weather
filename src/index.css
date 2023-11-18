@@ -2,160 +2,161 @@
 
 /* base styles */
 * {
-    margin: 0;
-    font-family: "Roboto";
-    color: white;
     background-color: #000;
+    color: white;
+    font-family: "Roboto";
+    margin: 0;
 }
+
 a {
-    text-decoration: none;
     color: skyblue;
     font-family: "Roboto";
     font-size: 0.9em;
+    text-decoration: none;
 }
+
 a:link {
-    text-decoration: none;
     color: skyblue;
+    text-decoration: none;
 }
+
 a:hover {
-    text-decoration: none;
     color: #ccffcc;
-}
-a:active {
     text-decoration: none;
-    color: skyblue;
-}
-a:visited {
-    text-decoration: none;
-    color: skyblue;
-}
-li {
-    margin: 0 0 6px 0;
 }
 
 .baptitle {
-    font-size: 1.1em;
+    font-size: 1em;
+}
+
+li {
+    font-size: 0.9em;
+    margin-bottom:6px;
 }
 
 .daycolors {
     float: left;
-    width: 250px;
-    height: 30px;
     font-size: 0.8em;
+    height: 30px;
+    width: 250px;
 }
 
 .go-blue {
-    float: left;
-    width: 30px;
     background-color: #1994f1;
-    height: 100%;
     color: #303030;
-    text-align: center;
-    vertical-align: middle;
+    float: left;
+    height: 100%;
     line-height: 30px;
     margin-left: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
 }
+
 .go-green {
-    float: left;
-    width: 30px;
     background-color: #1efc0f;
-    height: 100%;
     color: #303030;
-    text-align: center;
-    vertical-align: middle;
+    float: left;
+    height: 100%;
     line-height: 30px;
     margin-left: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
 }
+
 .go-lightgreen {
-    float: left;
-    width: 30px;
     background-color: #abf7b1;
-    height: 100%;
     color: #303030;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 30px;
-    margin-left: 1px;
-}
-.go-yellow {
     float: left;
-    width: 30px;
-    background-color: #fcec0f;
     height: 100%;
-    color: #303030;
-    text-align: center;
-    vertical-align: middle;
     line-height: 30px;
     margin-left: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+}
+
+.go-yellow {
+    background-color: #fcec0f;
+    color: #303030;
+    float: left;
+    height: 100%;
+    line-height: 30px;
+    margin-left: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
 }
 
 .go-yellow-blue {
-    float: left;
-    width: 30px;
     background: -webkit-linear-gradient(bottom right, #1994f1, #1994f1 30%, #fcec0f 30%, #fcec0f);
-    height: 100%;
     color: #303030;
-    text-align: center;
-    vertical-align: middle;
+    float: left;
+    height: 100%;
     line-height: 30px;
     margin-left: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
 }
 
 .go-lightgreen-blue {
-    float: left;
-    width: 30px;
     background: -webkit-linear-gradient(bottom right, #1994f1, #1994f1 30%, #abf7b1 30%, #abf7b1);
-    height: 100%;
     color: #303030;
-    text-align: center;
-    vertical-align: middle;
+    float: left;
+    height: 100%;
     line-height: 30px;
     margin-left: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
 }
 
 .go-gray {
-    float: left;
-    width: 30px;
     background-color: #9c9c9c;
-    height: 100%;
     color: #303030;
-    text-align: center;
-    vertical-align: middle;
+    float: left;
+    height: 100%;
     line-height: 30px;
     margin-left: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
 }
 
 .go-gray-blue {
-    float: left;
-    width: 30px;
     background: -webkit-linear-gradient(bottom right, #1994f1, #1994f1 30%, #9c9c9c 30%, #9c9c9c);
-    height: 100%;
     color: #303030;
-    text-align: center;
-    vertical-align: middle;
+    float: left;
+    height: 100%;
     line-height: 30px;
     margin-left: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
 }
-
 
 .infopanel {
-    margin: 10px 0 10px 0;
-    width: 400px;
-    float: left;
     clear: left;
     color: white;
+    float: left;
     font-size: 0.9em;
+    margin: 10px 0 10px 0;
+    width: 400px;
 }
+
 .infobutton {
-    float: right;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #fff;
     background-color: #03a9f4;
     border: none;
-    padding: 3px 6px 3px 6px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    float: right;
     margin-right: 30px;
+    padding: 3px 6px 3px 6px;
 }
+
 .infoblocks {
     margin-bottom: 15px;
 }
@@ -163,26 +164,29 @@ li {
 .infogreen {
     background-color: #1efc0f;
     color: #000;
-    padding: 4px;
     margin-right: 5px;
+    padding: 4px;
 }
+
 .infogreenlight {
     background-color: #dcf285;
     color: #000;
-    padding: 4px;
     margin-right: 5px;
+    padding: 4px;
 }
+
 .infoyellow {
     background-color: #ffff00;
     color: #000;
-    padding: 4px;
     margin-right: 5px;
+    padding: 4px;
 }
+
 .infogray {
     background-color: gray;
     color: #FFF;
-    padding: 4px;
     margin-right: 5px;
+    padding: 4px;
 }
 
 .infoblue {
@@ -195,54 +199,58 @@ li {
 .morestuff {
     clear: left;
     float: left;
-    padding: 5px;
-    margin-left: 5px;
     margin-bottom: 5px;
+    margin-left: 5px;
+    padding: 5px;
     width:400px;
 }
 
 .moretitle {
-    font-size: 0.9em;
+    clear: left;
     color: #fff;
-    clear: left;
     float: left;
+    font-size: 0.9em;
 }
+
 .morelinks {
-    font-size: 0.8em;
-    float: left;
     clear: left;
+    float: left;
+    font-size: 0.8em;
     margin: 5px 0 8px 5px;
     width: 400px;
 }
+
 .morelinky {
   margin-right:10px;
 }
+
 .nws_image_box {
-    float: left;
     clear: left;
+    float: left;
     height: 100%;
 }
+
 .nws_image {
-    max-width: 100%;
     margin: auto;
+    max-width: 100%;
     width: 100%;
 }
 
 .rowbutton {
-    color: #949494;
     background-color: #4d5471;
     border: none;
-    float:left;
     clear:left;
+    color: #949494;
+    float:left;
     height:30px;
     width:30px;
 }
 .siterow {
-    cursor: pointer;
     clear: left;
+    cursor: pointer;
     float: left;
-    width: 450px;
     margin-bottom: 1px;
+    width: 450px;
 }
 
 .toprow {
@@ -252,21 +260,20 @@ li {
 }
 
 .linkmap {
-    width: 450px;
+    width: 400px;
 }
 
-
 .sitename {
+    background-color: #454d72;
+    color: white;
+    float: left;
     font-size: 0.9em;
-  float: left;
-  color: white;
-  background-color: #454d72;
-  width: 130px;
-  padding-left: 15px;
-  padding-right: 5px;
-  height: 30px;
-  vertical-align: middle;
-  line-height: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+    padding-right: 5px;
+    vertical-align: middle;
+    width: 130px;
 }
 
 .status {
@@ -275,8 +282,8 @@ li {
 }
 .subtitle {
     clear: left;
-    float: left;
     color: rgb(100, 197, 230);
+    float: left;
     font-size: 1em;
     margin: 20px 0 10px 0;
 }
@@ -285,5 +292,4 @@ li {
     margin: 13px 0 13px 0;
     width: 400px;
 }
-
 

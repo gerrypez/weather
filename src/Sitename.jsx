@@ -1,23 +1,12 @@
-// import { useState } from "react";
+/*
+*  The site name
+*/
 
-const Sitename = ({ id, name }) => {
-    // console.log("<Sitename /> ..." + id + name);
-    // this works
-
-    // const mapid = "map" + id;
-
-    // const [mapShown, setMapShown] = useState(true);
-    // const displayMap = (mapid) => {
-    //     // setMapShown((current) => !current);
-    //     console.log("sitename click ..." + mapid);
-    // };
+const Sitename = ({sitename}) => {
 
     return (
         <div className="sitename">
-            {/* <button className="rowbutton" onClick={displayMap(mapid)}>
-                +
-            </button> */}
-            {name}
+            {sitename}
         </div>
     );
 };
