@@ -10,7 +10,8 @@
 a {
     text-decoration: none;
     color: skyblue;
-    font-size: 0.8em;
+    font-family: "Roboto";
+    font-size: 0.9em;
 }
 a:link {
     text-decoration: none;
@@ -40,7 +41,7 @@ li {
     float: left;
     width: 250px;
     height: 30px;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 .go-blue {
@@ -112,7 +113,6 @@ li {
     margin-left: 1px;
 }
 
-
 .go-gray {
     float: left;
     width: 30px;
@@ -139,12 +139,12 @@ li {
 
 
 .infopanel {
-    font-size: 0.8em;
     margin: 10px 0 10px 0;
-    width: 430px;
+    width: 400px;
     float: left;
     clear: left;
     color: white;
+    font-size: 0.9em;
 }
 .infobutton {
     float: right;
@@ -198,25 +198,24 @@ li {
     padding: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
-    max-width: 100%;
+    width:400px;
 }
-.morestuff span {
-    margin-right: 5px;
-}
+
 .moretitle {
+    font-size: 0.9em;
     color: #fff;
     clear: left;
     float: left;
-    font-size: 0.9em;
 }
 .morelinks {
+    font-size: 0.8em;
     float: left;
     clear: left;
-    margin: 2px 0 8px 5px;
-    width: 500px;
+    margin: 5px 0 8px 5px;
+    width: 400px;
 }
 .morelinky {
-  margin-right:5px;
+  margin-right:10px;
 }
 .nws_image_box {
     float: left;
@@ -242,28 +241,27 @@ li {
     cursor: pointer;
     clear: left;
     float: left;
-    width: 500px;
+    width: 450px;
     margin-bottom: 1px;
-    margin-left:20px;
 }
 
 .toprow {
   clear:left;
   float:left;
-  width: 500px;
+  width: 450px;
 }
 
 .linkmap {
     width: 450px;
-    font-size: 0.9em;
 }
 
 
 .sitename {
+    font-size: 0.9em;
   float: left;
   color: white;
   background-color: #454d72;
-  width: 150px;
+  width: 130px;
   padding-left: 15px;
   padding-right: 5px;
   height: 30px;
@@ -279,20 +277,13 @@ li {
     clear: left;
     float: left;
     color: rgb(100, 197, 230);
-    font-size: 1.1em;
-    margin: 20px 0 10px 10px;
+    font-size: 1em;
+    margin: 20px 0 10px 0;
 }
 
 .thetitle {
-    margin: 13px 0 13px 10px;
-    width: 415px;
+    margin: 13px 0 13px 0;
+    width: 400px;
 }
-.t_day {
-    width: 30px;
-    background-color: blue;
-    color: #fff;
-    float: left;
-    font-size: x-large;
-    padding-left: 10px;
-}
+
 

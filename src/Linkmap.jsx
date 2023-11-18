@@ -8,7 +8,7 @@ const Linkmap = ({ id, nws_image }) => {
     return (
         <div>
             <div className="nws_image_box">
-                <img className="nws_image" id={mapid} alt="#" src={nws_image} width="640" />
+                <img className="nws_image" id={mapid} alt="#" src={nws_image} width="450" />
             </div>
         </div>
     );

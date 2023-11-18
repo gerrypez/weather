@@ -16,7 +16,7 @@ export const arraydata = [
         speedmax_edge: 15,
         lightwind_ok: "no",
         dir_ideal: ["WSW", "W", "WNW"],
-        dir_edge: ["SW", "WSW", "W", "WNW", "NW"],
+        dir_edge: ["SW", "WSW", "W", "WNW", "NW", "NNW"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.1384&lon=-122.1959&wfo=STO&zcode=CAZ017&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-122.1959&lat=38.1384#.WtYca9PwbUI" },
@@ -35,7 +35,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.1384,-122.1959" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/13,54/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.1384,-122.1959" },
-        ]
+        ],
     },
     {
         id: 2,
@@ -74,7 +74,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.098,-122.180" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/13,52/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.098,-122.180" },
-        ]
+        ],
     },
     {
         id: 3,

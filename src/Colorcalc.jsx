@@ -13,12 +13,13 @@ export const Colorcalc = (nwsdata, name, hourstart, hourend, speedmin_ideal, spe
 
     // declare variable that will be changed and
     var colorresult = [
-        ["d1", "gray"],
-        ["d2", "gray"],
-        ["d3", "gray"],
-        ["d4", "gray"],
-        ["d5", "gray"],
-        ["d6", "gray"],
+        ["", "go-gray"],
+        ["", "go-gray"],
+        ["", "fo-gray"],
+        ["", "go-gray"],
+        ["", "go-gray"],
+        ["", "go-gray"],
+        ["", "go-gray"],
     ];
 
     // declare variables
@@ -111,6 +112,8 @@ export const Colorcalc = (nwsdata, name, hourstart, hourend, speedmin_ideal, spe
 
             // console.log(name + " greeno: "+greeno+", yellowo: "+yellowo)
 
+            // console.log("weekend[todaynum] ="+ weekday[todaynum])
+            // console.log("arrayposition = " +arrayposition)
             // set the day in the array colorresult
             colorresult[arrayposition][0] = weekday[todaynum];
 

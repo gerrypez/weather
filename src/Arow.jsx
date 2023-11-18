@@ -1,33 +1,27 @@
+/*
+*   Displays one row (site), using the built React components
+*/
+
 import Sitename from "./Sitename";
 import Sitedays from "./Sitedays";
 import Linkmap from "./Linkmap";
 import Linkforecasts from "./Linkforecasts";
 import Linkcurrent from "./Linkcurrent";
 import Linkdata from "./Linkdata";
-
 import { useState } from "react";
 
 const Arow = ({ arraydata }) => {
+
     // when info button is clicked, show info panel
-    // const [isShown, setIsShown] = useState(false);
-    // const showInfo = (e) => {
-    //     setIsShown((current) => !current);
-    // };
+    const [show, setShow] = useState(false);
 
-    const [rowShow, setRowShow] = useState(0);
-    // const showRow(rownum) = (e) => {
-    //     setRowShow((current) => !current);
-    // };
-    // onClick={() => { func1(); func2();}}
-
-    // console.log("<Arow />");
+    // onClick={() => setRowShow(data.id)}
 
     return (
         <div>
             {arraydata.map((data) => (
                 <div className="siterow" key={data.id}>
-                    <div className="toprow" onClick={() => setRowShow(data.id)}>
-                        <button className="rowbutton">+</button>
+                    <div className="toprow" onClick={() => setShow(data.id)}>
                         <div className="title_blue" id={data.id}>
                             <Sitename id={data.id} name={data.name} />
                         </div>
@@ -37,9 +31,9 @@ const Arow = ({ arraydata }) => {
                             speedmin_edge={data.speedmin_edge} speedmax_edge={data.speedmax_edge} lightwind_ok={data.lightwind_ok} dir_ideal={data.dir_ideal} dir_edge={data.dir_edge} />
                         </div>
                     </div>
-                    {rowShow === data.id && (
+                    {show === data.id && (
                         <div>
-                            <div className="linkmap">
+                            <div className="linkmap" onClick={() => setShow(0)}>
                                 <Linkmap id={data.id} nws_image={data.nws_image} />
                             </div>
                             <div className="morestuff">
