@@ -3,7 +3,7 @@
 This React app is used by paraglider and hang glider pilots in the San Francisco Bay Area. <br>
 It uses the NWS API to show an overview of which sites might be flyable.
 
-App deploted website --> (tbd)
+App deploted website --> https://liftweather-c9ac8.web.app/ 
 
 ### `how this app works`
 
