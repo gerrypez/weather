@@ -35,6 +35,8 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.1384,-122.1959" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/13,54/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.1384,-122.1959" },
+            { id: 4, description: "Site Guide", url: "https://www.penguinparagliding.com/bluerock.html" },
+
         ],
     },
     {
@@ -74,6 +76,8 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.098,-122.180" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/13,52/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.098,-122.180" },
+            { id: 4, description: "Site Guide", url: "https://www.penguinparagliding.com/channingwest.html" },
+
         ],
     },
     {
@@ -113,6 +117,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.098,-122.180" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/13,52/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.098,-122.180" },
+            { id: 4, description: "Site Guide", url: "https://www.penguinparagliding.com/channingeast.html" },
         ]
     },
     {
@@ -154,7 +159,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.881,-121.914" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/103,106/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.881,-121.914" },
-            { id: 4, description: "Rules", url: "https://wingsofrogallo.org/mt-diablo/" },
+            { id: 4, description: "Site Guide", url: "https://wingsofrogallo.org/mt-diablo/" },
         ]
     },
     {
@@ -196,7 +201,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.881,-121.914" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/103,106/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.881,-121.914" },
-            { id: 4, description: "Rules", url: "https://wingsofrogallo.org/mt-diablo/" },
+            { id: 4, description: "Site Guide", url: "https://wingsofrogallo.org/mt-diablo/" },
         ]
     },
     {
@@ -238,7 +243,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.4847,-121.8654" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/101,88/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.4847,-121.8654" },
-            { id: 4, description: "Rules", url: "https://wingsofrogallo.org/ed-levin/" },
+            { id: 4, description: "Site Guide", url: "https://wingsofrogallo.org/ed-levin/" },
         ]
     },
     {
@@ -280,7 +285,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.518,-121.892" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/101,90/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.518,-121.892" },
-            { id: 4, description: "Rules", url: "https://wingsofrogallo.org/ed-levin/" },
+            { id: 4, description: "Site Guide", url: "https://wingsofrogallo.org/ed-levin/" },
         ]
     },
     {
@@ -323,7 +328,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/36.626,-121.844" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/95,51/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/36.626,-121.844" },
-            { id: 4, description: "Rules", url: "http://www.coastalcondors.org" },
+            { id: 4, description: "Site Guide", url: "http://www.coastalcondors.org" },
         ]
     },
     {
@@ -368,6 +373,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.674,-122.495" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/81,101/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.674,-122.495" },
+            { id: 4, description: "Site Guide", url: "https://www.paragliding-lessons.com/mrsg/" },
         ]
     },
     {
@@ -515,7 +521,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KFAT&state=CA" },
         ],
         link_current: [
-            { id: 2, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=35.971&lon=-121.453&zoom=13" },
+            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=35.971&lon=-121.453&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/35.971,-121.453" },
@@ -1494,7 +1500,7 @@ export const arraydata = [
     },
     {
         id: 41,
-        sitename: "vallejo parks",
+        sitename: "vallejo river park",
         category: "kiting",
         lat: 38.1141,
         lng: -122.2708,

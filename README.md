@@ -1,4 +1,4 @@
-# Lift Paragliding: SF Bay Area Forecast
+## Lift Paragliding: SF Bay Area Forecast
 
 This React app is used by paraglider and hang glider pilots in the San Francisco Bay Area. <br>
 It uses the NWS API to show an overview of which sites might be flyable.

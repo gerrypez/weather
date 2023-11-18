@@ -18,9 +18,12 @@ const Arow = ({ arraydata }) => {
     // toggle the open and close of bottom links
     function toggle(dataid) {
         if(dataid === isOpen) {
+            // already open so close link area
             setIsOpen(0);
         } else {
           setIsOpen(dataid);
+          // console.log(dataid);
+          // change css background color of title_blue
         }
     }
 
