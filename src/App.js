@@ -3,15 +3,23 @@ import Allrows from "./Allrows";
 import { useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-function App() {
+const App = () => {
 
-    // App reloads every 3 hours for new NWS data
     useEffect(() => {
-        const intervalId = setInterval(() => {
-          window.location.reload();
-        }, 10800000); // 3 hours in milliseconds
-        return () => clearInterval(intervalId);
-      }, []);
+
+        // reload app every 3 hours (in milliseconds)
+        const reloadInterval = 10800000;
+
+        const reloadApp = () => {
+          window.location.reload(true);
+        };
+
+        const reloadTimeout = setTimeout(reloadApp, reloadInterval);
+
+        // Clear the timeout when the component is unmounted
+        return () => clearTimeout(reloadTimeout);
+      }, []); // Empty dependency array means this effect runs once on mount
+
 
     return (
         <Router>
