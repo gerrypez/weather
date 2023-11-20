@@ -1,6 +1,6 @@
 /*
-*  Forecast links below each row
-*/
+ *  Forecast links below each row
+ */
 
 const link_forecasts = ({ link_forecasts }) => {
     return (

@@ -4,17 +4,16 @@ import { useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const App = () => {
-
-    // reload app every 3 hours (in milliseconds)
+    // reload app every hour
     useEffect(() => {
-        const reloadInterval = 10800000;
+        const reloadInterval = 3600000;
         const reloadApp = () => {
-          window.location.reload(true);
+            window.location.reload(true);
         };
         const reloadTimeout = setTimeout(reloadApp, reloadInterval);
         // Clear the timeout when the component is unmounted
         return () => clearTimeout(reloadTimeout);
-      }, []); // Empty dependency array means this effect runs once on mount
+    }, []); // Empty dependency array means this effect runs once on mount
 
     return (
         <Router>
@@ -24,6 +23,6 @@ const App = () => {
             </div>
         </Router>
     );
-}
+};
 
 export default App;

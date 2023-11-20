@@ -20,7 +20,7 @@ const Errorcheck = ({ arraydata }) => {
                 if (grid_x !== nwsdata.properties.gridX || grid_y !== nwsdata.properties.gridY || station !== nwsdata.properties.gridId) {
                     const errorMessage = sitename + " " + station + "/" + grid_x + "/" + grid_y + " should be " + nwsdata.properties.gridId + "/" + nwsdata.properties.gridX + "/" + nwsdata.properties.gridY;
                     console.log(errorMessage);
-                } 
+                }
             };
             try {
                 getWeatherJson(siteURL);
@@ -36,11 +36,11 @@ const Errorcheck = ({ arraydata }) => {
         <div>
             <div className="errorcheckarea">
                 Running error check ... to console.log
-                    {arraydata.map((data) => (
-                        <div className="errorstationcheck" key={data.id}>
-                            {CheckStations(data.sitename, data.lat, data.lng, data.station, data.grid_x, data.grid_y)}
-                        </div>
-                    ))}
+                {arraydata.map((data) => (
+                    <div className="errorstationcheck" key={data.id}>
+                        {CheckStations(data.sitename, data.lat, data.lng, data.station, data.grid_x, data.grid_y)}
+                    </div>
+                ))}
             </div>
         </div>
     );

@@ -32,7 +32,11 @@ a:hover {
 
 .bottomspace {
     clear:left;
-    height: 50px;
+    float:left;
+    font-size:0.7em;
+    height:50px;
+    margin-top: 20px;
+    padding:10px;
 }
 
 li {

@@ -28,7 +28,7 @@ export const FetchJson = (sitename, station, grid_x, grid_y, hourstart, hourend,
                         if (response.ok) {
                             return await response.json();
                         } else if (response.status === 500) {
-                            console.error(sitename + " FetchJson.jsx 500 error, retry number " + i+1);
+                            console.error(sitename + " FetchJson.jsx 500 error, retry number " + i + 1);
                             await new Promise((resolve) => setTimeout(resolve, 1500));
                         } else {
                             throw new Error(sitename + " FetchJson.jsx unexpected response status");

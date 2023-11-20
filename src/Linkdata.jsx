@@ -1,6 +1,6 @@
 /*
-*  Links for data below each site row
-*/
+ *  Links for data below each site row
+ */
 const link_data = ({ link_data }) => {
     return (
         <div>

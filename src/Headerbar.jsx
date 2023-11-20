@@ -27,8 +27,8 @@ const Headerbar = () => {
                             <span className="infogray">unlikely</span>
                             <span className="infoblue">rain</span>
                         </li>
-                        <li>pro tip: click on row for weather links</li>
-                        <li>code: github.com/gerrypez/weather</li>
+                        <li>click row for weather details</li>
+                        <li>code v2.0 github.com/gerrypez/weather</li>
                         <li>developer: gerrypez@gmail.com</li>
                     </ul>
                 </div>

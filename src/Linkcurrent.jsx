@@ -1,6 +1,6 @@
 /*
-*  Links for current weather below each site row
-*/
+ *  Links for current weather below each site row
+ */
 const link_current = ({ link_current }) => {
     return (
         <div>

@@ -1,6 +1,6 @@
 /*
-*   Displays one site row
-*/
+ *   Displays one site row
+ */
 
 import Sitename from "./Sitename";
 import Sitedays from "./Sitedays";
@@ -11,17 +11,16 @@ import Linkdata from "./Linkdata";
 import { useState } from "react";
 
 const Arow = ({ arraydata }) => {
-
     // when info button is clicked, show info panel
     const [isOpen, setIsOpen] = useState(0);
 
     // toggle the open and close of bottom links
     function toggle(dataid) {
-        if(dataid === isOpen) {
+        if (dataid === isOpen) {
             setIsOpen(0);
         } else {
-          setIsOpen(dataid);
-          // change css background color of title_blue
+            setIsOpen(dataid);
+            // change css background color of title_blue
         }
     }
 
@@ -29,19 +28,31 @@ const Arow = ({ arraydata }) => {
         <div>
             {arraydata.map((data) => (
                 <div className="siterow" key={data.id}>
-                    <div className="toprow" onClick={e => toggle(data.id)}>
+                    <div className="toprow" onClick={(e) => toggle(data.id)}>
                         <div className="title_blue" id={data.id}>
                             <Sitename id={data.id} sitename={data.sitename} />
                         </div>
                         <div className="daycolors">
-                            <Sitedays sitename={data.sitename} station={data.station} grid_x={data.grid_x} grid_y={data.grid_y}
-                            hourstart={data.hourstart} hourend={data.hourend} speedmin_ideal={data.speedmin_ideal} speedmax_ideal={data.speedmax_ideal}
-                            speedmin_edge={data.speedmin_edge} speedmax_edge={data.speedmax_edge} lightwind_ok={data.lightwind_ok} dir_ideal={data.dir_ideal} dir_edge={data.dir_edge} />
+                            <Sitedays
+                                sitename={data.sitename}
+                                station={data.station}
+                                grid_x={data.grid_x}
+                                grid_y={data.grid_y}
+                                hourstart={data.hourstart}
+                                hourend={data.hourend}
+                                speedmin_ideal={data.speedmin_ideal}
+                                speedmax_ideal={data.speedmax_ideal}
+                                speedmin_edge={data.speedmin_edge}
+                                speedmax_edge={data.speedmax_edge}
+                                lightwind_ok={data.lightwind_ok}
+                                dir_ideal={data.dir_ideal}
+                                dir_edge={data.dir_edge}
+                            />
                         </div>
                     </div>
                     {data.id === isOpen && (
                         <div>
-                            <div className="linkmap" onClick={e => toggle(data.id)}>
+                            <div className="linkmap" onClick={(e) => toggle(data.id)}>
                                 <Nwsimage id={data.id} nws_image={data.nws_image} />
                             </div>
                             <div className="morestuff">
