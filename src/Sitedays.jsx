@@ -9,7 +9,7 @@ const Sitedays = ({ sitename, station, grid_x, grid_y, hourstart, hourend, speed
     // get NWS API data for each site
     // daycolors is an array variable like [['Mo','go-green'], ['Tu','go-yellow'], etc]
     const daycolors = FetchJson(sitename, station, grid_x, grid_y, hourstart, hourend, speedmin_ideal, speedmax_ideal, speedmin_edge, speedmax_edge, lightwind_ok, dir_ideal, dir_edge);
-
+    
     return (
         <div>
             {daycolors.map((daycolor, i) => (

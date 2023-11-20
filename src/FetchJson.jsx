@@ -1,7 +1,7 @@
 /*
  *  FetchJson fetches the NWS API
- *  then calls Colorcalc function to determine day colors
- *  daycolor array is passed back to Sitedays.jsx
+ *  Calls Colorcalc function to determine day colors
+ *  daycolor array is returned to Sitedays.jsx
  */
 
 import { Colorcalc } from "./Colorcalc.jsx";
@@ -18,20 +18,20 @@ export const FetchJson = (sitename, station, grid_x, grid_y, hourstart, hourend,
     // useRef hook to store hasInitialCallMade
     const hasInitialCallMadeRef = useRef(false);
 
-    // call the NWS API
+    // call the NWS API, retry up to 5 times
     useEffect(() => {
         const getWeatherJson = async () => {
-            async function fetchWithRetries(url, retries = 5) {
+            async function fetchWithRetries(url, retries = 9) {
                 for (let i = 0; i < retries; i++) {
                     try {
                         const response = await fetch(url);
                         if (response.ok) {
                             return await response.json();
                         } else if (response.status === 500) {
-                            console.error("FetchJson.jsx" + sitename + "500 error, Retrying...");
-                            await new Promise((resolve) => setTimeout(resolve, 1000));
+                            console.error(sitename + " FetchJson.jsx 500 error, retry number " + i+1);
+                            await new Promise((resolve) => setTimeout(resolve, 1500));
                         } else {
-                            throw new Error("FetchJson.jsx" + sitename + "Unexpected response status");
+                            throw new Error(sitename + " FetchJson.jsx unexpected response status");
                         }
                     } catch (error) {
                         console.error("FetchJson.jsx error fetching data");
@@ -43,20 +43,15 @@ export const FetchJson = (sitename, station, grid_x, grid_y, hourstart, hourend,
                 throw new Error("FetchJson.jsx maximum number of retries reached");
             }
 
-            const nwsdata = await fetchWithRetries(siteURL, 5);
+            const nwsdata = await fetchWithRetries(siteURL, 9);
 
-            // Only call Colorcalc on the first call
+            // Call Colorcalc only one time
             if (!hasInitialCallMadeRef.current) {
-                // send NWS json to function Colorcalc
                 const colorresult = Colorcalc(nwsdata, sitename, hourstart, hourend, speedmin_ideal, speedmax_ideal, speedmin_edge, speedmax_edge, lightwind_ok, dir_ideal, dir_edge);
-
-                // store color result for site, this is used by Sitedays.jsx
                 setDaycolor(colorresult);
-
-                // Update hasInitialCallMadeRef.current to true
                 hasInitialCallMadeRef.current = true;
             }
-        }; // end getWeatherJson
+        };
 
         // call getWeatherJson function
         try {

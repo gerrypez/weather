@@ -30,6 +30,11 @@ a:hover {
     margin-left:30px;
 }
 
+.bottomspace {
+    clear:left;
+    height: 50px;
+}
+
 li {
     font-size: 0.9em;
     margin-bottom:6px;
@@ -40,6 +45,20 @@ li {
     font-size: 0.8em;
     height: 30px;
     width: 250px;
+}
+
+.errorcheckarea {
+    clear: left;
+    float:left;
+    width: 350px;
+    border: 1px solid white;
+    font-size:0.8em;
+    margin-top:50px;
+    padding: 10px;
+}
+
+.errorstationcheck {
+
 }
 
 .go-blue {
@@ -250,6 +269,7 @@ li {
     cursor: pointer;
     float: left;
     margin-bottom: 1px;
+    margin-left: 5px;
     width: 450px;
 }
 
@@ -285,7 +305,7 @@ li {
     color: rgb(100, 197, 230);
     float: left;
     font-size: 1em;
-    margin: 20px 0 10px 0;
+    margin: 20px 0 10px 5px;
 }
 
 .thetitle {

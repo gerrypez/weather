@@ -4,7 +4,6 @@
  */
 
 export const Colorcalc = (nwsdata, sitename, hourstart, hourend, speedmin_ideal, speedmax_ideal, speedmin_edge, speedmax_edge, lightwind_ok, dir_ideal, dir_edge) => {
-
     // initialize day, color array variable to store color results
     // this will be populated ex. [['Mo','go-green'], ['Tu','go-yellow'], etc]
     var colorresult = [
@@ -42,7 +41,6 @@ export const Colorcalc = (nwsdata, sitename, hourstart, hourend, speedmin_ideal,
 
     // loop through each of 156 hours to assign a color (go-green, etc)
     for (i = 0; i < countperiods; i++) {
-
         // get the start hour (T00 to T24) for the data block
         // Example format for timestr is 2023-11-23T08:00:00-08:00
         // Note the -08:00 means the UTC offset is done so it is local time
@@ -71,8 +69,7 @@ export const Colorcalc = (nwsdata, sitename, hourstart, hourend, speedmin_ideal,
             // reminder - colorresult looks like this [['Mo','go-green'], ['Tu','go-yellow'], etc]
             colorresult[arrayposition][0] = weekday[day_num];
 
-            // assign the color in colorresult
-            // these colors (ex. go-yellow) are CSS properties
+            // assign the color in colorresult, these colors (ex. go-yellow) are CSS properties
             colorresult[arrayposition][1] = "go-gray";
             if (yellow_total >= 2 && rainscore <= 5) {
                 colorresult[arrayposition][1] = "go-yellow";
@@ -111,20 +108,20 @@ export const Colorcalc = (nwsdata, sitename, hourstart, hourend, speedmin_ideal,
             // so keep adding up color scores
         } else if (api_hour >= hourstart && api_hour <= hourend) {
             if (nwswindspeed >= speedmin_ideal && nwswindspeed <= speedmax_ideal && dir_ideal.indexOf(thedirection) > -1) {
-                console.log(sitename + " GREEN   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
+                // console.log(sitename + " GREEN   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 // conditions for this hour look good, increment green
                 green_total = green_total + 1;
                 yellow_total = yellow_total + 1;
             } else if (nwswindspeed >= speedmin_edge && nwswindspeed <= speedmax_edge && dir_edge.indexOf(thedirection) > -1) {
-                console.log(sitename + " YELLOW   T=" + api_hour + " speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
+                // console.log(sitename + " YELLOW   T=" + api_hour + " speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 // conditions for this hour are within the edge boundaries, so increment yellow
                 yellow_total = yellow_total + 1;
             } else if (nwswindspeed <= 5 && lightwind_ok === "yes") {
-                console.log(sitename + " LIGHTWIND  T=" + api_hour +  ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
+                // console.log(sitename + " LIGHTWIND  T=" + api_hour +  ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 // sites that can take light wind (regardless of direction) increment yellow
                 yellow_total = yellow_total + 1;
             } else {
-                console.log(sitename + " GRAY   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
+                // console.log(sitename + " GRAY   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
             }
 
             // increment rainscore if rain is probable
