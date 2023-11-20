@@ -2,7 +2,6 @@ import { arraydata } from "./Arraydata";
 import Arow from "./Arow";
 
 const Allrows = () => {
-    // console.log("<Allrows />");
 
     return (
     <div>

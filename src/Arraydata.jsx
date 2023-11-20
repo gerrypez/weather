@@ -36,7 +36,7 @@ export const arraydata = [
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/13,54/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.1384,-122.1959" },
             { id: 4, description: "Site Guide", url: "https://www.penguinparagliding.com/bluerock.html" },
-
+            { id: 5, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
         ],
     },
     {
@@ -77,7 +77,7 @@ export const arraydata = [
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/13,52/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.098,-122.180" },
             { id: 4, description: "Site Guide", url: "https://www.penguinparagliding.com/channingwest.html" },
-
+            { id: 5, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
         ],
     },
     {
@@ -118,26 +118,27 @@ export const arraydata = [
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/13,52/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.098,-122.180" },
             { id: 4, description: "Site Guide", url: "https://www.penguinparagliding.com/channingeast.html" },
-        ]
+            { id: 5, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 4,
         sitename: "diablo juniper",
         category: "local",
-        lat : 37.881,
-        lng : -121.914,
-        station : "MTR",
-        grid_x : 103,
-        grid_y : 106,
-        hourstart : 10,
-        hourend : 18,
-        speedmin_ideal : 0,
-        speedmax_ideal : 8,
-        speedmin_edge : 0,
-        speedmax_edge : 14,
+        lat: 37.881,
+        lng: -121.914,
+        station: "MTR",
+        grid_x: 103,
+        grid_y: 106,
+        hourstart: 10,
+        hourend: 18,
+        speedmin_ideal: 0,
+        speedmax_ideal: 8,
+        speedmin_edge: 0,
+        speedmax_edge: 14,
         lightwind_ok: "yes",
-        dir_ideal : ["SSW", "SW", "WSW"],
-        dir_edge : ["S", "SW", "WSW", "W"],
+        dir_ideal: ["SSW", "SW", "WSW"],
+        dir_edge: ["S", "SW", "WSW", "W"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=37.881&lon=-121.914&wfo=MTR&zcode=CAZ511&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=36&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-121.914&lat=37.881#.WtYca9PwbUI" },
@@ -152,34 +153,34 @@ export const arraydata = [
         link_current: [
             { id: 1, description: "6hr Current Wind", url: "http://bit.ly/2K2lyL3" },
             { id: 2, description: "Webcam Top", url: "http://www.alertwildfire.org/southeastbay/index.html?camera=Axis-Diablo" },
-            { id: 3, description: "Telegram Chat", url: "https://wingsofrogallo.org/chat/" },
-            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.881&lon=-121.914&zoom=13" },
+            { id: 3, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.881&lon=-121.914&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.881,-121.914" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/103,106/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.881,-121.914" },
             { id: 4, description: "Site Guide", url: "https://wingsofrogallo.org/mt-diablo/" },
-        ]
+            { id: 5, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 5,
         sitename: "diablo towers",
         category: "local",
-        lat : 37.881,
-        lng : -121.914,
-        station : "MTR",
-        grid_x : 103,
-        grid_y : 106,
-        hourstart : 10,
-        hourend : 18,
-        speedmin_ideal : 5,
-        speedmax_ideal : 9,
-        speedmin_edge : 3,
-        speedmax_edge : 14,
+        lat: 37.881,
+        lng: -121.914,
+        station: "MTR",
+        grid_x: 103,
+        grid_y: 106,
+        hourstart: 10,
+        hourend: 18,
+        speedmin_ideal: 5,
+        speedmax_ideal: 9,
+        speedmin_edge: 3,
+        speedmax_edge: 14,
         lightwind_ok: "yes",
-        dir_ideal : ["WNW", "NW", "NNW"],
-        dir_edge : ["W", "WNW", "W", "NW", "NNW", "N"],
+        dir_ideal: ["WNW", "NW", "NNW"],
+        dir_edge: ["W", "WNW", "W", "NW", "NNW", "N"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=37.881&lon=-121.914&wfo=MTR&zcode=CAZ511&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=36&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-121.914&lat=37.881#.WtYca9PwbUI" },
@@ -194,7 +195,6 @@ export const arraydata = [
         link_current: [
             { id: 1, description: "6hr Current Wind", url: "http://bit.ly/2K2lyL3" },
             { id: 2, description: "Webcam Top", url: "http://www.alertwildfire.org/southeastbay/index.html?camera=Axis-Diablo" },
-            { id: 3, description: "Telegram Chat", url: "https://wingsofrogallo.org/chat/" },
             { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.881&lon=-121.914&zoom=13" },
         ],
         link_data: [
@@ -202,26 +202,27 @@ export const arraydata = [
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/103,106/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.881,-121.914" },
             { id: 4, description: "Site Guide", url: "https://wingsofrogallo.org/mt-diablo/" },
-        ]
+            { id: 5, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 6,
         sitename: "ed levin",
         category: "local",
-        lat : 37.4847,
-        lng : -121.8654,
-        station : "MTR",
-        grid_x : 101,
-        grid_y : 88,
-        hourstart : 9,
-        hourend : 18,
-        speedmin_ideal : 0,
-        speedmax_ideal : 10,
-        speedmin_edge : 0,
-        speedmax_edge : 16,
+        lat: 37.4847,
+        lng: -121.8654,
+        station: "MTR",
+        grid_x: 101,
+        grid_y: 88,
+        hourstart: 9,
+        hourend: 18,
+        speedmin_ideal: 0,
+        speedmax_ideal: 10,
+        speedmin_edge: 0,
+        speedmax_edge: 16,
         lightwind_ok: "yes",
-        dir_ideal : ["SSE", "S", "SSW", "SW", "WSW", "W", "WNW"],
-        dir_edge : ["SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
+        dir_ideal: ["SSE", "S", "SSW", "SW", "WSW", "W", "WNW"],
+        dir_edge: ["SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=37.4847&lon=-121.8654&wfo=MTR&zcode=CAZ511&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=36&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-121.8654&lat=37.4847#.WtYca9PwbUI" },
@@ -236,34 +237,34 @@ export const arraydata = [
             { id: 1, description: "WindSlammer", url: "http://windslammer.hang-gliding.com/WindSlammer/" },
             { id: 2, description: "Mt Alison", url: "https://mesowest.utah.edu/cgi-bin/droman/meso_graph_mesowest.cgi?stn1=PG674&stn2=PG674&unit=0&timeout=0000&time=LOCAL&hour1=00&day1=00&month1=&year1=&hours=12&past=0&graph1=TTD&graph2=WND&g1min=&g1max=&g2min=&g2max=&gsize=1&g1auto=1&g2auto=1&linetype=colorline" },
             { id: 3, description: "Skew-T", url: "http://topaflyers.com/weather/soundings/oak.png" },
-            { id: 4, description: "Telegram Chat", url: "https://wingsofrogallo.org/chat/" },
-            { id: 5, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.4847&lon=-121.8654&zoom=13" },
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.4847&lon=-121.8654&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.4847,-121.8654" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/101,88/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.4847,-121.8654" },
             { id: 4, description: "Site Guide", url: "https://wingsofrogallo.org/ed-levin/" },
-        ]
+            { id: 5, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 7,
         sitename: "mission",
         category: "local",
-        lat : 37.518,
-        lng : -121.892,
-        station : "MTR",
-        grid_x : 101,
-        grid_y : 90,
-        hourstart : 11,
-        hourend : 18,
-        speedmin_ideal : 3,
-        speedmax_ideal : 11,
-        speedmin_edge : 0,
-        speedmax_edge : 16,
+        lat: 37.518,
+        lng: -121.892,
+        station: "MTR",
+        grid_x: 101,
+        grid_y: 90,
+        hourstart: 10,
+        hourend: 18,
+        speedmin_ideal: 3,
+        speedmax_ideal: 11,
+        speedmin_edge: 0,
+        speedmax_edge: 16,
         lightwind_ok: "yes",
-        dir_ideal : ["SW", "WSW", "W", "WNW", "NW", "NNW"],
-        dir_edge : ["SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N", "NNE"],
+        dir_ideal: ["SW", "WSW", "W", "WNW", "NW", "NNW"],
+        dir_edge: ["SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N", "NNE"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=37.518&lon=-121.892&wfo=MTR&zcode=CAZ511&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=36&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-121.892&lat=37.518#.WtYca9PwbUI" },
@@ -278,34 +279,34 @@ export const arraydata = [
             { id: 1, description: "WindSlammer", url: "http://windslammer.hang-gliding.com/WindSlammer/" },
             { id: 2, description: "Mt Alison", url: "https://mesowest.utah.edu/cgi-bin/droman/meso_graph_mesowest.cgi?stn1=PG674&stn2=PG674&unit=0&timeout=0000&time=LOCAL&hour1=00&day1=00&month1=&year1=&hours=12&past=0&graph1=TTD&graph2=WND&g1min=&g1max=&g2min=&g2max=&gsize=1&g1auto=1&g2auto=1&linetype=colorline" },
             { id: 3, description: "Skew-T", url: "http://topaflyers.com/weather/soundings/oak.png" },
-            { id: 4, description: "Telegram Chat", url: "https://wingsofrogallo.org/chat/" },
-            { id: 5, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.518&lon=-121.892&zoom=13" },
+            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.518&lon=-121.892&zoom=13" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.518,-121.892" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/101,90/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.518,-121.892" },
             { id: 4, description: "Site Guide", url: "https://wingsofrogallo.org/ed-levin/" },
-        ]
+            { id: 5, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 8,
         sitename: "marina, sand city",
         category: "local",
-        lat : 36.626,
-        lng : -121.844,
-        station : "MTR",
-        grid_x : 95,
-        grid_y : 51,
-        hourstart : 10,
-        hourend : 18,
-        speedmin_ideal : 9,
-        speedmax_ideal : 13,
-        speedmin_edge : 7,
-        speedmax_edge : 18,
+        lat: 36.626,
+        lng: -121.844,
+        station: "MTR",
+        grid_x: 95,
+        grid_y: 51,
+        hourstart: 10,
+        hourend: 18,
+        speedmin_ideal: 9,
+        speedmax_ideal: 13,
+        speedmin_edge: 7,
+        speedmax_edge: 18,
         lightwind_ok: "no",
-        dir_ideal : ["W", "WNW", "NW"],
-        dir_edge : ["SW", "WSW", "W", "WNW", "NW"],
+        dir_ideal: ["W", "WNW", "NW"],
+        dir_edge: ["SW", "WSW", "W", "WNW", "NW"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=36.626&lon=-121.844&wfo=MTR&zcode=CAZ530&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=36&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-121.844&lat=36.626#.WtYca9PwbUI" },
@@ -322,33 +323,33 @@ export const arraydata = [
             { id: 3, description: "Webcam", url: "https://www.thesanctuarybeachresort.com/resort/beach-camera" },
             { id: 4, description: "Fog Satellite", url: "https://www.fog.today" },
             { id: 5, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=36.626&lon=-121.844&zoom=13" },
-
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/36.626,-121.844" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/95,51/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/36.626,-121.844" },
             { id: 4, description: "Site Guide", url: "http://www.coastalcondors.org" },
-        ]
+            { id: 5, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 9,
         sitename: "mussel rock",
         category: "local",
-        lat : 37.674,
-        lng : -122.495,
-        station : "MTR",
-        grid_x : 81,
-        grid_y : 101,
-        hourstart : 10,
-        hourend : 18,
-        speedmin_ideal : 9,
-        speedmax_ideal : 15,
-        speedmin_edge : 8,
-        speedmax_edge : 20,
+        lat: 37.674,
+        lng: -122.495,
+        station: "MTR",
+        grid_x: 81,
+        grid_y: 101,
+        hourstart: 10,
+        hourend: 18,
+        speedmin_ideal: 9,
+        speedmax_ideal: 15,
+        speedmin_edge: 8,
+        speedmax_edge: 20,
         lightwind_ok: "no",
-        dir_ideal : ["W", "WNW", "NW"],
-        dir_edge : ["SW", "WSW", "W", "WNW", "NW"],
+        dir_ideal: ["W", "WNW", "NW"],
+        dir_edge: ["SW", "WSW", "W", "WNW", "NW"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=37.674&lon=-122.495&wfo=MTR&zcode=CAZ509&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=36&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-122.495&lat=37.674#.WtYca9PwbUI" },
@@ -367,33 +368,33 @@ export const arraydata = [
             { id: 5, description: "Webcam Cheetah", url: "https://youtu.be/L6e1EEA-dQI" },
             { id: 6, description: "Webcam Funston", url: "https://www.fellowfeathers.com/dashboard/" },
             { id: 7, description: "Fog Satellite", url: "https://www.fog.today" },
-
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.674,-122.495" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/81,101/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.674,-122.495" },
             { id: 4, description: "Site Guide", url: "https://www.paragliding-lessons.com/mrsg/" },
-        ]
+            { id: 5, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 10,
         sitename: "tam",
         category: "local",
-        lat : 37.911,
-        lng : -122.625,
-        station : "MTR",
-        grid_x : 79,
-        grid_y : 113,
-        hourstart : 10,
-        hourend : 18,
-        speedmin_ideal : 2,
-        speedmax_ideal : 8,
-        speedmin_edge : 0,
-        speedmax_edge : 12,
+        lat: 37.911,
+        lng: -122.625,
+        station: "MTR",
+        grid_x: 79,
+        grid_y: 113,
+        hourstart: 10,
+        hourend: 18,
+        speedmin_ideal: 2,
+        speedmax_ideal: 8,
+        speedmin_edge: 0,
+        speedmax_edge: 12,
         lightwind_ok: "yes",
-        dir_ideal : ["S", "SSW", "SW", "WSW", "W"],
-        dir_edge : ["SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW"],
+        dir_ideal: ["S", "SSW", "SW", "WSW", "W"],
+        dir_edge: ["SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=37.9114&lon=-122.625&wfo=MTR&zcode=CAZ507&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10101110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=36&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-122.625&lat=37.911#.WtYca9PwbUI" },
@@ -417,26 +418,27 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.911,-122.625" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/79,113/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.911,-122.625" },
-        ]
+            { id: 4, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 11,
         sitename: "vaca ridge",
         category: "local",
-        lat : 38.400,
-        lng : -122.106,
-        station : "MTR",
-        grid_x : 101,
-        grid_y : 131,
-        hourstart : 11,
-        hourend : 17,
-        speedmin_ideal : 5,
-        speedmax_ideal : 10,
-        speedmin_edge : 0,
-        speedmax_edge : 16,
+        lat: 38.4,
+        lng: -122.106,
+        station: "MTR",
+        grid_x: 101,
+        grid_y: 131,
+        hourstart: 11,
+        hourend: 17,
+        speedmin_ideal: 5,
+        speedmax_ideal: 10,
+        speedmin_edge: 0,
+        speedmax_edge: 16,
         lightwind_ok: "yes",
-        dir_ideal : ["SW", "WSW", "W"],
-        dir_edge : ["SSW", "SW", "WSW", "W", "WNW"],
+        dir_ideal: ["SW", "WSW", "W"],
+        dir_edge: ["SSW", "SW", "WSW", "W", "WNW"],
         nws_image: "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.4&lon=-122.106&wfo=MTR&zcode=CAZ507&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=36&pqpfhr=6&psnwhr=6",
         link_forecasts: [
             { id: 1, description: "NWS Summary", url: "https://forecast.weather.gov/MapClick.php?lon=-122.106&lat=38.400#.WtYca9PwbUI" },
@@ -455,10 +457,11 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.400,-122.106" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/101,131/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.400,-122.106" },
-        ]
+            { id: 4, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
-        id:12,
+        id: 12,
         sitename: "bidwell chico",
         category: "remote",
         lat: 39.7802,
@@ -484,17 +487,15 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KCIC&state=CA" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.7802&lon=-121.761&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.7802&lon=-121.761&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.7802,-121.761" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/42,123/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.7802,-121.761" },
-        ]
+        ],
     },
     {
-        id:13,
+        id: 13,
         sitename: "big sur",
         category: "remote",
         lat: 35.971,
@@ -520,17 +521,15 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KFAT&state=CA" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=35.971&lon=-121.453&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=35.971&lon=-121.453&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/35.971,-121.453" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/103,19/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/35.971,-121.453" },
-        ]
+        ],
     },
     {
-        id:14,
+        id: 14,
         sitename: "drakes pt reyes",
         category: "remote",
         lat: 38.0265,
@@ -565,7 +564,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.0265,-122.9634" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/68,120/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.0265,-122.9634" },
-        ]
+        ],
     },
     {
         id: 15,
@@ -594,14 +593,13 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KFAT&state=CA" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=36.765&lon=-119.098&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=36.765&lon=-119.098&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/36.765,-119.098" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/HNX/77,96/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/36.765,-119.098" },
-        ]
+            { id: 4, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 16,
@@ -630,15 +628,12 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" },
         ],
-        link_current: [
-            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.2295&lon=-119.7651&zoom=13" },
-
-        ],
+        link_current: [{ id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.2295&lon=-119.7651&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.2295,-119.7651" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/REV/44,93/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.2295,-119.7651" },
-        ]
+        ],
     },
     {
         id: 17,
@@ -666,15 +661,12 @@ export const arraydata = [
             { id: 4, description: "Windy All Models", url: "https://www.windy.com/39.277/-122.941/wind?39.277,-122.941,7,m:eHCacL2" },
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.277&lon=-122.941&zoom=13" },
-
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.277&lon=-122.941&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.277,-122.941" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/EKA/89,31/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.277,-122.941" },
-        ]
+        ],
     },
     {
         id: 18,
@@ -703,14 +695,12 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRBL&state=CA" },
         ],
-        link_current: [
-            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=40.842&lon=-121.428&zoom=13" },
-        ],
+        link_current: [{ id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=40.842&lon=-121.428&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/40.842,-121.428" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/63,168/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/40.842,-121.428" },
-        ]
+        ],
     },
     {
         id: 19,
@@ -738,14 +728,12 @@ export const arraydata = [
             { id: 4, description: "Windy All Models", url: "https://www.windy.com/40.842/-121.428/wind?40.842,-121.428,7,m:eHCacL2" },
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
         ],
-        link_current: [
-            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.509&lon=-122.937&zoom=13" },
-        ],
+        link_current: [{ id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.509&lon=-122.937&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.509,-122.937" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/EKA/92,41/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.509,-122.937" },
-        ]
+        ],
     },
     {
         id: 20,
@@ -773,14 +761,12 @@ export const arraydata = [
             { id: 4, description: "Windy All Models", url: "https://www.windy.com/40.194/-120.923/wind?40.194,-121.923,7,m:eHCacL2" },
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
         ],
-        link_current: [
-            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=40.194&lon=-120.923&zoom=13" },
-        ],
+        link_current: [{ id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=40.194&lon=-120.923&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/40.194,-120.923" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/REV/13,143/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/40.194,-120.923" },
-        ]
+        ],
     },
     {
         id: 21,
@@ -817,7 +803,8 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.4421,-123.1245" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/66,140/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.4421,-123.1245" },
-        ]
+            { id: 4, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 22,
@@ -854,7 +841,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.478,-123.163" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/65,142/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.478,-123.163" },
-        ]
+        ],
     },
     {
         id: 23,
@@ -883,14 +870,12 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 5, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KMHS&state=CA" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.333&lon=-122.002&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.333&lon=-122.002&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.333,-122.002" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/21,61/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.333,-122.002" },
-        ]
+        ],
     },
     {
         id: 24,
@@ -919,14 +904,12 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 5, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KCIC&state=CA" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.537&lon=-121.628&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=39.537&lon=-121.628&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.537,-121.628" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/44,111/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.537,-121.628" },
-        ]
+        ],
     },
     {
         id: 25,
@@ -963,7 +946,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.4554,-122.4447" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/81,91/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.4554,-122.4447" },
-        ]
+        ],
     },
     {
         id: 26,
@@ -992,14 +975,13 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 5, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRBL&state=CA" },
         ],
-        link_current: [
-            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.3317&lon=-122.685&zoom=13" },
-        ],
+        link_current: [{ id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.3317&lon=-122.685&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.317,-122.685" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/7,109/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.317,-122.685" },
-        ]
+            { id: 4, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 27,
@@ -1028,14 +1010,12 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 5, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSAC&state=CA" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.822&lon=-120.889&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.822&lon=-120.889&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.822,-120.889" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/11,51/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.822,-120.889" },
-        ]
+        ],
     },
     {
         id: 28,
@@ -1064,14 +1044,12 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 5, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSAC&state=CA" },
         ],
-        link_current: [
-            { id: 1, description: "Local Station", url: "https://www.wunderground.com/dashboard/pws/KCAVALLE1156" },
-        ],
+        link_current: [{ id: 1, description: "Local Station", url: "https://www.wunderground.com/dashboard/pws/KCAVALLE1156" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.0772,-122.2398" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/11,51/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.0772,-122.2398" },
-        ]
+        ],
     },
     {
         id: 29,
@@ -1112,7 +1090,7 @@ export const arraydata = [
             { id: 1, description: "API", url: "https://api.weather.gov/points/39.319,-119.867" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/REV/41,97/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/39.319,-119.867" },
-        ]
+        ],
     },
     {
         id: 30,
@@ -1141,14 +1119,12 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KAPC&state=CA" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.667&lon=-122.628&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.667&lon=-122.628&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.667,-122.628" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/86,146/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.667,-122.628" },
-        ]
+        ],
     },
     {
         id: 31,
@@ -1177,14 +1153,12 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KAPC&state=CA" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.0047&lon=-121.9201&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.0047&lon=-121.9201&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.0047,-121.9201" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/104,112/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.0047,-121.9201" },
-        ]
+        ],
     },
     {
         id: 32,
@@ -1213,14 +1187,12 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KFAT&state=CA" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.015&lon=-119.373&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.015&lon=-119.373&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.015,-119.373" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/HNX/69,109/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.015,-119.373" },
-        ]
+        ],
     },
     {
         id: 33,
@@ -1249,14 +1221,12 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KTRK&state=CA" },
         ],
-        link_current: [
-            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.089&lon=-122.274&zoom=13" },
-        ],
+        link_current: [{ id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.089&lon=-122.274&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.089,-122.274" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/84,74/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.089,-122.274" },
-        ]
+        ],
     },
     {
         id: 34,
@@ -1285,14 +1255,13 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KPAO&state=CA" },
         ],
-        link_current: [
-            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.364&lon=-122.245&zoom=13" },
-        ],
+        link_current: [{ id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.364&lon=-122.245&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.364,-122.245" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/87,86/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.364,-122.245" },
-        ]
+            { id: 4, description: "Telegram", url: "https://wingsofrogallo.org/chat/" },
+        ],
     },
     {
         id: 35,
@@ -1304,11 +1273,11 @@ export const arraydata = [
         grid_x: 89,
         grid_y: 109,
         hourstart: 7,
-        hourend: 10,
+        hourend: 18,
         speedmin_ideal: 8,
         speedmax_ideal: 13,
         speedmin_edge: 7,
-        speedmax_edge: 18,
+        speedmax_edge: 19,
         lightwind_ok: "no",
         dir_ideal: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
         dir_edge: ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"],
@@ -1317,14 +1286,12 @@ export const arraydata = [
             { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=37.871&lon=-122.319&unit=0&lg=english&FcstType=graphical" },
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/37.871/-122.319/wind?37.871,-122.319,7,m:eHCacL2" },
         ],
-        link_current: [
-            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.871&lon=-122.319&zoom=13" },
-        ],
+        link_current: [{ id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.871&lon=-122.319&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.871,-122.319" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/89,109/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.871,-122.319" },
-        ]
+        ],
     },
     {
         id: 36,
@@ -1349,14 +1316,12 @@ export const arraydata = [
             { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.570&lon=-121.820&unit=0&lg=english&FcstType=graphical" },
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/38.570/-121.820/wind?38.570,-121.820,7,m:eHCacL2" },
         ],
-        link_current: [
-            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.57&lon=-121.82&zoom=13" },
-        ],
+        link_current: [{ id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.57&lon=-121.82&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.570,-121.820" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/89,109/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.570,-121.820" },
-        ]
+        ],
     },
     {
         id: 37,
@@ -1381,14 +1346,12 @@ export const arraydata = [
             { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=37.430&lon=-122.076&unit=0&lg=english&FcstType=graphical" },
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/37.430/-122.076/wind?37.430,-122.076,7,m:eHCacL2" },
         ],
-        link_current: [
-            { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.43&lon=-122.076&zoom=13" },
-        ],
+        link_current: [{ id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.43&lon=-122.076&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.430,-122.076" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/94,88/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.430,-122.076" },
-        ]
+        ],
     },
     {
         id: 38,
@@ -1426,13 +1389,12 @@ export const arraydata = [
             { id: 5, description: "Webcam Cheetah", url: "https://youtu.be/L6e1EEA-dQI" },
             { id: 6, description: "Webcam Funston", url: "https://www.fellowfeathers.com/dashboard/" },
             { id: 7, description: "Fog Satellite", url: "https://www.fog.today" },
-
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.674,-122.495" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/81,101/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.674,-122.495" },
-        ]
+        ],
     },
     {
         id: 39,
@@ -1457,14 +1419,12 @@ export const arraydata = [
             { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=37.8039&lon=-122.4627&unit=0&lg=english&FcstType=graphical" },
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/37.8039/-122.4627/wind?37.8039,-122.4627,7,m:eHCacL2" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.8039&lon=-122.4627&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.8039&lon=-122.4627&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.8039,-122.4627" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/MTR/83,107/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/37.8039,-122.4627" },
-        ]
+        ],
     },
     {
         id: 40,
@@ -1489,14 +1449,12 @@ export const arraydata = [
             { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.333&lon=-122.002&unit=0&lg=english&FcstType=graphical" },
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/38.333/-122.002/wind?38.333,-122.002,7,m:eHCacL2" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.333&lon=-122.002&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.333&lon=-122.002&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.333,-122.002" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/20,60/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.333,-122.002" },
-        ]
+        ],
     },
     {
         id: 41,
@@ -1521,13 +1479,11 @@ export const arraydata = [
             { id: 1, description: "NWS Hourly", url: "https://forecast.weather.gov/MapClick.php?lat=38.1141&lon=-122.2708&unit=0&lg=english&FcstType=graphical" },
             { id: 2, description: "Windy All Models", url: "https://www.windy.com/38.1144/-122.2705/wind?38.1141,-122.2708,7,m:eHCacL2" },
         ],
-        link_current: [
-            { id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.1141&lon=-122.2708&zoom=13" },
-        ],
+        link_current: [{ id: 1, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.1141&lon=-122.2708&zoom=13" }],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/38.1141,-122.2708" },
             { id: 2, description: "Data", url: "https://api.weather.gov/gridpoints/STO/10,53/forecast/hourly" },
             { id: 3, description: "Map", url: "https://www.google.com/maps/place/38.1141,-122.2708" },
-        ]
+        ],
     },
 ];
