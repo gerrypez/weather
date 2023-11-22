@@ -18,9 +18,14 @@ const Arow = ({ arraydata }) => {
     function toggle(dataid) {
         if (dataid === isOpen) {
             setIsOpen(0);
+            // const dataElement = document.getElementById(dataid);
+            // dataElement.className = "sitename";
         } else {
             setIsOpen(dataid);
-            // change css background color of title_blue
+            // const alreadyBlue = document.getElementsByClassName("sitenamehigh");
+            // alreadyBlue.className = "sitename";
+            // const dataElement = document.getElementById(dataid);
+            // dataElement.className = "sitenamehigh";
         }
     }
 
@@ -29,7 +34,7 @@ const Arow = ({ arraydata }) => {
             {arraydata.map((data) => (
                 <div className="siterow" key={data.id}>
                     <div className="toprow" onClick={(e) => toggle(data.id)}>
-                        <div className="title_blue" id={data.id}>
+                        <div>
                             <Sitename id={data.id} sitename={data.sitename} />
                         </div>
                         <div className="daycolors">

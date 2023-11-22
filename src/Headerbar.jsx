@@ -33,6 +33,7 @@ const Headerbar = () => {
                     </ul>
                 </div>
             )}
+            <div className="headererrormessage" id="showtopmessage">The NWS API is reporting errors for some locations.  Patience padawan. </div>
         </div>
     );
 };

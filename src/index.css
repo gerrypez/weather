@@ -61,10 +61,6 @@ li {
     padding: 10px;
 }
 
-.errorstationcheck {
-
-}
-
 .go-blue {
     background-color: #1994f1;
     color: #303030;
@@ -159,6 +155,18 @@ li {
     text-align: center;
     vertical-align: middle;
     width: 30px;
+}
+
+.headererrormessage {
+    border: 1px solid darkgray;
+    float:left;
+    clear: left;
+    font-size: 0.9em;
+    width: 300px;
+    margin: 20px 0 20px 30px;
+    padding: 10px;
+    color: red;
+    display: none;
 }
 
 .infopanel {
@@ -289,6 +297,19 @@ li {
 
 .sitename {
     background-color: #454d72;
+    color: white;
+    float: left;
+    font-size: 0.9em;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+    padding-right: 5px;
+    vertical-align: middle;
+    width: 130px;
+}
+
+.sitenamehigh {
+    background-color: #1b7ac7;
     color: white;
     float: left;
     font-size: 0.9em;

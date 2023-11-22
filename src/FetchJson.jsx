@@ -13,6 +13,11 @@ export const FetchJson = (sitename, station, grid_x, grid_y, hourstart, hourend,
     // daycolor is an array  ex. [["mo", "go-green"], ["Tu", "go-gray"], etc]
     const [daycolor, setDaycolor] = useState([]);
 
+    function showErrorMessage() {
+        const errorMessageElement = document.getElementById("showtopmessage");
+        errorMessageElement.style.display = "block";
+    }
+
     const siteURL = "https://api.weather.gov/gridpoints/" + station + "/" + grid_x + "," + grid_y + "/forecast/hourly";
 
     // useRef hook to store hasInitialCallMade
@@ -31,6 +36,7 @@ export const FetchJson = (sitename, station, grid_x, grid_y, hourstart, hourend,
                             console.error(sitename + " FetchJson.jsx 500 error, retry number " + i + 1);
                             await new Promise((resolve) => setTimeout(resolve, 1500));
                         } else {
+                            showErrorMessage();
                             throw new Error(sitename + " FetchJson.jsx unexpected response status");
                         }
                     } catch (error) {

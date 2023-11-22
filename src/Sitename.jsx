@@ -2,8 +2,8 @@
  *  The site name
  */
 
-const Sitename = ({ sitename }) => {
-    return <div className="sitename">{sitename}</div>;
+const Sitename = ({ sitename, id }) => {
+    return <div className="sitename" id={id}>{sitename}</div>;
 };
 
 export default Sitename;
