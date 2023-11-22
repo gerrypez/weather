@@ -39,6 +39,7 @@ const Arow = ({ arraydata }) => {
                         </div>
                         <div className="daycolors">
                             <Sitedays
+                                id = {data.id}
                                 sitename={data.sitename}
                                 station={data.station}
                                 grid_x={data.grid_x}
