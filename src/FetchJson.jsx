@@ -39,23 +39,31 @@ export const FetchJson = (id, sitename, station, grid_x, grid_y, hourstart, hour
                             // try again in 1.5 seconds
                             await new Promise((resolve) => setTimeout(resolve, 1500));
                         } else {
-                            // 503 error, server unavailable
-                            // 404 error, api url not found
-                            console.error(sitename + " FJ 503(?) error, retry " + i + 1);
+                            // 503 error server unavailable, or 404 error api url not found
+                            // tollhouse FJ 503(GP) error, retry 81
+                            console.error(sitename + " FJ 503(GP) error, retry " + i + 1);
 
                             // show the error message in client at the top of the page
                             showErrorMessage();
 
                             /*
-                            * Next time there is a 503 error, see if this works
-                            *  do I need to JSON.parse this ... try without too 
+                            * Test this if there is a 503 error
+                            * (1) first see if the down site has proper local storage, getting Woah message below
+                            * (2) if so, try to return storedData
                             */
-                            // const olddata = JSON.parse(localStorage.getItem('id'+id));
-                            // console.log("localStorage for site id " + id + " is " + olddata);
-                            // return olddata;
 
-                            // describe the error
-                            throw new Error(sitename + " FJ this is the error message");
+                            // get todays day in the format Mo, Tu etc
+                            const todaysDay = new Date().toLocaleDateString("en-US", { weekday: "short" }).slice(0, 2);
+
+                            // get data from local storage
+                            const storedData = JSON.parse(localStorage.getItem("id"+id));
+                            if (storedData[0][0] === todaysDay) {
+                                console.log(sitename + "Woah - got storedData, return this???" + storedData);
+                                // return storedData;
+                            }
+
+                            // this happens after several retrys
+                            throw new Error(sitename + " FJ bottom error message");
                         }
                     } catch (error) {
                         // 404 error, api url not found
@@ -87,9 +95,10 @@ export const FetchJson = (id, sitename, station, grid_x, grid_y, hourstart, hour
         } catch (error) {
             console.log("FetchJson.jsx error: ", error);
         }
-    }, [siteURL, sitename, dir_edge, dir_ideal, hourend, hourstart, lightwind_ok, speedmax_edge, speedmax_ideal, speedmin_edge, speedmin_ideal]);
+    }, [siteURL, id, sitename, dir_edge, dir_ideal, hourend, hourstart, lightwind_ok, speedmax_edge, speedmax_ideal, speedmin_edge, speedmin_ideal]);
 
     // console.log('FetchJson: ' + sitename + " - " + daycolor);
     // return the array daycolor to Sitedays.jsx
+
     return daycolor;
 };
