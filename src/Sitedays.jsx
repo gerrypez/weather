@@ -11,13 +11,12 @@ const Sitedays = ({ id, sitename, station, grid_x, grid_y, hourstart, hourend, s
     // get todays day in the format Mo, Tu etc
     const todaysDay = new Date().toLocaleDateString("en-US", { weekday: "short" }).slice(0, 2);
 
-    // store the color results locally
-    // helpful if the server is temporarily down with a 503 error
+    // store the color results locally, used for 503 errors
     if (Array.isArray(daycolors) && daycolors.length > 0) {
         // Perform actions if daycolors is an array starting with today
         if (daycolors[0][0] === todaysDay) {
             // Store the data locally if the variable is an array (a valid result)
-            localStorage.setItem("id" + id, JSON.stringify(daycolors));
+            localStorage.setItem("id"+id, JSON.stringify(daycolors));
             // console.log(sitename + " was stored locally :" + daycolors);
         }
     }

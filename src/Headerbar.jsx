@@ -34,7 +34,7 @@ const Headerbar = () => {
                 </div>
             )}
             <div className="headererrormessage" id="showtopmessage">
-                NWS API, no data some sites
+                NWS API - some data missing
             </div>
         </div>
     );
