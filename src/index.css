@@ -62,8 +62,8 @@ li {
 }
 
 .go-black {
-    background-color: #6F7378;
-    color: #FFFFFF;
+    background-color: #000;
+    color: #3f3f3f;
     float: left;
     height: 100%;
     line-height: 30px;

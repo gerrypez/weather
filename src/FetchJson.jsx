@@ -26,6 +26,9 @@ export const FetchJson = (id, sitename, station, grid_x, grid_y, hourstart, hour
     // call the NWS API, retry up to 5 times
     useEffect(() => {
         const getWeatherJson = async () => {
+            // const storedData = JSON.parse(localStorage.getItem("id"+id));
+            // console.log("here is locall " + sitename + " " + storedData[0][0] + " " + JSON.parse(localStorage.getItem("id"+id)));
+
             async function fetchWithRetries(url, retries = 9) {
                 for (let i = 0; i < retries; i++) {
                     try {
@@ -35,7 +38,7 @@ export const FetchJson = (id, sitename, station, grid_x, grid_y, hourstart, hour
                             return await response.json();
                         } else if (response.status === 500) {
                             // 500 error, server not responding
-                            console.error(sitename + " FJ 500 error, retry number " + (i + 1));
+                            console.error(sitename + " GP500 error, retry " + (i + 1));
                             // try again in 1.5 seconds
                             await new Promise((resolve) => setTimeout(resolve, 1500));
                         } else {
@@ -48,25 +51,25 @@ export const FetchJson = (id, sitename, station, grid_x, grid_y, hourstart, hour
                              */
 
                             // 503 error server unavailable, or 404 error api url not found
-                            console.error(sitename + "gp test the response.status is " + response.status);
-                            console.error(sitename + "gptest FJ 503 error, retry " + i);
+                            console.error(sitename + "GP503a error, the response.status is " + response.status);
+                            console.error(sitename + "GP503b error, retry " + i);
 
                             // get todays day in the format Mo, Tu etc
                             const todaysDay = new Date().toLocaleDateString("en-US", { weekday: "short" }).slice(0, 2);
-                            console.log(sitename + "gptest todaysDay " + todaysDay);
+                            console.log(sitename + "GP503c todaysDay " + todaysDay);
 
                             // get data from local storage
                             const storedData = JSON.parse(localStorage.getItem("id" + id));
-                            console.log(sitename + "gptest storedData[0][0] " + storedData[0][0]);
+                            console.log(sitename + "GP503d storedData[0][0], the first day in storedData, is " + storedData[0][0]);
 
                             if (storedData[0][0] === todaysDay) {
-                                console.log(sitename + "gptest FJ  - check if storedData is here ???" + storedData);
+                                console.log(sitename + "GP503e FJ  - matched, check if storedData is here ???" + storedData);
                                 // do I return as .json(), was already stored as json ?
                                 return storedData;
                             } else {
                                 // show the error message in client at the top of the page
                                 showErrorMessage();
-                                console.log(sitename + "gptest no local storage, so return n o d a t a message, storedData = " + storedData);
+                                console.log(sitename + "GP503f no local storage, so return n o d a t a message, storedData = " + storedData);
                                 var noDataArray = new Array([
                                     ["n", "go-black"],
                                     ["o", "go-black"],
@@ -76,7 +79,7 @@ export const FetchJson = (id, sitename, station, grid_x, grid_y, hourstart, hour
                                     ["a", "go-black"],
                                 ]);
                                 // do I return as .json ?
-                                return noDataArray.json();
+                                return noDataArray;
                             }
 
                             // this below is unreachable
@@ -84,9 +87,9 @@ export const FetchJson = (id, sitename, station, grid_x, grid_y, hourstart, hour
                         }
                     } catch (error) {
                         // 404 error, api url not found
-                        console.error(sitename + " gptest FJ bottom catch error, retries = " + retries);
+                        console.error(sitename + " GP503g FJ bottom catch error, retries = " + retries);
                         if (i === retries - 1) {
-                            throw new Error(sitename + " gptest FJ bottom catch error message");
+                            throw new Error(sitename + " GP503h FJ bottom catch error message");
                         }
                     }
                 }
