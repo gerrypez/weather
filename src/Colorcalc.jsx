@@ -94,7 +94,7 @@ export const Colorcalc = (nwsdata, sitename, hourstart, hourend, speedmin_ideal,
             if (green_total >= 4) {
                 colorresult[arrayposition][1] = "go-green";
             }
-            if (green_total >= 4 && rainscore > 5) {
+            if (green_total >= 4 && rainscore > 4) {
                 colorresult[arrayposition][1] = "go-lightgreen-blue";
             }
             // for today after 6pm color the square black
@@ -120,24 +120,25 @@ export const Colorcalc = (nwsdata, sitename, hourstart, hourend, speedmin_ideal,
             // so keep adding up color scores
         } else if (api_hour >= hourstart && api_hour <= hourend) {
             if (nwswindspeed >= speedmin_ideal && nwswindspeed <= speedmax_ideal && dir_ideal.indexOf(thedirection) > -1) {
-                // console.log(sitename + " GREEN   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 // conditions for this hour look good, increment green
+                // console.log(sitename + " GREEN   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 green_total = green_total + 1;
                 yellow_total = yellow_total + 1;
             } else if (nwswindspeed >= speedmin_edge && nwswindspeed <= speedmax_edge && dir_edge.indexOf(thedirection) > -1) {
-                // console.log(sitename + " YELLOW   T=" + api_hour + " speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 // conditions for this hour are within the edge boundaries, so increment yellow
+                // console.log(sitename + " YELLOW   T=" + api_hour + " speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 yellow_total = yellow_total + 1;
             } else if (nwswindspeed <= 5 && lightwind_ok === "yes") {
-                // console.log(sitename + " LIGHTWIND  T=" + api_hour +  ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 // sites that can take light wind (regardless of direction) increment yellow
+                // console.log(sitename + " LIGHTWIND  T=" + api_hour +  ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 yellow_total = yellow_total + 1;
             } else {
-                // console.log(sitename + " GRAY   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
+                // default will be go-gray
+                console.log(sitename + " GRAY   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
             }
-
             // increment rainscore if rain is probable
             if (rainprob > 33) {
+                // console.log(sitename + " rain probability: " + rainprob + ", day " + weekday[day_num]);
                 rainscore = rainscore + 1;
             }
         }
