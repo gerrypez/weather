@@ -15,9 +15,9 @@ const Sitedays = ({ id, sitename, station, grid_x, grid_y, hourstart, hourend, s
     if (Array.isArray(daycolors) && daycolors.length > 0) {
         // Perform actions if daycolors is an array starting with today
         if (daycolors[0][0] === todaysDay) {
-            // Store the data locally if the variable is an array (a valid result)
+            // Store the data locally if the variable is an array (a valid result) and today current
             localStorage.setItem("id"+id, JSON.stringify(daycolors));
-            // console.log(sitename + " was stored locally :" + daycolors);
+            // console.log(sitename + " was stored locally: " + daycolors);
         }
     }
 

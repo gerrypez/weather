@@ -128,7 +128,7 @@ export const arraydata = [
         lat: 37.8778,
         lng: -121.9351,
         station: "MTR",
-        grid_x: 103,
+        grid_x: 102,
         grid_y: 106,
         hourstart: 10,
         hourend: 18,
@@ -1295,7 +1295,7 @@ export const arraydata = [
     },
     {
         id: 36,
-        sitename: "davis university field",
+        sitename: "davis university",
         category: "kiting",
         lat: 38.5403,
         lng: -121.7585,

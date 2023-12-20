@@ -13,9 +13,15 @@ export const FetchJson = (id, sitename, station, grid_x, grid_y, hourstart, hour
     // daycolor is an array  ex. [["mo", "go-green"], ["Tu", "go-gray"], etc]
     const [daycolor, setDaycolor] = useState([]);
 
-    function showErrorMessage() {
-        const errorMessageElement = document.getElementById("showtopmessage");
-        errorMessageElement.style.display = "block";
+    function appendErrorMessage(errorMessage) {
+        console.log("appending error messages to bottomspace");
+        const bottomSpaceElement = document.querySelector(".bottomspace");
+        // Get the current text content of the element
+        const currentText = bottomSpaceElement.textContent;
+        // Combine the current text with the error message
+        const newText = `${currentText}${errorMessage}`;
+        // Update the element's text content with the new text
+        bottomSpaceElement.textContent = newText;
     }
 
     const siteURL = "https://api.weather.gov/gridpoints/" + station + "/" + grid_x + "," + grid_y + "/forecast/hourly";
@@ -27,8 +33,9 @@ export const FetchJson = (id, sitename, station, grid_x, grid_y, hourstart, hour
     useEffect(() => {
         const getWeatherJson = async () => {
             // const storedData = JSON.parse(localStorage.getItem("id"+id));
-            // console.log("here is locall " + sitename + " " + storedData[0][0] + " " + JSON.parse(localStorage.getItem("id"+id)));
+            // console.log("localStorage for  " + sitename + " : " + JSON.parse(localStorage.getItem("id"+id)));
 
+            // This functions gets json data from NWS api
             async function fetchWithRetries(url, retries = 9) {
                 for (let i = 0; i < retries; i++) {
                     try {
@@ -37,73 +44,51 @@ export const FetchJson = (id, sitename, station, grid_x, grid_y, hourstart, hour
                             // good response from server, so return nws json data
                             return await response.json();
                         } else if (response.status === 500) {
-                            // 500 error, server not responding
-                            console.error(sitename + " GP500 error, retry " + (i + 1));
-                            // try again in 1.5 seconds
+                            // 500 error, server not responding, so retry every 1.5 seconds
+                            console.error(sitename + " fetchWithRetries 500 server not responding error, retry " + (i + 1));
                             await new Promise((resolve) => setTimeout(resolve, 1500));
                         } else {
-                            // 503 error, but can be other server errors here
-
-                            /*
-                             * This code (when there is a 503/etc error) is in progress
-                             *  It recovers localStorage, and uses it if valid
-                             * test if a site is giving a 503 error (to test search "gptest" in console)
-                             */
-
-                            // 503 error server unavailable, or 404 error api url not found
-                            console.error(sitename + "GP503a error, the response.status is " + response.status);
-                            console.error(sitename + "GP503b error, retry " + i);
-
-                            // get todays day in the format Mo, Tu etc
-                            const todaysDay = new Date().toLocaleDateString("en-US", { weekday: "short" }).slice(0, 2);
-                            console.log(sitename + "GP503c todaysDay " + todaysDay);
-
-                            // get data from local storage
-                            const storedData = JSON.parse(localStorage.getItem("id" + id));
-                            console.log(sitename + "GP503d storedData[0][0], the first day in storedData, is " + storedData[0][0]);
-
-                            if (storedData[0][0] === todaysDay) {
-                                console.log(sitename + "GP503e FJ  - matched, check if storedData is here ???" + storedData);
-                                // do I return as .json(), was already stored as json ?
-                                return storedData;
-                            } else {
-                                // show the error message in client at the top of the page
-                                showErrorMessage();
-                                console.log(sitename + "GP503f no local storage, so return n o d a t a message, storedData = " + storedData);
-                                var noDataArray = new Array([
-                                    ["n", "go-black"],
-                                    ["o", "go-black"],
-                                    ["d", "go-black"],
-                                    ["a", "go-black"],
-                                    ["t", "go-black"],
-                                    ["a", "go-black"],
-                                ]);
-                                // do I return as .json ?
-                                return noDataArray;
-                            }
-
-                            // this below is unreachable
-                            // throw new Error(sitename + " FJ bottom error message");
+                            // Other server error like 404 or 503, no nws data from server
+                            console.error(sitename + " fetchWithRetries 503 no data error, the error response.status is " + response.status);
+                            return "503error";
                         }
                     } catch (error) {
-                        // 404 error, api url not found
-                        console.error(sitename + " GP503g FJ bottom catch error, retries = " + retries);
+                        // unable to fetch url
+                        console.error(sitename + " fetchWithRetries catch(error), retries = " + retries);
                         if (i === retries - 1) {
-                            throw new Error(sitename + " GP503h FJ bottom catch error message");
+                            throw new Error(sitename + " fetchWithRetries catch(error)");
                         }
                     }
                 }
                 throw new Error("FetchJson.jsx maximum number of retries reached");
             }
 
+            // Fetch the nws data, using 9 retries every 1.5 seconds if necessary
             const nwsdata = await fetchWithRetries(siteURL, 9);
 
-            // Call Colorcalc only one time
+            // Given the nws json data, figure out the colors using Colorcalc
+            // If there is a server error, use local Storage last values to populate the colors
+            // Using hasInitialCallMadeRef is to make sure that Colorcalc is only called one time
             if (!hasInitialCallMadeRef.current) {
-                const colorresult = Colorcalc(nwsdata, sitename, hourstart, hourend, speedmin_ideal, speedmax_ideal, speedmin_edge, speedmax_edge, lightwind_ok, dir_ideal, dir_edge);
-
-                // setDaycolor returns the final array daycolor back to Sitedays.jsx
-                setDaycolor(colorresult);
+                if (nwsdata === "503error") {
+                    // in this case, the nws json data was not available from the server
+                    // so use the last locally stored values to populate the site row
+                    // make sure that the local data starts from today
+                    const errormessage = sitename + " 503 error,    ";
+                    appendErrorMessage(errormessage);
+                    console.log(sitename + " processsing 503error using local Storage !!! ");
+                    const todaysDay = new Date().toLocaleDateString("en-US", { weekday: "short" }).slice(0, 2);
+                    const storedData = JSON.parse(localStorage.getItem("id" + id));
+                    if (storedData[0][0] === todaysDay) {
+                        const colorresult = storedData;
+                        setDaycolor(colorresult);
+                    }
+                } else {
+                    // returns a javascript array
+                    const colorresult = Colorcalc(nwsdata, sitename, hourstart, hourend, speedmin_ideal, speedmax_ideal, speedmin_edge, speedmax_edge, lightwind_ok, dir_ideal, dir_edge);
+                    // setDaycolor returns the final array daycolor back to Sitedays.jsx
+                    setDaycolor(colorresult);
+                }
                 hasInitialCallMadeRef.current = true;
             }
         };

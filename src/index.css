@@ -33,10 +33,12 @@ a:hover {
 .bottomspace {
     clear: left;
     float: left;
+    width: 350px;
     font-size: 0.7em;
-    height: 50px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     padding: 10px;
+    color: red;
 }
 
 li {
@@ -51,7 +53,7 @@ li {
     width: 250px;
 }
 
-.errorcheckarea {
+.stationcheckarea {
     clear: left;
     float: left;
     width: 350px;
@@ -213,7 +215,7 @@ li {
 }
 
 .infogreenlight {
-    background-color: #dcf285;
+    background-color: #abf7b1;
     color: #000;
     margin-right: 5px;
     padding: 4px;

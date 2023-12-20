@@ -1,6 +1,7 @@
 import { arraydata } from "./Arraydata";
 import Arow from "./Arow";
-// import Errorcheck from "./Errorcheck";
+import Bottomerrors from "./Bottomerrors";
+// import Stationcheck from "./Stationcheck";
 
 const Allrows = () => {
 
@@ -12,8 +13,8 @@ const Allrows = () => {
         <Arow arraydata={arraydata.filter((data) => data.category === "remote")} />
         <div className="subtitle">Kiting Fields</div>
         <Arow arraydata={arraydata.filter((data) => data.category === "kiting")} />
-        { /* <Errorcheck arraydata={arraydata} /> */ }
-        <div className="bottomspace"></div>
+        <Bottomerrors />
+        { /* <Stationcheck arraydata={arraydata} /> */ }
     </div>
     );
 }

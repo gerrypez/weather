@@ -1,12 +1,13 @@
 /*
- *  To run Errorcheck, undo comments in Allrows.jsx
+ *   This checks Stations are correct given GPS lat, lon
+ *   To run Stationcheck, undo comments in Allrows.jsx
  *   This verifies the GPS lat,lng match the station/gridX/gridY
  *   Ideally this is called in a separate API for the app
  */
 
 import { useEffect } from "react";
 
-const Errorcheck = ({ arraydata }) => {
+const Stationcheck = ({ arraydata }) => {
     function CheckStations(sitename, lat, lng, station, grid_x, grid_y) {
         const siteURL = "https://api.weather.gov/points/" + lat + "," + lng;
 
@@ -18,8 +19,10 @@ const Errorcheck = ({ arraydata }) => {
                 }
                 const nwsdata = await fetchWithRetries(siteURL);
                 if (grid_x !== nwsdata.properties.gridX || grid_y !== nwsdata.properties.gridY || station !== nwsdata.properties.gridId) {
-                    const errorMessage = sitename + " " + station + "/" + grid_x + "/" + grid_y + " should be " + nwsdata.properties.gridId + "/" + nwsdata.properties.gridX + "/" + nwsdata.properties.gridY;
+                    const errorMessage = "SITE ERROR :" + sitename + " " + station + "/" + grid_x + "/" + grid_y + " should be " + nwsdata.properties.gridId + "/" + nwsdata.properties.gridX + "/" + nwsdata.properties.gridY;
                     console.log(errorMessage);
+                } else {
+                    console.log(sitename + " ok");
                 }
             };
             try {
@@ -34,8 +37,8 @@ const Errorcheck = ({ arraydata }) => {
 
     return (
         <div>
-            <div className="errorcheckarea">
-                Running error check ... to console.log
+            <div className="stationcheckarea">
+                CheckStations running ... see results in console.log
                 {arraydata.map((data) => (
                     <div className="errorstationcheck" key={data.id}>
                         {CheckStations(data.sitename, data.lat, data.lng, data.station, data.grid_x, data.grid_y)}
@@ -46,4 +49,4 @@ const Errorcheck = ({ arraydata }) => {
     );
 };
 
-export default Errorcheck;
+export default Stationcheck;
