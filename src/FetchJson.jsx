@@ -1,7 +1,7 @@
 /*
- *  FetchJson fetches the NWS API
- *  Calls Colorcalc function to determine day colors
- *  daycolor array is returned to Sitedays.jsx
+ *  FetchJson fetches the NWS API json data for a site, then ... 
+ *  Calls Colorcalc function to determine day colors, daycolor array is returned to Sitedays.jsx
+ *  An example API fetch URL is https://api.weather.gov/gridpoints/MTR/102/106/forecast/hourly
  */
 
 import { Colorcalc } from "./Colorcalc.jsx";
@@ -40,6 +40,7 @@ export const FetchJson = (id, sitename, station, grid_x, grid_y, hourstart, hour
                 for (let i = 0; i < retries; i++) {
                     try {
                         const response = await fetch(url);
+                        // const response = await fetch(url, { mode: 'no-cors' });
                         if (response.ok) {
                             // good response from server, so return nws json data
                             return await response.json();

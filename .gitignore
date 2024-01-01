@@ -30,6 +30,7 @@ firebase-error.log*
 firebase.json
 
 #Misc
+_dev_notes.text
 __generated__
 .DS_Store
 .env
@@ -44,4 +45,4 @@ yarn-error.log*
 yarn.lock
 .yarn-integrity
 VERSION
-_dev_notes.text
+

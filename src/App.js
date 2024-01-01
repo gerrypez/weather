@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const App = () => {
-    // reload app every hour
+    // reload app every hour in case NWS has new data 
     useEffect(() => {
         const reloadInterval = 3600000;
         const reloadApp = () => {
