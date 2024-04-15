@@ -370,6 +370,7 @@ export const arraydata = [
             { id: 5, description: "Webcam Cheetah", url: "https://youtu.be/L6e1EEA-dQI" },
             { id: 6, description: "Webcam Funston", url: "https://www.fellowfeathers.com/dashboard/" },
             { id: 7, description: "Fog Satellite", url: "https://www.fog.today" },
+            { id: 8, description: "Fog GEOS West", url: "https://www.star.nesdis.noaa.gov/goes/sector_band.php?sat=G18&sector=psw&band=GEOCOLOR&length=48&dim=undefined" },
         ],
         link_data: [
             { id: 1, description: "API", url: "https://api.weather.gov/points/37.6698,-122.4944" },
