@@ -120,20 +120,20 @@ export const Colorcalc = (nwsdata, sitename, hourstart, hourend, speedmin_ideal,
         } else if (api_hour >= hourstart && api_hour <= hourend) {
             if (nwswindspeed >= speedmin_ideal && nwswindspeed <= speedmax_ideal && dir_ideal.indexOf(thedirection) > -1) {
                 // conditions for this hour look good, increment green
-                // console.log(sitename + "  GREEN   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
+                console.log(sitename + "  GREEN   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 green_total = green_total + 1;
                 yellow_total = yellow_total + 1;
             } else if (nwswindspeed >= speedmin_edge && nwswindspeed <= speedmax_edge && dir_edge.indexOf(thedirection) > -1) {
                 // conditions for this hour are within the edge boundaries, so increment yellow
-                // console.log(sitename + "  YELLOW   T=" + api_hour + " speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
+                console.log(sitename + "  YELLOW   T=" + api_hour + " speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 yellow_total = yellow_total + 1;
             } else if (nwswindspeed <= 5 && lightwind_ok === "yes") {
                 // sites that can take light wind (regardless of direction) increment yellow
-                // console.log(sitename + "  LIGHTWIND  T=" + api_hour +  ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
+                console.log(sitename + "  LIGHTWIND  T=" + api_hour +  ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
                 yellow_total = yellow_total + 1;
             } else {
                 // default will be go-gray
-                // console.log(sitename + "  GRAY   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
+                console.log(sitename + "  GRAY   T=" + api_hour + ", speed:" + thespeed + " " + thedirection + ", day " + weekday[day_num]);
             }
             // increment rainscore if rain is probable
             if (rainprob > 33) {
