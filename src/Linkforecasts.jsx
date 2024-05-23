@@ -5,7 +5,7 @@
 const link_forecasts = ({ link_forecasts }) => {
     return (
         <div>
-            <div className="moretitle">Forecasts</div>
+            <div className="moretitle">Forecast</div>
             <div className="morelinks">
                 {link_forecasts.map((link) => (
                     <span key={link.id}>
