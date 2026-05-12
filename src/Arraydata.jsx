@@ -1263,7 +1263,7 @@ export const arraydata = [
     },
     {
         id: 35,
-        sitename: "berkeley cesear chavez",
+        sitename: "berkeley park",
         category: "kiting",
         lat: 37.871,
         lng: -122.319,

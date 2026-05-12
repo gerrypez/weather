@@ -3,6 +3,9 @@ import { db } from "./firebase";
 import { arraydata } from "./Arraydata";
 import { Colorcalc } from "./Colorcalc";
 
+const BATCH_SIZE = 8;
+const BATCH_DELAY_MS = 500;
+
 // Returns true if the cached data is older than the most recent NWS update (4AM or 4PM local).
 function isStale(fetchedAt) {
     if (!fetchedAt) return true;
@@ -21,7 +24,6 @@ function isStale(fetchedAt) {
     } else if (now >= today4AM) {
         lastUpdate = today4AM;
     } else {
-        // Before 4AM — last update was yesterday at 4PM
         lastUpdate = new Date(today4PM);
         lastUpdate.setDate(lastUpdate.getDate() - 1);
     }
@@ -63,12 +65,28 @@ async function fetchSiteColors(site) {
     if (!nwsdata) return null;
 
     return Colorcalc(
-        nwsdata, sitename,
+        nwsdata,
         hourstart, hourend,
         speedmin_ideal, speedmax_ideal,
         speedmin_edge, speedmax_edge,
         lightwind_ok, dir_ideal, dir_edge
     );
+}
+
+// Fetch sites in batches to avoid overwhelming the NWS API.
+async function fetchAllSiteColors() {
+    const results = [];
+    for (let i = 0; i < arraydata.length; i += BATCH_SIZE) {
+        const batch = arraydata.slice(i, i + BATCH_SIZE);
+        const batchResults = await Promise.all(
+            batch.map((site) => fetchSiteColors(site).then((colors) => ({ id: site.id, colors })))
+        );
+        results.push(...batchResults);
+        if (i + BATCH_SIZE < arraydata.length) {
+            await new Promise((r) => setTimeout(r, BATCH_DELAY_MS));
+        }
+    }
+    return results;
 }
 
 // Reads color data from RTDB. If stale, fetches from NWS, runs Colorcalc,
@@ -80,7 +98,6 @@ export async function loadWeatherCache() {
 
     if (cached && !isStale(cached.fetchedAt)) {
         console.log("WeatherCache: using cached data from", new Date(cached.fetchedAt).toLocaleString());
-        // RTDB returns nested arrays as objects with numeric keys; convert back.
         const sites = {};
         for (const [id, val] of Object.entries(cached.sites)) {
             sites[id] = Object.values(val).map((pair) => Object.values(pair));
@@ -88,12 +105,8 @@ export async function loadWeatherCache() {
         return sites;
     }
 
-    console.log("WeatherCache: cache stale, fetching from NWS...");
-    const results = await Promise.all(
-        arraydata.map((site) =>
-            fetchSiteColors(site).then((colors) => ({ id: site.id, colors }))
-        )
-    );
+    console.log("WeatherCache: cache stale, fetching from NWS in batches...");
+    const results = await fetchAllSiteColors();
 
     const sites = {};
     for (const { id, colors } of results) {

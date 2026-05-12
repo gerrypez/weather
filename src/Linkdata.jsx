@@ -1,7 +1,7 @@
 /*
  *  Links for data below each site row
  */
-const link_data = ({ link_data }) => {
+const Linkdata = ({ link_data }) => {
     return (
         <div>
             <div className="moretitle">Data</div>
@@ -18,4 +18,4 @@ const link_data = ({ link_data }) => {
     );
 };
 
-export default link_data;
+export default Linkdata;

@@ -1,7 +1,7 @@
 /*
  *  Links for current weather below each site row
  */
-const link_current = ({ link_current }) => {
+const Linkcurrent = ({ link_current }) => {
     return (
         <div>
             <div className="moretitle">Current</div>
@@ -18,4 +18,4 @@ const link_current = ({ link_current }) => {
     );
 };
 
-export default link_current;
+export default Linkcurrent;

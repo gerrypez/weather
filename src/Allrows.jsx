@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { arraydata } from "./Arraydata";
 import Arow from "./Arow";
-import Bottomerrors from "./Bottomerrors";
 import { loadWeatherCache } from "./WeatherCache";
 
 const Allrows = () => {
@@ -15,12 +14,12 @@ const Allrows = () => {
 
     return (
         <div>
-            <div className="subtitle">Local Sites</div>
+            <div className="subtitle">Local</div>
             <Arow
                 arraydata={arraydata.filter((d) => d.category === "local")}
                 siteColors={siteColors}
             />
-            <div className="subtitle">Remote Sites</div>
+            <div className="subtitle">Remote</div>
             <Arow
                 arraydata={arraydata.filter((d) => d.category === "remote")}
                 siteColors={siteColors}
@@ -30,7 +29,6 @@ const Allrows = () => {
                 arraydata={arraydata.filter((d) => d.category === "kiting")}
                 siteColors={siteColors}
             />
-            <Bottomerrors />
         </div>
     );
 };

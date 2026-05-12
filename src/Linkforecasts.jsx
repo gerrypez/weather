@@ -2,7 +2,7 @@
  *  Forecast links below each row
  */
 
-const link_forecasts = ({ link_forecasts }) => {
+const Linkforecasts = ({ link_forecasts }) => {
     return (
         <div>
             <div className="moretitle">Forecast</div>
@@ -19,4 +19,4 @@ const link_forecasts = ({ link_forecasts }) => {
     );
 };
 
-export default link_forecasts;
+export default Linkforecasts;

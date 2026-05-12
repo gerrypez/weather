@@ -1,0 +1,10 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "weathercache": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}

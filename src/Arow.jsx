@@ -18,9 +18,7 @@ const Arow = ({ arraydata, siteColors }) => {
             {arraydata.map((data) => (
                 <div className="siterow" key={data.id}>
                     <div className="toprow" onClick={() => toggle(data.id)}>
-                        <div>
-                            <Sitename id={data.id} sitename={data.sitename} />
-                        </div>
+                        <Sitename id={data.id} sitename={data.sitename} />
                         <div className="daycolors">
                             <Sitedays
                                 daycolors={siteColors ? (siteColors[String(data.id)] ?? []) : null}
