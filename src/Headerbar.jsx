@@ -28,13 +28,13 @@ const Headerbar = () => {
                             <span className="infoblue">rain</span>
                         </li>
                         <li>click row for weather details</li>
-                        <li>code v2.0 github.com/gerrypez/weather</li>
+                        <li>code v3.0 github.com/gerrypez/weather</li>
                         <li>developer: gerrypez@gmail.com</li>
                     </ul>
                 </div>
             )}
             <div className="headererrormessage" id="showtopmessage">
-                // message here, change css display 
+                // message here, change css display
             </div>
         </div>
     );
