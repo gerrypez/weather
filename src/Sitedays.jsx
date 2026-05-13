@@ -1,3 +1,6 @@
+// Sitedays: renders the row of 7 colored day boxes for one site.
+// Shows gray placeholders while data is loading; hides today's column after 5PM PT.
+//
 const ptHour = () =>
     new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })).getHours();
 

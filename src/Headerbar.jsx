@@ -1,3 +1,6 @@
+// Headerbar: top banner with the app title and an info button.
+// Toggling the info button reveals a legend explaining the color coding and contact details.
+//
 import { useState } from "react";
 
 const Headerbar = () => {

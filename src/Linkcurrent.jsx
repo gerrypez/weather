@@ -1,6 +1,6 @@
-/*
- *  Links for current weather below each site row
- */
+// Linkcurrent: renders the "Current" section of links in an expanded site row.
+// Links point to live weather station data for the site.
+//
 const Linkcurrent = ({ link_current }) => {
     return (
         <div>

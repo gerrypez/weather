@@ -1,7 +1,6 @@
-/*
- *  Forecast links below each row
- */
-
+// Linkforecasts: renders the "Forecast" section of links in an expanded site row.
+// Links point to NWS and third-party forecast pages for the site.
+//
 const Linkforecasts = ({ link_forecasts }) => {
     return (
         <div>

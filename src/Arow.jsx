@@ -1,3 +1,6 @@
+// Arow: renders a list of site rows for one category (Local, Remote, or Kiting).
+// Each row shows the site name and 7-day color boxes; clicking expands forecast links and the NWS meteogram.
+//
 import Sitename from "./Sitename";
 import Sitedays from "./Sitedays";
 import Nwsimage from "./Nwsimage";
@@ -28,7 +31,7 @@ const Arow = ({ arraydata, siteColors }) => {
                     {data.id === isOpen && (
                         <div>
                             <div className="linkmap" onClick={() => toggle(data.id)}>
-                                <Nwsimage id={data.id} nws_image={data.nws_image} />
+                                <Nwsimage nws_image={data.nws_image} />
                             </div>
                             <div className="morestuff">
                                 <Linkforecasts link_forecasts={data.link_forecasts} />

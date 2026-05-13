@@ -1,3 +1,7 @@
+// Colorcalc: converts NWS hourly forecast JSON into a 7-element array of [day-label, color-class] pairs.
+// Scores each hour in the flyable window against ideal/edge wind speed and direction thresholds.
+// Color classes: go-green, go-lightgreen, go-yellow, go-gray, go-black, and *-blue rain variants.
+//
 export const Colorcalc = (nwsdata, hourstart, hourend, speedmin_ideal, speedmax_ideal, speedmin_edge, speedmax_edge, lightwind_ok, dir_ideal, dir_edge) => {
     var colorresult = [["",""],["",""],["",""],["",""],["",""],["",""],["",""]];
 
@@ -34,9 +38,10 @@ export const Colorcalc = (nwsdata, hourstart, hourend, speedmin_ideal, speedmax_
 
         thedirection = nwsdata.properties.periods[i].windDirection;
 
-        rainprob = parseInt(nwsdata.properties.periods[i].probabilityOfPrecipitation.value);
+        rainprob = parseInt(nwsdata.properties.periods[i].probabilityOfPrecipitation.value) || 0;
 
         if (api_hour === 23) {
+            if (arrayposition >= colorresult.length) continue;
             colorresult[arrayposition][0] = weekday[day_num];
             colorresult[arrayposition][1] = "go-gray";
             if (yellow_total >= 2 && rainscore <= 5) colorresult[arrayposition][1] = "go-yellow";

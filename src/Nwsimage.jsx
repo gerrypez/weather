@@ -1,7 +1,5 @@
-/*
- *  The NWS weather image below each raw
- */
-
+// Nwsimage: renders the NWS meteogram image shown in an expanded site row.
+//
 const Nwsimage = ({ nws_image }) => {
     return (
         <div>

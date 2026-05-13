@@ -1,6 +1,6 @@
-/*
- *  Links for data below each site row
- */
+// Linkdata: renders the "Data" section of links in an expanded site row.
+// Links point to APIs, maps, and site guides for the site.
+//
 const Linkdata = ({ link_data }) => {
     return (
         <div>

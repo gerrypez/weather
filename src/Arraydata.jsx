@@ -1,3 +1,6 @@
+// Arraydata: static definitions for all paragliding sites — lat/lon, NWS grid coords, wind parameters, and links.
+// Add or edit sites here; each entry drives both the weather fetch and the row display.
+//
 export const arraydata = [
     {
         id: 1,

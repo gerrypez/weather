@@ -1,63 +1,87 @@
+// Tfr: fetches active TFRs from the FAA API and checks if any VIP TFRs are within 100 miles of SF.
+// If found, calls onActiveTfrs() so the parent can hide "Local", then renders red "Active TFRs:" with linked notam IDs.
+// Renders nothing (null) when no nearby VIP TFRs are active — the common case.
+// 
+import { useState, useEffect } from "react";
+
 const SF = { lat: 37.7749, lon: -122.4194 };
 const RADIUS_MILES = 100;
-const RADIUS_NM = RADIUS_MILES / 1.15078;
+const CANDIDATE_STATES = ["CA", "NV"];
+const proxy = (url) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`;
 
-// Pre-filter: only states that could be within 100 miles of SF
-const CANDIDATE_STATES = ['CA', 'NV'];
-
-function distanceNM(lat1, lon1, lat2, lon2) {
-  const R = 3440.065;
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLon = (lon2 - lon1) * Math.PI / 180;
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(lat1 * Math.PI / 180) *
-    Math.cos(lat2 * Math.PI / 180) *
-    Math.sin(dLon / 2) ** 2;
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+function distanceMiles(lat1, lon1, lat2, lon2) {
+    const R = 3958.8;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a =
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLon / 2) ** 2;
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
 async function getTfrCoords(notamId) {
-  const filename = 'detail_' + notamId.replace('/', '_') + '.xml';
-  const res = await fetch(`https://tfr.faa.gov/save_pages/${filename}`);
-  const text = await res.text();
-  const lat = parseFloat(text.match(/<lat>([\d.-]+)<\/lat>/)?.[1]);
-  const lon = parseFloat(text.match(/<long>([\d.-]+)<\/long>/)?.[1]);
-  return isNaN(lat) || isNaN(lon) ? null : { lat, lon };
+    const filename = "detail_" + notamId.replace("/", "_") + ".xml";
+    const res = await fetch(proxy(`https://tfr.faa.gov/save_pages/${filename}`));
+    const text = await res.text();
+    const lat = parseFloat(text.match(/<lat>([\d.-]+)<\/lat>/)?.[1]);
+    const lon = parseFloat(text.match(/<long>([\d.-]+)<\/long>/)?.[1]);
+    return isNaN(lat) || isNaN(lon) ? null : { lat, lon };
 }
 
 async function findVipTfrsNearSF() {
-  const res = await fetch('https://tfr.faa.gov/tfrapi/exportTfrList');
-  const tfrs = await res.json();
+    const res = await fetch(proxy("https://tfr.faa.gov/tfrapi/exportTfrList"));
+    const tfrs = await res.json();
 
-  // Pre-filter to VIP type and nearby states before making XML requests
-  const candidates = tfrs.filter(t =>
-    t.type === 'VIP' && CANDIDATE_STATES.includes(t.state)
-  );
+    const candidates = tfrs.filter((t) =>
+        t.type === "VIP" && CANDIDATE_STATES.includes(t.state)
+    );
 
-  console.log(`${tfrs.length} total TFRs → ${candidates.length} VIP candidate(s) in ${CANDIDATE_STATES.join('/')} — fetching coordinates...`);
+    const results = (await Promise.all(
+        candidates.map(async (tfr) => {
+            const coords = await getTfrCoords(tfr.notam_id);
+            if (!coords) return null;
+            if (distanceMiles(SF.lat, SF.lon, coords.lat, coords.lon) > RADIUS_MILES) return null;
+            return tfr;
+        })
+    )).filter(Boolean);
 
-  // Fetch all candidate XMLs in parallel
-  const results = (await Promise.all(
-    candidates.map(async tfr => {
-      const coords = await getTfrCoords(tfr.notam_id);
-      if (!coords) return null;
-
-      const distanceMiles = distanceNM(SF.lat, SF.lon, coords.lat, coords.lon) * 1.15078;
-      if (distanceMiles > RADIUS_MILES) return null;
-
-      return { ...tfr, coords, distanceMiles: Math.round(distanceMiles) };
-    })
-  )).filter(Boolean);
-
-  console.log(`Found ${results.length} VIP TFR(s) within ${RADIUS_MILES} miles of San Francisco:`);
-  console.log(JSON.stringify(results, null, 2));
-  return results;
+    return results;
 }
 
-findVipTfrsNearSF();
+const Tfr = ({ onActiveTfrs }) => {
+    const [activeTfrs, setActiveTfrs] = useState([]);
 
-// https://tfr.faa.gov/tfr3/?page=detail_6_9456
+    useEffect(() => {
+        findVipTfrsNearSF()
+            .then(setActiveTfrs)
+            .catch((err) => console.error("TFR fetch failed:", err));
+    }, []);
 
-// in the header bar there is an <div> for messages - use that 
+    useEffect(() => {
+        onActiveTfrs(activeTfrs.length > 0);
+    }, [activeTfrs]);
 
+    if (activeTfrs.length === 0) return null;
+
+    return (
+        <span>
+            <span style={{ color: "red" }}>Active TFRs: </span>
+            {activeTfrs.map((tfr, i) => (
+                <span key={tfr.notam_id}>
+                    {i > 0 && ", "}
+                    <a
+                        href={`https://tfr.faa.gov/tfr3/?page=detail_${tfr.notam_id.replace("/", "_")}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{ textDecoration: "underline" }}
+                    >
+                        {tfr.notam_id}
+                    </a>
+                </span>
+            ))}
+        </span>
+    );
+};
+
+export default Tfr;
