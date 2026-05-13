@@ -1,18 +1,26 @@
+const ptHour = () =>
+    new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })).getHours();
+
 // daycolors: null = loading, [] or [[day,color],...] = loaded
 const Sitedays = ({ daycolors }) => {
+    const hideTodayCol = ptHour() >= 17;
+
     if (daycolors === null) {
+        const count = hideTodayCol ? 6 : 7;
         return (
             <>
-                {Array.from({ length: 7 }).map((_, i) => (
+                {Array.from({ length: count }).map((_, i) => (
                     <div className="go-gray" key={i} />
                 ))}
             </>
         );
     }
 
+    const visibleDays = hideTodayCol ? daycolors.slice(1) : daycolors;
+
     return (
         <>
-            {daycolors.map((daycolor, i) => (
+            {visibleDays.map((daycolor, i) => (
                 <div className={daycolor[1]} key={i}>
                     {daycolor[0]}
                 </div>

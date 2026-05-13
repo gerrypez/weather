@@ -33,7 +33,6 @@ const Headerbar = () => {
                     </ul>
                 </div>
             )}
-            <div className="headererrormessage" id="showtopmessage"></div>
         </div>
     );
 };
