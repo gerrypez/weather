@@ -9,7 +9,7 @@ const Sitedays = ({ daycolors }) => {
     const hideTodayCol = ptHour() >= 17;
 
     if (daycolors === null) {
-        const count = hideTodayCol ? 6 : 7;
+        const count = 7;
         return (
             <>
                 {Array.from({ length: count }).map((_, i) => (
@@ -19,7 +19,7 @@ const Sitedays = ({ daycolors }) => {
         );
     }
 
-    const visibleDays = hideTodayCol ? daycolors.slice(1) : daycolors;
+    const visibleDays = hideTodayCol ? daycolors.slice(1) : daycolors.slice(0, 7);
 
     return (
         <>

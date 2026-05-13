@@ -34,7 +34,7 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
 - `go-yellow` — edge conditions (broader speed/direction range), ≥2 hours
 - `go-gray` — unlikely to fly
 - `*-blue` variants (e.g. `go-yellow-blue`) — rain probability >33% on any of those hours
-- `go-black` — today after 6PM (day is done)
+- `go-black` — today after 5PM (day is done)
 
 ## Key Files
 
@@ -42,12 +42,12 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
 |---|---|
 | `src/Arraydata.jsx` | All site definitions — add/edit sites here |
 | `src/WeatherCache.js` | RTDB read/write + NWS fetch + staleness logic |
-| `src/Colorcalc.jsx` | Wind scoring logic; converts NWS JSON → 7-day color array |
+| `src/Colorcalc.jsx` | Wind scoring logic; converts NWS JSON → 8-day color array; commits each day on day-change + final partial day at end of loop |
 | `src/firebase.js` | Firebase app init + Realtime Database export |
 | `src/App.jsx` | Root component; auto-reloads at 4AM, 4PM, 5PM PT |
 | `src/Allrows.jsx` | Loads weather cache, renders Local / Remote / Kiting sections; shows "Updating weather ..." if load takes >1s |
 | `src/Arow.jsx` | One row per site; click to expand links and NWS meteogram |
-| `src/Sitedays.jsx` | Renders the 7 colored day boxes; shows gray placeholders while loading; hides today after 5PM PT |
+| `src/Sitedays.jsx` | Renders up to 7 colored day boxes; shows gray placeholders while loading; hides today after 5PM PT (shows days 1–7 of the 8-slot array) |
 | `src/Tfr.jsx` | Fetches FAA TFR list via corsproxy.io; if VIP TFRs within 100mi of SF are active, replaces "Local" subtitle with red "Active TFRs:" + linked notam IDs |
 | `src/Stationcheck.jsx` | Dev utility to verify site NWS grid coords match lat/lon — import into Allrows.jsx to run, results in console |
 | `src/index.css` | All styles including responsive mobile layout (≤600px breakpoint) |
