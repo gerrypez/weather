@@ -76,7 +76,7 @@ const Tfr = ({ onActiveTfrs }) => {
                         rel="noreferrer"
                         style={{ textDecoration: "underline" }}
                     >
-                        {tfr.notam_id}
+                        {tfr.facility} {tfr.notam_id}
                     </a>
                 </span>
             ))}

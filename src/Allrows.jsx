@@ -7,6 +7,7 @@ import { arraydata } from "./Arraydata";
 import Arow from "./Arow";
 import { loadWeatherCache } from "./WeatherCache";
 import Tfr from "./Tfr";
+import spinnerGif from "./images/bluecheck.gif";
 
 const Allrows = () => {
     const [siteColors, setSiteColors] = useState(null);
@@ -23,7 +24,13 @@ const Allrows = () => {
 
     return (
         <div>
-            <div className="subtitle">{!hasTfrs && (siteColors === null && isSlowLoad ? "Updating weather ..." : "Local")}<Tfr onActiveTfrs={setHasTfrs} /></div>
+            <div className="subtitle">
+                {!hasTfrs && (siteColors === null && isSlowLoad
+                    ? <><span>Updating weather ...</span><img src={spinnerGif} alt="" style={{ height: "75px", width: "auto", verticalAlign: "middle", marginLeft: "8px" }} /></>
+                    : "Local"
+                )}
+                <Tfr onActiveTfrs={setHasTfrs} />
+            </div>
             <Arow
                 arraydata={arraydata.filter((d) => d.category === "local")}
                 siteColors={siteColors}
