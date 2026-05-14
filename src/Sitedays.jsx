@@ -19,7 +19,10 @@ const Sitedays = ({ daycolors }) => {
         );
     }
 
-    const visibleDays = hideTodayCol ? daycolors.slice(1) : daycolors.slice(0, 7);
+    // slice(1,7): NWS covers ~156h (~6.5 days), so slot 7 is always a partial day —
+    // cap at slot 6 when hiding today to avoid showing an unreliable 7th column.
+    const visibleDays = (hideTodayCol ? daycolors.slice(1, 7) : daycolors.slice(0, 7))
+        .filter(d => d[0] !== "");
 
     return (
         <>
