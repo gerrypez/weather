@@ -24,8 +24,22 @@ function msUntilNextEvent() {
 
 const App = () => {
     useEffect(() => {
+        const nextEvent = Date.now() + msUntilNextEvent();
+
+        // visibilitychange catches the case where the tab was backgrounded (common on mobile)
+        // and the setTimeout fired late or not at all — reload if we woke up past the threshold.
+        const handleVisibility = () => {
+            if (document.visibilityState === "visible" && Date.now() >= nextEvent) {
+                window.location.reload();
+            }
+        };
+        document.addEventListener("visibilitychange", handleVisibility);
+
         const reloadTimeout = setTimeout(() => window.location.reload(), msUntilNextEvent());
-        return () => clearTimeout(reloadTimeout);
+        return () => {
+            clearTimeout(reloadTimeout);
+            document.removeEventListener("visibilitychange", handleVisibility);
+        };
     }, []);
 
     return (

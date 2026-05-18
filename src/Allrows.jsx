@@ -7,26 +7,37 @@ import { arraydata } from "./Arraydata";
 import Arow from "./Arow";
 import { loadWeatherCache } from "./WeatherCache";
 import Tfr from "./Tfr";
-import spinnerGif from "./images/bluecheck.gif";
 
 const Allrows = () => {
     const [siteColors, setSiteColors] = useState(null);
     const [isSlowLoad, setIsSlowLoad] = useState(false);
     const [hasTfrs, setHasTfrs] = useState(false);
+    const [nwsError, setNwsError] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => setIsSlowLoad(true), 1000);
         loadWeatherCache()
-            .then((data) => { clearTimeout(timer); setSiteColors(data); })
+            .then(({ sites, nwsError }) => {
+                clearTimeout(timer);
+                setSiteColors(sites);
+                setNwsError(nwsError);
+            })
             .catch((err) => { clearTimeout(timer); console.error("WeatherCache load failed:", err); });
         return () => clearTimeout(timer);
     }, []);
 
     return (
         <div>
+            {nwsError && (
+                <div className="nws-error">
+                    {Object.keys(siteColors ?? {}).length > 0
+                        ? "NWS unavailable — showing last known forecast"
+                        : "Weather data unavailable"}
+                </div>
+            )}
             <div className="subtitle">
                 {!hasTfrs && (siteColors === null && isSlowLoad
-                    ? <><span>Updating weather ...</span><img src={spinnerGif} alt="" style={{ height: "75px", width: "auto", verticalAlign: "middle", marginLeft: "8px" }} /></>
+                    ? "Updating weather ..."
                     : "Local"
                 )}
                 <Tfr onActiveTfrs={setHasTfrs} />

@@ -328,6 +328,12 @@ li {
     color: pink;
     margin-left: 30px;
 }
+.nws-error {
+    clear: both;
+    color: rgb(255, 180, 50);
+    font-size: 0.9em;
+    margin: 16px 0 0 20px;
+}
 .subtitle {
     clear: left;
     color: rgb(100, 197, 230);

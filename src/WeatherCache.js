@@ -89,8 +89,18 @@ async function fetchAllSiteColors() {
     return results;
 }
 
+function parseCachedSites(cachedSites) {
+    const sites = {};
+    for (const [id, val] of Object.entries(cachedSites)) {
+        sites[id] = Object.values(val).map((pair) => Object.values(pair));
+    }
+    return sites;
+}
+
 // Reads color data from RTDB. If stale, fetches from NWS, runs Colorcalc,
-// and writes the results back. Returns a map of site id → daycolors array.
+// and writes the results back. Returns { sites, nwsError } where nwsError is
+// true if all NWS fetches failed (in which case stale cached data is returned
+// unchanged rather than overwriting the cache with empty data).
 export async function loadWeatherCache() {
     const cacheRef = ref(db, "weathercache");
     const snapshot = await get(cacheRef);
@@ -98,11 +108,7 @@ export async function loadWeatherCache() {
 
     if (cached && !isStale(cached.fetchedAt)) {
         console.log("WeatherCache: using cached data from", new Date(cached.fetchedAt).toLocaleString());
-        const sites = {};
-        for (const [id, val] of Object.entries(cached.sites)) {
-            sites[id] = Object.values(val).map((pair) => Object.values(pair));
-        }
-        return sites;
+        return { sites: parseCachedSites(cached.sites), nwsError: false };
     }
 
     console.log("WeatherCache: cache stale, fetching from NWS in batches...");
@@ -113,7 +119,15 @@ export async function loadWeatherCache() {
         if (colors) sites[String(id)] = colors;
     }
 
+    if (Object.keys(sites).length === 0) {
+        // All NWS fetches failed — preserve the existing cache rather than
+        // overwriting it with empty data and a fresh timestamp.
+        console.warn("WeatherCache: all NWS fetches failed, preserving stale cache");
+        const staleSites = cached?.sites ? parseCachedSites(cached.sites) : {};
+        return { sites: staleSites, nwsError: true };
+    }
+
     await set(cacheRef, { fetchedAt: Date.now(), sites });
     console.log("WeatherCache: RTDB updated at", new Date().toLocaleString());
-    return sites;
+    return { sites, nwsError: false };
 }
