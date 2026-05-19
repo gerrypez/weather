@@ -23,7 +23,7 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
    - If stale: fetches NWS hourly forecast for each site in batches of 8, runs `Colorcalc.jsx`, writes results back to RTDB
 4. `Sitedays.jsx` renders the colored day boxes from the data passed down
 
-**Cache staleness:** data is considered stale if it was fetched before the most recent NWS update (4AM or 4PM local time). The first user after each update window triggers the NWS refresh; all subsequent users get the cached RTDB result.
+**Cache staleness:** data is considered stale if it was fetched before the most recent NWS update (2AM or 2PM local time). The first user after each update window triggers the NWS refresh; all subsequent users get the cached RTDB result. On total NWS failure (all retries exhausted), the existing cache is preserved rather than overwritten with empty data, and an amber "NWS unavailable" banner is shown to the user.
 
 **NWS API URL per site:**
 `https://api.weather.gov/gridpoints/{station}/{grid_x},{grid_y}/forecast/hourly`
@@ -34,7 +34,7 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
 - `go-yellow` — edge conditions (broader speed/direction range), ≥2 hours
 - `go-gray` — unlikely to fly
 - `*-blue` variants (e.g. `go-yellow-blue`) — rain probability >33% on any of those hours
-- `go-black` — today after 5PM (day is done)
+- `go-black` — today's slot when scored after 5PM (applied by Colorcalc at cache-build time)
 
 ## Key Files
 
@@ -44,10 +44,10 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
 | `src/WeatherCache.js` | RTDB read/write + NWS fetch + staleness logic |
 | `src/Colorcalc.jsx` | Wind scoring logic; converts NWS JSON → 8-day color array; commits each day on day-change + final partial day at end of loop |
 | `src/firebase.js` | Firebase app init + Realtime Database export |
-| `src/App.jsx` | Root component; auto-reloads at 4AM, 4PM, 5PM PT |
-| `src/Allrows.jsx` | Loads weather cache, renders Local / Remote / Kiting sections; shows "Updating weather ..." if load takes >1s |
+| `src/App.jsx` | Root component; auto-reloads at midnight, 2AM, 2PM, 5PM PT; `visibilitychange` listener fires reload if a scheduled event was missed while the tab was backgrounded (common on mobile) |
+| `src/Allrows.jsx` | Loads weather cache, renders Local / Remote / Kiting sections; shows "Updating weather ..." if load takes >1s; shows amber NWS error banner on total fetch failure |
 | `src/Arow.jsx` | One row per site; click to expand links and NWS meteogram |
-| `src/Sitedays.jsx` | Renders up to 7 colored day boxes; shows gray placeholders while loading; hides today after 5PM PT (shows days 1–7 of the 8-slot array) |
+| `src/Sitedays.jsx` | Renders up to 7 colored day boxes; shows gray placeholders while loading; hides today after 5PM PT; computes starting slot and day labels from today's actual date so display is correct when cached data was built on a prior day |
 | `src/Tfr.jsx` | Fetches FAA TFR list via corsproxy.io; if VIP TFRs within 100mi of SF are active, replaces "Local" subtitle with red "Active TFRs:" + linked notam IDs |
 | `src/Stationcheck.jsx` | Dev utility to verify site NWS grid coords match lat/lon — import into Allrows.jsx to run, results in console |
 | `src/index.css` | All styles including responsive mobile layout (≤600px breakpoint) |
