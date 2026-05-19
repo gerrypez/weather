@@ -1,34 +1,49 @@
 // Sitedays: renders the row of 7 colored day boxes for one site.
 // Shows gray placeholders while data is loading; hides today's column after 5PM PT.
+// Day labels and starting slot are computed from today's actual date so the display
+// stays correct even when the cached data was built on a previous day.
 //
-const ptHour = () =>
-    new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })).getHours();
+const weekday = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+const weekdayIndex = { Su: 0, Mo: 1, Tu: 2, We: 3, Th: 4, Fr: 5, Sa: 6 };
 
 // daycolors: null = loading, [] or [[day,color],...] = loaded
 const Sitedays = ({ daycolors }) => {
-    const hideTodayCol = ptHour() >= 17;
+    const ptNow = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+    const ptHour = ptNow.getHours();
+    const hideTodayCol = ptHour >= 17;
+    const todayNum = ptNow.getDay();
 
     if (daycolors === null) {
-        const count = 7;
         return (
             <>
-                {Array.from({ length: count }).map((_, i) => (
+                {Array.from({ length: 7 }).map((_, i) => (
                     <div className="go-gray" key={i} />
                 ))}
             </>
         );
     }
 
-    // slice(1,7): NWS covers ~156h (~6.5 days), so slot 7 is always a partial day —
-    // cap at slot 6 when hiding today to avoid showing an unreliable 7th column.
-    const visibleDays = (hideTodayCol ? daycolors.slice(1, 7) : daycolors.slice(0, 7))
+    // If the cache was built on a prior day, slot 0's stored label will be behind today.
+    // Compute daysElapsed so we skip past stale leading slots (e.g. skip "Su" on Monday).
+    const slot0Label = daycolors[0]?.[0];
+    const slot0DayNum = slot0Label ? (weekdayIndex[slot0Label] ?? todayNum) : todayNum;
+    const daysElapsed = (todayNum - slot0DayNum + 7) % 7;
+    const startSlot = daysElapsed + (hideTodayCol ? 1 : 0);
+    const maxCols = hideTodayCol ? 6 : 7;
+
+    // slice(startSlot, startSlot+maxCols): cap at slot 6 when hiding today to avoid
+    // showing an unreliable partial 7th column.
+    const visibleDays = daycolors
+        .slice(startSlot, startSlot + maxCols)
         .filter(d => d[0] !== "");
+
+    const startDayNum = (todayNum + (hideTodayCol ? 1 : 0)) % 7;
 
     return (
         <>
             {visibleDays.map((daycolor, i) => (
                 <div className={daycolor[1]} key={i}>
-                    {daycolor[0]}
+                    {weekday[(startDayNum + i) % 7]}
                 </div>
             ))}
         </>

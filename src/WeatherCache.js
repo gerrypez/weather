@@ -6,25 +6,25 @@ import { Colorcalc } from "./Colorcalc";
 const BATCH_SIZE = 8;
 const BATCH_DELAY_MS = 500;
 
-// Returns true if the cached data is older than the most recent NWS update (4AM or 4PM local).
+// Returns true if the cached data is older than the most recent NWS update (2AM or 2PM local).
 function isStale(fetchedAt) {
     if (!fetchedAt) return true;
     const now = new Date();
     const fetched = new Date(fetchedAt);
 
-    const today4AM = new Date(now);
-    today4AM.setHours(4, 0, 0, 0);
+    const today2AM = new Date(now);
+    today2AM.setHours(2, 0, 0, 0);
 
-    const today4PM = new Date(now);
-    today4PM.setHours(16, 0, 0, 0);
+    const today2PM = new Date(now);
+    today2PM.setHours(14, 0, 0, 0);
 
     let lastUpdate;
-    if (now >= today4PM) {
-        lastUpdate = today4PM;
-    } else if (now >= today4AM) {
-        lastUpdate = today4AM;
+    if (now >= today2PM) {
+        lastUpdate = today2PM;
+    } else if (now >= today2AM) {
+        lastUpdate = today2AM;
     } else {
-        lastUpdate = new Date(today4PM);
+        lastUpdate = new Date(today2PM);
         lastUpdate.setDate(lastUpdate.getDate() - 1);
     }
 
