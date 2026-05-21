@@ -127,6 +127,15 @@ export async function loadWeatherCache() {
         return { sites: staleSites, nwsError: true };
     }
 
+    // Merge: keep stale cached data for any sites that failed this fetch cycle
+    // so they don't go blank when only a subset of NWS calls succeed.
+    if (cached?.sites) {
+        const staleSites = parseCachedSites(cached.sites);
+        for (const [id, colors] of Object.entries(staleSites)) {
+            if (!sites[id]) sites[id] = colors;
+        }
+    }
+
     await set(cacheRef, { fetchedAt: Date.now(), sites });
     console.log("WeatherCache: RTDB updated at", new Date().toLocaleString());
     return { sites, nwsError: false };
