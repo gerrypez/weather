@@ -107,8 +107,13 @@ export async function loadWeatherCache() {
     const cached = snapshot.val();
 
     if (cached && !isStale(cached.fetchedAt)) {
-        console.log("WeatherCache: using cached data from", new Date(cached.fetchedAt).toLocaleString());
-        return { sites: parseCachedSites(cached.sites), nwsError: false };
+        const cachedIds = new Set(Object.keys(cached.sites ?? {}));
+        const allPresent = arraydata.every((site) => cachedIds.has(String(site.id)));
+        if (allPresent) {
+            console.log("WeatherCache: using cached data from", new Date(cached.fetchedAt).toLocaleString());
+            return { sites: parseCachedSites(cached.sites), nwsError: false };
+        }
+        console.log("WeatherCache: cache missing sites, fetching from NWS...");
     }
 
     console.log("WeatherCache: cache stale, fetching from NWS in batches...");

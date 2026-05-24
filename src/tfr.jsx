@@ -31,7 +31,9 @@ async function getTfrCoords(notamId) {
 
 async function findVipTfrsNearSF() {
     const res = await fetch(proxy("https://tfr.faa.gov/tfrapi/exportTfrList"));
+    if (!res.ok) throw new Error(`TFR list fetch failed: ${res.status}`);
     const tfrs = await res.json();
+    if (!Array.isArray(tfrs)) throw new Error("TFR list response is not an array");
 
     const candidates = tfrs.filter((t) =>
         t.type === "VIP" && CANDIDATE_STATES.includes(t.state)
