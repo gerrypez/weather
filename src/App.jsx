@@ -5,13 +5,13 @@ import Headerbar from "./Headerbar";
 import Allrows from "./Allrows";
 import { useEffect } from "react";
 
-// Returns ms until the next significant PT event: midnight, 2AM, 2PM, or 5PM.
+// Returns ms until the next significant PT event: midnight, 2AM, 8AM, 2PM, or 5PM.
 // Midnight ensures the day column labels update when the date rolls over.
 // Fires 1 min after each threshold so cache/display logic triggers cleanly.
 function msUntilNextEvent() {
     const now = new Date();
     const ptNow = new Date(now.toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
-    for (const hour of [0, 2, 14, 17]) {
+    for (const hour of [0, 2, 8, 14, 17]) {
         const event = new Date(ptNow);
         event.setHours(hour, 1, 0, 0);
         if (event > ptNow) return event - ptNow;

@@ -15,12 +15,17 @@ function isStale(fetchedAt) {
     const today2AM = new Date(now);
     today2AM.setHours(2, 0, 0, 0);
 
+    const today8AM = new Date(now);
+    today8AM.setHours(8, 0, 0, 0);
+
     const today2PM = new Date(now);
     today2PM.setHours(14, 0, 0, 0);
 
     let lastUpdate;
     if (now >= today2PM) {
         lastUpdate = today2PM;
+    } else if (now >= today8AM) {
+        lastUpdate = today8AM;
     } else if (now >= today2AM) {
         lastUpdate = today2AM;
     } else {
