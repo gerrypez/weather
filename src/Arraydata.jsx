@@ -12,7 +12,7 @@ export const arraydata = [
         grid_x: 13,
         grid_y: 54,
         hourstart: 10,
-        hourend: 20,
+        hourend: 18,
         speedmin_ideal: 8,
         speedmax_ideal: 13,
         speedmin_edge: 6,
@@ -30,7 +30,7 @@ export const arraydata = [
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KVCB&state=CA" },
         ],
         link_current: [
-            { id: 1, description: "KCAVALLE53*", url: "https://www.wunderground.com/personal-weather-station/dashboard?ID=KCAVALLE53" },
+            { id: 1, description: "KCAVALLE53*", url: "https://www.wunderground.com/dashboard/pws/KCAVALLE1558" },
             { id: 2, description: "Bridge Wind", url: "https://tidesandcurrents.noaa.gov/met.html?id=9415118" },
             { id: 3, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=38.1384&lon=-122.1959&zoom=13" },
         ],

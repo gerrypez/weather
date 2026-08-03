@@ -171,6 +171,13 @@ li {
     width: 30px;
 }
 
+.go-empty {
+    float: left;
+    height: 100%;
+    margin-left: 1px;
+    width: 30px;
+}
+
 
 .infopanel {
     clear: left;
@@ -403,7 +410,7 @@ li {
     }
     .go-black, .go-blue, .go-green, .go-lightgreen,
     .go-yellow, .go-yellow-blue, .go-lightgreen-blue,
-    .go-gray, .go-gray-blue {
+    .go-gray, .go-gray-blue, .go-empty {
         float: none;
         flex: 1;
         width: auto;

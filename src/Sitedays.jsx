@@ -37,15 +37,22 @@ const Sitedays = ({ daycolors }) => {
         .slice(startSlot, startSlot + maxCols)
         .filter(d => d[0] !== "");
 
+    const paddedDays = [
+        ...visibleDays,
+        ...Array.from({ length: Math.max(0, maxCols - visibleDays.length) }, () => null),
+    ];
+
     const startDayNum = (todayNum + (hideTodayCol ? 1 : 0)) % 7;
 
     return (
         <>
-            {visibleDays.map((daycolor, i) => (
-                <div className={daycolor[1]} key={i}>
-                    {weekday[(startDayNum + i) % 7]}
-                </div>
-            ))}
+            {paddedDays.map((daycolor, i) =>
+                daycolor === null
+                    ? <div className="go-empty" key={i} />
+                    : <div className={daycolor[1]} key={i}>
+                        {weekday[(startDayNum + i) % 7]}
+                    </div>
+            )}
         </>
     );
 };

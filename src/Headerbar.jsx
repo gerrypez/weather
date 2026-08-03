@@ -32,6 +32,7 @@ const Headerbar = () => {
                         </li>
                         <li>click row for weather details</li>
                         <li>code v3.0 github.com/gerrypez/weather</li>
+                        <li>website url https://liftweather-c9ac8.web.app/</li>
                         <li>developer: gerrypez@gmail.com</li>
                     </ul>
                 </div>
