@@ -155,7 +155,7 @@ export const arraydata = [
         ],
         link_current: [
             { id: 1, description: "6hr Current Wind", url: "http://bit.ly/2K2lyL3" },
-            { id: 2, description: "Webcam Top", url: "http://www.alertwildfire.org/southeastbay/index.html?camera=Axis-Diablo" },
+            { id: 2, description: "Webcam Top", url: "https://ops.alertcalifornia.org/cam-console/2156" },
             { id: 3, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.8778&lon=-121.9351&zoom=13" },
         ],
         link_data: [
@@ -197,7 +197,7 @@ export const arraydata = [
         ],
         link_current: [
             { id: 1, description: "6hr Current Wind", url: "http://bit.ly/2K2lyL3" },
-            { id: 2, description: "Webcam Top", url: "http://www.alertwildfire.org/southeastbay/index.html?camera=Axis-Diablo" },
+            { id: 2, description: "Webcam Top", url: "https://ops.alertcalifornia.org/cam-console/2156" },
             { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.8820&lon=-121.9190&zoom=13" },
         ],
         link_data: [
@@ -237,8 +237,7 @@ export const arraydata = [
             { id: 7, description: "Atmo", url: "https://sf.atmo.ai/wind@37.47475,-121.85950,12.24,20,0,1667778004" },
         ],
         link_current: [
-            { id: 1, description: "WindSlammer", url: "http://windslammer.hang-gliding.com/WindSlammer/" },
-            { id: 2, description: "Mt Alison", url: "https://mesowest.utah.edu/cgi-bin/droman/meso_graph_mesowest.cgi?stn1=PG674&stn2=PG674&unit=0&timeout=0000&time=LOCAL&hour1=00&day1=00&month1=&year1=&hours=12&past=0&graph1=TTD&graph2=WND&g1min=&g1max=&g2min=&g2max=&gsize=1&g1auto=1&g2auto=1&linetype=colorline" },
+            { id: 2, description: "Mt Alison", url: "https://mesowest.utah.edu/cgi-bin/droman/meso_base_dyn.cgi?stn=PG674" },
             { id: 3, description: "Skew-T", url: "http://topaflyers.com/weather/soundings/oak.png" },
             { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.4756&lon=-121.8614&zoom=13" },
             { id: 5, description: "Webcam 2128", url: "https://ops.alertcalifornia.org/cam-console/2128" },
@@ -281,8 +280,7 @@ export const arraydata = [
             { id: 7, description: "Atmo", url: "https://sf.atmo.ai/wind@37.5177,-121.8920,13.34,20,0,1667778004" },
         ],
         link_current: [
-            { id: 1, description: "WindSlammer", url: "http://windslammer.hang-gliding.com/WindSlammer/" },
-            { id: 2, description: "Mt Alison", url: "https://mesowest.utah.edu/cgi-bin/droman/meso_graph_mesowest.cgi?stn1=PG674&stn2=PG674&unit=0&timeout=0000&time=LOCAL&hour1=00&day1=00&month1=&year1=&hours=12&past=0&graph1=TTD&graph2=WND&g1min=&g1max=&g2min=&g2max=&gsize=1&g1auto=1&g2auto=1&linetype=colorline" },
+            { id: 2, description: "Mt Alison", url: "https://mesowest.utah.edu/cgi-bin/droman/meso_base_dyn.cgi?stn=PG674" },
             { id: 3, description: "Skew-T", url: "http://topaflyers.com/weather/soundings/oak.png" },
             { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.5177&lon=-121.8920&zoom=13" },
         ],
@@ -940,7 +938,6 @@ export const arraydata = [
             { id: 5, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KHAF&state=CA" },
         ],
         link_current: [
-            { id: 1, description: "Webcam", url: "http://samcam.samschowderhouse.com:8334/view/viewer_index.shtml?id=921" },
             { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.4554&lon=-122.4447&zoom=13" },
         ],
         link_data: [
@@ -1078,7 +1075,6 @@ export const arraydata = [
             { id: 4, description: "Windy All Models", url: "https://www.windy.com/39.319/-119.867/wind?39.319,-119.867,7,m:eHCacL2" },
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" },
-            { id: 7, description: "Jet Stream", url: "http://virga.sfsu.edu/scripts/jetstream_model_fcst.html" },
             { id: 8, description: "Winds Aloft", url: "http://www.usairnet.com/cgi-bin/Winds/Aloft.cgi?location=RNO&Submit=Get+Forecast&hour=12&course=azimuth" },
         ],
         link_current: [
