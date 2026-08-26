@@ -2,11 +2,18 @@
 // Scores each hour in the flyable window against ideal/edge wind speed and direction thresholds.
 // Color classes: go-green, go-lightgreen, go-yellow, go-gray, go-black, and *-blue rain variants.
 //
+// Converts a Date to its wall-clock equivalent in Pacific Time, so getDay()/getHours()
+// reflect the site's local calendar day regardless of the visitor's own device timezone
+// (this runs client-side and the result is written to the shared RTDB cache for all visitors).
+function toPacificTime(date) {
+    return new Date(date.toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+}
+
 export const Colorcalc = (nwsdata, hourstart, hourend, speedmin_ideal, speedmax_ideal, speedmin_edge, speedmax_edge, lightwind_ok, dir_ideal, dir_edge) => {
 
     const colorresult = [["",""],["",""],["",""],["",""],["",""],["",""],["",""],["",""]];
     const weekday = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
-    const now = new Date();
+    const now = toPacificTime(new Date());
     const today_num = now.getDay();
     const currentHour = now.getHours();
     const countperiods = nwsdata.properties.periods.length;
@@ -28,7 +35,7 @@ export const Colorcalc = (nwsdata, hourstart, hourend, speedmin_ideal, speedmax_
         if (green_total >= 1 && green_total <= 3) colorresult[arrayposition][1] = "go-lightgreen";
         if (green_total >= 1 && rainscore > 5) colorresult[arrayposition][1] = "go-lightgreen-blue";
         if (green_total >= 4) colorresult[arrayposition][1] = "go-green";
-        if (green_total >= 4 && rainscore > 4) colorresult[arrayposition][1] = "go-lightgreen-blue";
+        if (green_total >= 4 && rainscore > 5) colorresult[arrayposition][1] = "go-lightgreen-blue";
         if (today_num === todayDayOfWeek && currentHour > 17) colorresult[arrayposition][1] = "go-black";
         arrayposition++;
         day_num = (day_num + 1) % 7;
@@ -41,7 +48,7 @@ export const Colorcalc = (nwsdata, hourstart, hourend, speedmin_ideal, speedmax_
         const period = nwsdata.properties.periods[i];
         const timestr = period.startTime;
         const api_hour = parseInt(timestr.substring(11, 13));
-        const dayOfWeek = new Date(timestr).getDay();
+        const dayOfWeek = toPacificTime(new Date(timestr)).getDay();
         const nwswindspeed = parseInt(period.windSpeed);
         const thedirection = period.windDirection;
         const rainprob = parseInt(period.probabilityOfPrecipitation.value) || 0;
