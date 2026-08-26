@@ -42,7 +42,7 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
 |---|---|
 | `src/Arraydata.jsx` | All site definitions — add/edit sites here |
 | `src/WeatherCache.js` | RTDB read/write + NWS fetch + staleness logic |
-| `src/Colorcalc.jsx` | Wind scoring logic; converts NWS JSON → 8-day color array; commits each day on day-change + final partial day at end of loop |
+| `src/Colorcalc.jsx` | Wind scoring logic; converts NWS JSON → 8-day color array; commits each day on day-change + final partial day at end of loop; computes "today"/current hour in Pacific Time (not the visitor's local timezone) since its output is written to the shared RTDB cache for all users |
 | `src/firebase.js` | Firebase app init + Realtime Database export + Google Analytics (GA4) init |
 | `src/App.jsx` | Root component; auto-reloads at midnight, 2AM, 2PM, 5PM PT; `visibilitychange` listener fires reload if a scheduled event was missed while the tab was backgrounded (common on mobile) |
 | `src/Allrows.jsx` | Loads weather cache, renders Local / Remote / Kiting sections; shows "Updating weather ..." if load takes >1s; shows amber NWS error banner on total fetch failure |
@@ -54,7 +54,7 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
 | `index.html` | Vite entry HTML (project root, not public/) |
 | `vite.config.js` | Vite config |
 | `firebase.json` | Firebase Hosting (serves `dist/`) + RTDB rules reference |
-| `database.rules.json` | RTDB security rules — only `weathercache` path is accessible |
+| `database.rules.json` | RTDB security rules — only `weathercache` path is accessible; write validation requires `fetchedAt` + `sites`, rejects a `fetchedAt` more than 10 min in the future (prevents freezing the cache), and rejects unknown top-level keys |
 
 ## Firebase
 
@@ -62,7 +62,7 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
 - **Hosting:** serves the `dist/` build
 - **Realtime Database:** `https://liftweather-c9ac8-default-rtdb.firebaseio.com`
   - Path: `/weathercache` — stores `{ fetchedAt: timestamp, sites: { "1": [[day,color],...], ... } }`
-  - Rules: public read/write on `/weathercache` only; all other paths denied
+  - Rules: public read/write on `/weathercache` only; all other paths denied; writes are validated (see `database.rules.json` in Key Files) to prevent malicious/malformed data from corrupting the shared cache
 - **Note:** the project has Firestore in Datastore mode (legacy Google Cloud); do not use it — use RTDB only
 - **Google Analytics:** GA4 property linked (Property ID 551654714, Stream ID 15502802398, `measurementId: G-XK9LKJW4KV`); initialized in `src/firebase.js` via `getAnalytics(app)`. No manual event logging — the app has no client-side routing, so GA4's automatic `page_view`/`session_start` events are sufficient for daily visitor counts. View traffic in the GA4 dashboard (Reports → Realtime / Engagement).
 
