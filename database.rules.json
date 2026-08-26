@@ -4,7 +4,17 @@
     ".write": false,
     "weathercache": {
       ".read": true,
-      ".write": true
+      ".write": true,
+      ".validate": "newData.hasChildren(['fetchedAt', 'sites'])",
+      "fetchedAt": {
+        ".validate": "newData.isNumber() && newData.val() <= now + 600000"
+      },
+      "sites": {
+        ".validate": "newData.hasChildren()"
+      },
+      "$other": {
+        ".validate": false
+      }
     }
   }
 }
