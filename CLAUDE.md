@@ -43,7 +43,7 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
 | `src/Arraydata.jsx` | All site definitions — add/edit sites here |
 | `src/WeatherCache.js` | RTDB read/write + NWS fetch + staleness logic |
 | `src/Colorcalc.jsx` | Wind scoring logic; converts NWS JSON → 8-day color array; commits each day on day-change + final partial day at end of loop |
-| `src/firebase.js` | Firebase app init + Realtime Database export |
+| `src/firebase.js` | Firebase app init + Realtime Database export + Google Analytics (GA4) init |
 | `src/App.jsx` | Root component; auto-reloads at midnight, 2AM, 2PM, 5PM PT; `visibilitychange` listener fires reload if a scheduled event was missed while the tab was backgrounded (common on mobile) |
 | `src/Allrows.jsx` | Loads weather cache, renders Local / Remote / Kiting sections; shows "Updating weather ..." if load takes >1s; shows amber NWS error banner on total fetch failure |
 | `src/Arow.jsx` | One row per site; click to expand links and NWS meteogram |
@@ -64,6 +64,7 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
   - Path: `/weathercache` — stores `{ fetchedAt: timestamp, sites: { "1": [[day,color],...], ... } }`
   - Rules: public read/write on `/weathercache` only; all other paths denied
 - **Note:** the project has Firestore in Datastore mode (legacy Google Cloud); do not use it — use RTDB only
+- **Google Analytics:** GA4 property linked (Property ID 551654714, Stream ID 15502802398, `measurementId: G-XK9LKJW4KV`); initialized in `src/firebase.js` via `getAnalytics(app)`. No manual event logging — the app has no client-side routing, so GA4's automatic `page_view`/`session_start` events are sufficient for daily visitor counts. View traffic in the GA4 dashboard (Reports → Realtime / Engagement).
 
 ## Site Definition Fields (Arraydata.jsx)
 
@@ -99,5 +100,6 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
 - Vite 8
 - Firebase Realtime Database (weather cache)
 - Firebase Hosting (deployment)
+- Firebase Analytics / Google Analytics (GA4) — visitor tracking
 - CSS (plain, no framework) — `src/index.css`
 - No backend, no state management library, no component library
