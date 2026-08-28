@@ -362,6 +362,7 @@ export const arraydata = [
             { id: 5, description: "XC Skies", url: "https://www.xcskies.com/map" },
             { id: 6, description: "Aviation Weather", url: "http://usairnet.com/cgi-bin/launch/code.cgi?sta=KSFO&model=avn&state=CA&Submit=Change+Location" },
             { id: 7, description: "Tides", url: "https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9414290" },
+            { id: 8, description: "Fog", url: "https://www.sfbayweather.com/bay-area-fog-forecast#map" },
         ],
         link_current: [
             { id: 1, description: "Musselrockwx", url: "https://musselrockwx.com" },
