@@ -14,7 +14,6 @@ const Headerbar = () => {
         <div>
             <div className="thetitle">
                 <span className="baptitle">Lift Paragliding: SF Bay Area Forecast</span>
-                <span className="status"></span>
                 <button className="infobutton" onClick={showInfo}>
                     info
                 </button>
@@ -31,9 +30,24 @@ const Headerbar = () => {
                             <span className="infoblue">rain</span>
                         </li>
                         <li>click row for weather details</li>
-                        <li>code v3.0 github.com/gerrypez/weather</li>
-                        <li>website url https://liftweather-c9ac8.web.app/</li>
-                        <li>developer: gerrypez@gmail.com</li>
+                        <li>
+                            code v3.0{" "}
+                            <a href="https://github.com/gerrypez/weather" target="_blank" rel="noreferrer">
+                                github.com/gerrypez/weather
+                            </a>
+                        </li>
+                        <li>
+                            website url{" "}
+                            <a href="https://liftweather-c9ac8.web.app/" target="_blank" rel="noreferrer">
+                                https://liftweather-c9ac8.web.app/
+                            </a>
+                        </li>
+                        <li>
+                            developer:{" "}
+                            <a href="mailto:gerrypez@gmail.com">
+                                gerrypez@gmail.com
+                            </a>
+                        </li>
                     </ul>
                 </div>
             )}

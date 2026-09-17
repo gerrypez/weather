@@ -7,7 +7,10 @@ import { useState, useEffect } from "react";
 const SF = { lat: 37.7749, lon: -122.4194 };
 const RADIUS_MILES = 100;
 const CANDIDATE_STATES = ["CA", "NV"];
-const proxy = (url) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`;
+const proxyKey = import.meta.env.VITE_CORSPROXY_KEY;
+const proxy = (url) => proxyKey
+    ? `https://corsproxy.io/?key=${proxyKey}&url=${encodeURIComponent(url)}`
+    : `https://corsproxy.io/?url=${encodeURIComponent(url)}`;
 
 function distanceMiles(lat1, lon1, lat2, lon2) {
     const R = 3958.8;
@@ -57,8 +60,11 @@ const Tfr = ({ onActiveTfrs }) => {
     useEffect(() => {
         findVipTfrsNearSF()
             .then(setActiveTfrs)
-            .catch((err) => console.error("TFR fetch failed:", err));
-    }, []);
+            .catch((err) => {
+                console.warn("TFR fetch unavailable:", err.message || err);
+                onActiveTfrs(false);
+            });
+    }, [onActiveTfrs]);
 
     useEffect(() => {
         onActiveTfrs(activeTfrs.length > 0);

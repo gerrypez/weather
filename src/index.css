@@ -2,10 +2,15 @@
 
 /* base styles */
 * {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body, #root, .App {
     background-color: #00094B;
     color: white;
-    font-family: "Roboto";
-    margin: 0;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
 }
 
 a {
@@ -28,17 +33,6 @@ a:hover {
 .baptitle {
     font-size: 1.05em;
     margin-left: 20px;
-}
-
-.bottomspace {
-    clear: left;
-    float: left;
-    width: 350px;
-    font-size: 0.7em;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    padding: 10px;
-    color: red;
 }
 
 li {
@@ -277,15 +271,6 @@ li {
     width: 100%;
 }
 
-.rowbutton {
-    background-color: #4d5471;
-    border: none;
-    clear: left;
-    color: #949494;
-    float: left;
-    height: 30px;
-    width: 30px;
-}
 .siterow {
     clear: left;
     cursor: pointer;
@@ -318,19 +303,6 @@ li {
     width: 130px;
 }
 
-.sitenamehigh {
-    background-color: #1b7ac7;
-    color: white;
-    float: left;
-    font-size: 0.9em;
-    height: 35px;
-    line-height: 35px;
-    padding-left: 15px;
-    padding-right: 5px;
-    vertical-align: middle;
-    width: 130px;
-}
-
 .status {
     color: pink;
     margin-left: 30px;
@@ -358,8 +330,7 @@ li {
     .thetitle,
     .infopanel,
     .linkmap,
-    .morestuff,
-    .bottomspace {
+    .morestuff {
         float: none;
         clear: none;
         width: 100%;
@@ -394,8 +365,7 @@ li {
         width: 100%;
     }
     /* .sitename is now a direct flex child of .toprow */
-    .sitename,
-    .sitenamehigh {
+    .sitename {
         float: none;
         flex-shrink: 0;
         width: 35%;

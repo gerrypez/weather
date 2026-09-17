@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Lift Weather",
+  "name": "Lift Weather - SF Bay Area Paragliding Forecast",
   "icons": [
     {
       "src": "favicon.ico",

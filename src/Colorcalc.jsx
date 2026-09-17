@@ -46,9 +46,9 @@ export const Colorcalc = (nwsdata, hourstart, hourend, speedmin_ideal, speedmax_
 
     for (let i = 0; i < countperiods; i++) {
         const period = nwsdata.properties.periods[i];
-        const timestr = period.startTime;
-        const api_hour = parseInt(timestr.substring(11, 13));
-        const dayOfWeek = toPacificTime(new Date(timestr)).getDay();
+        const periodDate = toPacificTime(new Date(period.startTime));
+        const api_hour = periodDate.getHours();
+        const dayOfWeek = periodDate.getDay();
         const nwswindspeed = parseInt(period.windSpeed);
         const thedirection = period.windDirection;
         const rainprob = parseInt(period.probabilityOfPrecipitation.value) || 0;

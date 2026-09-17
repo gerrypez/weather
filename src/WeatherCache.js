@@ -6,11 +6,15 @@ import { Colorcalc } from "./Colorcalc";
 const BATCH_SIZE = 8;
 const BATCH_DELAY_MS = 500;
 
-// Returns true if the cached data is older than the most recent NWS update (2AM or 2PM local).
+function toPacificTime(date) {
+    return new Date(date.toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+}
+
+// Returns true if the cached data is older than the most recent NWS update (2AM, 8AM, or 2PM PT).
 function isStale(fetchedAt) {
     if (!fetchedAt) return true;
-    const now = new Date();
-    const fetched = new Date(fetchedAt);
+    const now = toPacificTime(new Date());
+    const fetched = toPacificTime(new Date(fetchedAt));
 
     const today2AM = new Date(now);
     today2AM.setHours(2, 0, 0, 0);
@@ -52,15 +56,19 @@ async function fetchSiteColors(site) {
             try {
                 const response = await fetch(url);
                 if (response.ok) return await response.json();
-                if (response.status === 500 || response.status === 503) {
+                if ([429, 500, 502, 503, 504].includes(response.status)) {
                     console.warn(`${sitename} NWS ${response.status}, retry ${i + 1}`);
                     await new Promise((r) => setTimeout(r, 1500));
                 } else {
                     console.error(`${sitename} NWS error ${response.status}`);
                     return null;
                 }
-            } catch {
-                if (i === retries - 1) return null;
+            } catch (err) {
+                if (i === retries - 1) {
+                    console.error(`${sitename} NWS fetch network error:`, err);
+                    return null;
+                }
+                await new Promise((r) => setTimeout(r, 1500));
             }
         }
         return null;

@@ -1,5 +1,5 @@
 // App: root component that renders the header and all site rows.
-// Schedules an auto-reload at 4AM, 4PM, and 5PM PT to pick up new NWS data and hide today's column.
+// Schedules an auto-reload at midnight, 2AM, 8AM, 2PM, and 5PM PT to pick up new NWS data and hide today's column.
 //
 import Headerbar from "./Headerbar";
 import Allrows from "./Allrows";
