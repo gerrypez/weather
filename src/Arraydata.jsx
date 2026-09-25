@@ -238,7 +238,7 @@ export const arraydata = [
         ],
         link_current: [
             { id: 2, description: "Mt Alison", url: "https://mesowest.utah.edu/cgi-bin/droman/meso_base_dyn.cgi?stn=PG674" },
-            { id: 3, description: "Skew-T", url: "http://topaflyers.com/weather/soundings/oak.png" },
+            { id: 3, description: "Skew-T", url: "https://weather.rap.ucar.edu/upper/displayUpper.php?img=KOAK.png&endDate=-1&endTime=-1&duration=0" },
             { id: 4, description: "Weather Stations", url: "https://www.wunderground.com/wundermap?lat=37.4756&lon=-121.8614&zoom=13" },
             { id: 5, description: "Webcam 2128", url: "https://ops.alertcalifornia.org/cam-console/2128" },
             { id: 6, description: "Webcam 2147", url: "https://ops.alertcalifornia.org/cam-console/2147" },
