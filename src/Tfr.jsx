@@ -9,12 +9,19 @@ const RADIUS_MILES = 100;
 const CANDIDATE_STATES = ["CA", "NV"];
 
 const proxyKey = import.meta.env.VITE_CORSPROXY_KEY;
+const customProxy = import.meta.env.VITE_PROXY_URL;
 const isDev = import.meta.env.DEV;
 
 function getProxyUrl(url) {
     if (isDev) {
         // In local development, use Vite's dev proxy to bypass CORS
         return url.replace(/^https?:\/\/tfr\.faa\.gov/, "/faa-tfr-api");
+    }
+    if (customProxy) {
+        // Supports any custom proxy (e.g., Cloudflare Worker or Corsfix)
+        return customProxy.includes("?") 
+            ? `${customProxy}${encodeURIComponent(url)}`
+            : `${customProxy}/${url}`;
     }
     return proxyKey
         ? `https://corsproxy.io/?key=${proxyKey}&url=${encodeURIComponent(url)}`
