@@ -1,5 +1,5 @@
 // Allrows: top-level layout component that loads the weather cache and renders all site rows.
-// Splits sites into Local, Remote, and Kiting Fields sections via category filter.
+// Splits sites into Local, Remote, and Kiting sections via category filter.
 // Shows "Updating weather ..." in each subtitle if the cache load takes over 1 second.
 //
 import { useState, useEffect } from "react";
@@ -50,7 +50,7 @@ const Allrows = () => {
                 arraydata={arraydata.filter((d) => d.category === "remote")}
                 siteColors={siteColors}
             />
-            <div className="subtitle">{isUpdating ? "Updating weather ..." : "Kiting Fields"}</div>
+            <div className="subtitle">{isUpdating ? "Updating weather ..." : "Kiting"}</div>
             <Arow
                 arraydata={arraydata.filter((d) => d.category === "kiting")}
                 siteColors={siteColors}

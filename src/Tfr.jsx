@@ -7,10 +7,19 @@ import { useState, useEffect } from "react";
 const SF = { lat: 37.7749, lon: -122.4194 };
 const RADIUS_MILES = 100;
 const CANDIDATE_STATES = ["CA", "NV"];
+
 const proxyKey = import.meta.env.VITE_CORSPROXY_KEY;
-const proxy = (url) => proxyKey
-    ? `https://corsproxy.io/?key=${proxyKey}&url=${encodeURIComponent(url)}`
-    : `https://corsproxy.io/?url=${encodeURIComponent(url)}`;
+const isDev = import.meta.env.DEV;
+
+function getProxyUrl(url) {
+    if (isDev) {
+        // In local development, use Vite's dev proxy to bypass CORS
+        return url.replace(/^https?:\/\/tfr\.faa\.gov/, "/faa-tfr-api");
+    }
+    return proxyKey
+        ? `https://corsproxy.io/?key=${proxyKey}&url=${encodeURIComponent(url)}`
+        : `https://corsproxy.io/?url=${encodeURIComponent(url)}`;
+}
 
 function distanceMiles(lat1, lon1, lat2, lon2) {
     const R = 3958.8;
@@ -23,35 +32,65 @@ function distanceMiles(lat1, lon1, lat2, lon2) {
     return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-async function getTfrCoords(notamId) {
+function extractTfrCoords(xmlText) {
+    const latRegex = /<(?:geo)?lat>([-\d.]+)\s*([NS])?<\/(?:geo)?lat>/gi;
+    const lonRegex = /<(?:geo)?long>([-\d.]+)\s*([EW])?<\/(?:geo)?long>/gi;
+    const lats = [];
+    const lons = [];
+
+    let m;
+    while ((m = latRegex.exec(xmlText)) !== null) {
+        let lat = parseFloat(m[1]);
+        if (m[2]?.toUpperCase() === "S" && lat > 0) lat = -lat;
+        if (!isNaN(lat)) lats.push(lat);
+    }
+    while ((m = lonRegex.exec(xmlText)) !== null) {
+        let lon = parseFloat(m[1]);
+        if (m[2]?.toUpperCase() === "W" && lon > 0) lon = -lon;
+        if (!isNaN(lon)) lons.push(lon);
+    }
+
+    const count = Math.min(lats.length, lons.length);
+    const coords = [];
+    for (let i = 0; i < count; i++) {
+        coords.push({ lat: lats[i], lon: lons[i] });
+    }
+    return coords;
+}
+
+async function isTfrNearSF(notamId) {
     const filename = "detail_" + notamId.replace("/", "_") + ".xml";
-    const res = await fetch(proxy(`https://tfr.faa.gov/save_pages/${filename}`));
+    const res = await fetch(getProxyUrl(`https://tfr.faa.gov/download/${filename}`));
+    if (!res.ok) return false;
     const text = await res.text();
-    const lat = parseFloat(text.match(/<lat>([\d.-]+)<\/lat>/)?.[1]);
-    const lon = parseFloat(text.match(/<long>([\d.-]+)<\/long>/)?.[1]);
-    return isNaN(lat) || isNaN(lon) ? null : { lat, lon };
+    const coords = extractTfrCoords(text);
+    if (coords.length === 0) return false;
+
+    return coords.some((c) => distanceMiles(SF.lat, SF.lon, c.lat, c.lon) <= RADIUS_MILES);
 }
 
 async function findVipTfrsNearSF() {
-    const res = await fetch(proxy("https://tfr.faa.gov/tfrapi/exportTfrList"));
-    if (!res.ok) throw new Error(`TFR list fetch failed: ${res.status}`);
+    const res = await fetch(getProxyUrl("https://tfr.faa.gov/tfrapi/exportTfrList"));
+    if (!res.ok) {
+        throw new Error(
+            `TFR list fetch failed: HTTP ${res.status}${res.status === 401 ? " (API key required for corsproxy.io)" : ""}`
+        );
+    }
     const tfrs = await res.json();
     if (!Array.isArray(tfrs)) throw new Error("TFR list response is not an array");
 
     const candidates = tfrs.filter((t) =>
-        t.type === "VIP" && CANDIDATE_STATES.includes(t.state)
+        t.type === "VIP" && (CANDIDATE_STATES.includes(t.state) || t.facility === "ZOA")
     );
 
-    const results = (await Promise.all(
+    const matches = await Promise.all(
         candidates.map(async (tfr) => {
-            const coords = await getTfrCoords(tfr.notam_id);
-            if (!coords) return null;
-            if (distanceMiles(SF.lat, SF.lon, coords.lat, coords.lon) > RADIUS_MILES) return null;
-            return tfr;
+            const isNear = await isTfrNearSF(tfr.notam_id);
+            return isNear ? tfr : null;
         })
-    )).filter(Boolean);
+    );
 
-    return results;
+    return matches.filter(Boolean);
 }
 
 const Tfr = ({ onActiveTfrs }) => {
@@ -68,7 +107,7 @@ const Tfr = ({ onActiveTfrs }) => {
 
     useEffect(() => {
         onActiveTfrs(activeTfrs.length > 0);
-    }, [activeTfrs]);
+    }, [activeTfrs, onActiveTfrs]);
 
     if (activeTfrs.length === 0) return null;
 
@@ -93,3 +132,4 @@ const Tfr = ({ onActiveTfrs }) => {
 };
 
 export default Tfr;
+

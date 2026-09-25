@@ -48,7 +48,7 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
 | `src/Allrows.jsx` | Loads weather cache, renders Local / Remote / Kiting sections; shows "Updating weather ..." if load takes >1s; shows amber NWS error banner on total fetch failure |
 | `src/Arow.jsx` | One row per site; click to expand links and NWS meteogram |
 | `src/Sitedays.jsx` | Renders up to 7 colored day boxes; shows gray placeholders while loading; hides today after 5PM PT; computes starting slot and day labels from today's actual date so display is correct when cached data was built on a prior day |
-| `src/Tfr.jsx` | Fetches FAA TFR list via corsproxy.io; if VIP TFRs within 100mi of SF are active, replaces "Local" subtitle with red "Active TFRs:" + linked notam IDs |
+| `src/Tfr.jsx` | Fetches FAA TFR list (via Vite proxy `/faa-tfr-api` in dev, or corsproxy.io in prod); if VIP TFRs within 100mi of SF are active, replaces "Local" subtitle with red "Active TFRs:" + linked notam IDs |
 | `src/Stationcheck.jsx` | Dev utility to verify site NWS grid coords match lat/lon — import into Allrows.jsx to run, results in console |
 | `src/index.css` | All styles including responsive mobile layout (≤600px breakpoint) |
 | `index.html` | Vite entry HTML (project root, not public/) |
