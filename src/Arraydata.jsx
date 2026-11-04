@@ -15,7 +15,7 @@ export const arraydata = [
         hourend: 18,
         speedmin_ideal: 8,
         speedmax_ideal: 13,
-        speedmin_edge: 6,
+        speedmin_edge: 7,
         speedmax_edge: 16,
         lightwind_ok: "no",
         dir_ideal: ["SW", "WSW", "W", "WNW"],

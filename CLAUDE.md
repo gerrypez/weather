@@ -82,7 +82,7 @@ Single-page React app with no backend. Data is cached in Firebase Realtime Datab
   hourend: 20,              // flyable window end
   speedmin_ideal: 8,        // mph
   speedmax_ideal: 13,
-  speedmin_edge: 6,
+  speedmin_edge: 7,
   speedmax_edge: 16,
   lightwind_ok: "no",       // "yes" if site flies in calm conditions
   dir_ideal: ["SW", "WSW", "W", "WNW"],
